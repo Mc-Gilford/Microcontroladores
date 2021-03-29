@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include <pic16f84A.h>
+#fuses XT, NOWDT, PUT, NOPROTECT, BROWNOUT, NOCPD, NOWRT, NODEBUG
+#use delay (clock=4M)
+#define use_port_a_lcd true
+#define use_port_b_kbd true
+
+
+void main()
+{
+}

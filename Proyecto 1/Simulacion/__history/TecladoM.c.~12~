@@ -1,0 +1,31 @@
+#include <string.h>
+#include<stdio.h>
+#include <pic16f84A.h>
+#fuses XT, NOWDT, PUT, NOPROTECT, BROWNOUT, NOCPD, NOWRT, NODEBUG
+#use delay (clock=4M)
+#define use_port_a_lcd true
+#define use_port_b_kbd true
+#include <lcd.c>
+#include <kbd.c>
+
+void main()
+{
+   char k;
+   lcd_init();
+   kbd_init();
+   port_b_pullups(true);
+   lcd_putc("Leyendo Teclado");
+   while(1)
+   {
+   k = kbd_getc();
+      if(k=="+")
+      {
+      lcd_putc("\f");
+      }
+      else
+      {
+      printf(lcd_putc, "\f Tecla No %c",k);
+      delay_ms(500);
+      }
+   }
+}

@@ -1,0 +1,6 @@
+#include<stdio.h>
+#include <pic16f84A.h>
+
+void main()
+{
+}
