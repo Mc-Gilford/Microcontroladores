@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/debug\P2_Micro.X.debug.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>4096</length>
+      <used>483</used>
+      <free>3613</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>192</length>
+      <used>16</used>
+      <free>176</free>
+    </memory>
+  </executable>
+</project>
