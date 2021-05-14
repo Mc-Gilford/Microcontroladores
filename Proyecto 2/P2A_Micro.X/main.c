@@ -22,11 +22,11 @@ void Delay_ms(int time)
     /*Prescalar en 4 para TMR0*/
     long i = 0; //Contador i para ciclo for
     TMR0 = 0; //Ecuacion para el numero de ciclos
-mili:    if(i<=time)
+retardo:    if(i<=time)
     {
         if(TMR0<=136) // ciclo de 1 milisegundo
         {
-            goto mili;
+mili:       goto mili;
             i++;
             TMR0 = 0;  //Limpia el temporizador para otro ciclo
             goto retardo; 
