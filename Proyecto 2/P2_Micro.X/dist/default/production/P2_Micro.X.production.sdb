@@ -3,6 +3,10 @@
 [d edition pro ]
 [d chip 16F873 ]
 [d frameptr 0 ]
+"59 C:\Users\chuch\MPLABXProjects\P2_Micro.X/kbd.h
+[v _keypad_readkey keypad_readkey `(uc  1 e 1 0 ]
+"114
+[v _keypad_getkey keypad_getkey `(uc  1 e 1 0 ]
 "61 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
 [v _LCD_Write_Nibble LCD_Write_Nibble `(v  1 e 1 0 ]
 "78
@@ -11,6 +15,8 @@
 [v _LCD_Goto LCD_Goto `(v  1 e 1 0 ]
 "106
 [v _LCD_PutC LCD_PutC `(v  1 e 1 0 ]
+"113
+[v _LCD_Print LCD_Print `(v  1 e 1 0 ]
 "124
 [v _LCD_Begin LCD_Begin `(v  1 e 1 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
@@ -21,12 +27,14 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"11 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
+"14 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"26
+"56
 [v _iniciar_puertos iniciar_puertos `(v  1 e 1 0 ]
 "52 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
 [v _RS RS `b  1 e 0 0 ]
+"166 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
 [s S22 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
@@ -34,9 +42,11 @@
 `uc 1 RA4 1 0 :1:4 
 `uc 1 RA5 1 0 :1:5 
 ]
-"181 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873.h
+"181
 [u S29 . 1 `S22 1 . 1 0 ]
 [v _PORTAbits PORTAbits `VES29  1 e 1 @5 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
 [s S39 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
@@ -77,17 +87,49 @@
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1857
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
-"2206
-[v _RA0 RA0 `VEb  1 e 0 @40 ]
-"11 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
+"2215
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"2218
+[v _RA4 RA4 `VEb  1 e 0 @44 ]
+"2221
+[v _RA5 RA5 `VEb  1 e 0 @45 ]
+"2254
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"2257
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"2260
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"2263
+[v _RC3 RC3 `VEb  1 e 0 @59 ]
+"2266
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"12 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
+[v _number number `[4]uc  1 e 4 0 ]
+"14
 [v _main main `(i  1 e 2 0 ]
 {
-"24
+"28
+[v main@c c `uc  1 a 1 15 ]
+"16
+[v main@i i `i  1 a 2 13 ]
+"54
 } 0
-"26
+"114 C:\Users\chuch\MPLABXProjects\P2_Micro.X/kbd.h
+[v _keypad_getkey keypad_getkey `(uc  1 e 1 0 ]
+{
+"116
+[v keypad_getkey@key key `uc  1 a 1 2 ]
+"126
+} 0
+"59
+[v _keypad_readkey keypad_readkey `(uc  1 e 1 0 ]
+{
+"112
+} 0
+"56 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
 [v _iniciar_puertos iniciar_puertos `(v  1 e 1 0 ]
 {
-"38
+"70
 } 0
 "106 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
 [v _LCD_PutC LCD_PutC `(v  1 e 1 0 ]
@@ -97,6 +139,18 @@
 "108
 [v LCD_PutC@LCD_Char LCD_Char `uc  1 a 1 4 ]
 "111
+} 0
+"113
+[v _LCD_Print LCD_Print `(v  1 e 1 0 ]
+{
+[v LCD_Print@LCD_Str LCD_Str `*.24uc  1 a 1 wreg ]
+"115
+[v LCD_Print@i i `uc  1 a 1 5 ]
+"113
+[v LCD_Print@LCD_Str LCD_Str `*.24uc  1 a 1 wreg ]
+"115
+[v LCD_Print@LCD_Str LCD_Str `*.24uc  1 a 1 4 ]
+"122
 } 0
 "87
 [v _LCD_Goto LCD_Goto `(v  1 e 1 0 ]

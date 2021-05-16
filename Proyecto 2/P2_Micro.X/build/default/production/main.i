@@ -1904,12 +1904,165 @@ void LCD_Begin()
 }
 # 6 "main.c" 2
 
+# 1 "./kbd.h" 1
+void disp_num(float num);
+int get_num (char ch);
+char scan_key(void);
+# 16 "./kbd.h"
+char scan_key()
+{
+RC3=0;RC2=1;RC1=1;RC0=1;
+if(RA3==0 && RC3==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA3==0);return '7';}
+if(RA4==0 && RC3==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA4==0);return '8';}
+if(RA5==0 && RC3==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA5==0);return '9';}
+if(RC4==0 && RC3==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '/';}
+RC3=1;RC2=0;RC1=1;RC0=1;
+if(RA3==0 && RC2==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA3==0);return '4';}
+if(RA4==0 && RC2==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA4==0);return '5';}
+if(RA5==0 && RC2==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA5==0);return '6';}
+if(RC4==0 && RC2==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '*';}
+RC3=1;RC2=1;RC1=0;RC0=1;
+if(RA3==0 && RC1==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA3==0);return '1';}
+if(RA4==0 && RC1==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA4==0);return '2';}
+if(RA5==0 && RC1==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA5==0);return '3';}
+if(RC4==0 && RC1==0){ LCD_Cmd(0x10);_delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '!';}
+RC3=1;RC2=1;RC1=1;RC0=0;
+if(RA3==0 && RC0==0){ LCD_Cmd(0x01);_delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '!';}
+if(RA4==0 && RC0==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA4==0);return '0';}
+if(RA5==0 && RC0==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '\0';}
+if(RC4==0 && RC0==0){ LCD_Cmd(0x14);_delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '!';}
+return 'n';
+}
 
+int get_num(char ch)
+{
+switch(ch)
+{
+case '0': return 0; break;
+case '1': return 1; break;
+case '2': return 2; break;
+case '3': return 3; break;
+case '4': return 4; break;
+case '5': return 5; break;
+case '6': return 6; break;
+case '7': return 7; break;
+case '8': return 8; break;
+case '9': return 9; break;
+}
+return 0;
+}
+
+unsigned char keypad_readkey(void)
+{
+    RC3 = 1;
+    RC2 = 0;
+    RC1 = 0;
+    RC0 = 0;
+    _delay((unsigned long)((30)*(32000000/4000000.0)));
+
+    if(RC3==1 && RC2==0 && RC1==0 && RC0==0) {
+        if (RA3 == 1) return 'A';
+        if (RA4 == 1) return '0';
+        if (RA5 == 1) return '=';
+        if (RC4 == 1) return '+';
+    }
+    RC3 = 0;
+    RC2 = 1;
+    RC1 = 0;
+    RC0 = 0;
+    _delay((unsigned long)((30)*(32000000/4000000.0)));
+
+    if(RC3==0 && RC2==1 && RC1==0 && RC0==0) {
+        if (RA3 == 1) return '1';
+        if (RA4 == 1) return '2';
+        if (RA5 == 1) return '3';
+        if (RC4 == 1) return '.';
+    }
+
+    RC3 = 0;
+    RC2 = 0;
+    RC1 = 1;
+    RC0 = 0;
+    _delay((unsigned long)((30)*(32000000/4000000.0)));
+
+    if(RC3==0 && RC2==0 && RC1==1 && RC0==0) {
+        if (RA3 == 1) return '4';
+        if (RA4 == 1) return '5';
+        if (RA5 == 1) return '6';
+        if (RC4 == 1) return '*';
+    }
+
+    RC3 = 0;
+    RC2 = 0;
+    RC1 = 0;
+    RC0 = 1;
+    _delay((unsigned long)((30)*(32000000/4000000.0)));
+
+    if(RC3==0 && RC2==0 && RC1==0 && RC0==1) {
+        if (RA3 == 1) return '7';
+        if (RA4 == 1) return '8';
+        if (RA5 == 1) return '9';
+        if (RC4 == 1) return '/';
+    }
+ return 'x';
+}
+
+unsigned char keypad_getkey(void)
+{
+ unsigned char key = 'x';
+
+
+ while(key == 'x')
+  key = keypad_readkey();
+
+
+ while(keypad_readkey() != 'x');
+
+ return key;
+}
+# 7 "main.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
+# 14 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+# 36 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+# 8 "main.c" 2
 
 void iniciar_puertos();
 
+
+char number[4];
+
 int main()
 {
+    int i=0;
     iniciar_puertos();
 
     LCD_Begin();
@@ -1918,7 +2071,33 @@ int main()
 
     while(1){
 
-    LCD_PutC('x');
+
+    if(i<4)
+    {
+    char c = keypad_getkey();
+        if(c!='=' && c!='A')
+        {
+        LCD_PutC(c);
+        number[i]=c;
+        i++;
+        }
+        else if(c=='A')
+        {
+            i=0;
+            LCD_Cmd(0x01);
+        }
+
+
+
+
+
+    }
+    else
+    {
+         i=0;
+         LCD_Goto(1,2);
+         LCD_Print("Enviado");
+    }
     _delay((unsigned long)((500)*(32000000/4000.0)));
     }
 }
@@ -1929,7 +2108,9 @@ void iniciar_puertos()
 
     PORTC=0X00;
     TRISC=0XF0;
-    RA0=0;
+    PORTA = 0;
+    PORTB = 0;
+    PORTC = 0;
 
 
 
