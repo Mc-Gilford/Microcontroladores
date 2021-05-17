@@ -18,6 +18,16 @@ void iniciar_puertos();
 int ECO;
 int ADRES;
 
+void imprimir_valor_lcd() //Imprime el resulatado en los leds
+{
+    /*En caso de mal funcionamiento eliminar este codigo hasta el comentario de fin*/
+    ADRESL = Rx_Dato();      // Recepcion del eco del dato
+    Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
+    ADRESH = Rx_Dato();      // Recepcion del eco del dato 
+    Tx_Dato(ADRESH);      // Transmite el dato de ADRESH                             
+    /*Fin de codigo*/
+    ADRES = (ADRESH << 8) | ADRESL;    // Almcena la conversion en la variable Peso1
+}
 
 void Delay_ms(int time)
 {
@@ -118,6 +128,13 @@ int main()
     bucle:                 
             Canal0(2);            // realiza la conversion y tiempo de espera 2ms
             
+            Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
+            ECO = Rx_Dato();      // Recepcion del eco del dato
+            Tx_Dato(ADRESH);      // Transmite el dato de ADRESH
+            ECO = Rx_Dato();      // Recepcion del eco del dato                              
+            
+            imprimir_valor_lcd();
+            
             if(ADRES < 127)     // 0V
                 PORTB = 0x00;
             if(ADRES > 127)     // 625 mv 
@@ -136,12 +153,7 @@ int main()
                 PORTB = 0x7F;
             if(ADRES > 1022)   // 5 V
                 PORTB = 0xFF;
-                /*
-            Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
-            ECO = Rx_Dato();      // Recepcion del eco del dato
-            Tx_Dato(ADRESH);      // Transmite el dato de ADRESH
-            ECO = Rx_Dato();      // Recepcion del eco del dato                              
-            */
+            
             goto bucle;                  // Bucle infinito
                     
 }

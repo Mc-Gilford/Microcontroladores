@@ -8,6 +8,8 @@
 # 2 "<built-in>" 2
 # 1 "main.c" 2
 
+
+
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1459,7 +1461,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 2 "main.c" 2
+# 4 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -1558,7 +1560,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 3 "main.c" 2
+# 5 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -1643,7 +1645,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 4 "main.c" 2
+# 6 "main.c" 2
 
 
 # 1 "./lcd.h" 1
@@ -1902,7 +1904,7 @@ void LCD_Begin()
   LCD_Cmd(0x0F);
   _delay((unsigned long)((50)*(32000000/4000.0)));
 }
-# 6 "main.c" 2
+# 8 "main.c" 2
 
 # 1 "./kbd.h" 1
 void disp_num(float num);
@@ -2020,7 +2022,7 @@ unsigned char keypad_getkey(void)
 
  return key;
 }
-# 7 "main.c" 2
+# 9 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
 # 14 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
@@ -2053,23 +2055,58 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 8 "main.c" 2
+# 10 "main.c" 2
 
 void iniciar_puertos();
+void inicio_presentacion();
 
 
 char number[4];
+
+int X = 47;
+char M[] = {"El ADC y el UART Jose Rdgz y Karla Reyes"};
+int ECO;
+int ADRES;
+
+
+void Tx_Dato(unsigned char X)
+{
+    PIR1bits.TXIF = 0;
+    TXREG = X;
+
+
+Transmitiendo:
+                if(TXSTAbits.TRMT == 0)
+                goto Transmitiendo;
+}
+
+
+
+unsigned char Rx_Dato(void)
+{
+    wait:
+        if(PIR1bits.RCIF == 0)
+        goto wait;
+    PIR1bits.RCIF = 0;
+    return RCREG;
+}
 
 int main()
 {
     int i=0;
     iniciar_puertos();
 
+
     LCD_Begin();
+    inicio_presentacion();
+    _delay((unsigned long)((500)*(32000000/4000.0)));
     LCD_Goto(1, 1);
     _delay((unsigned long)((500)*(32000000/4000.0)));
 
+
     while(1){
+
+
 
 
     if(i<4)
@@ -2095,7 +2132,7 @@ int main()
     else
     {
          i=0;
-         LCD_Goto(1,2);
+         LCD_PutC(' ');
          LCD_Print("Enviado");
     }
     _delay((unsigned long)((500)*(32000000/4000.0)));
@@ -2116,4 +2153,18 @@ void iniciar_puertos()
 
 
     ADCON1 = 0b00000110;
+}
+
+void inicio_presentacion ()
+{
+    LCD_Goto(1,1);
+    LCD_Print(M);
+    _delay((unsigned long)((50)*(32000000/4000.0)));
+    for(int i=0;i<40;i++){
+        LCD_Cmd(0x18);
+        _delay((unsigned long)((40)*(32000000/4000.0)));
+    }
+    _delay((unsigned long)((50)*(32000000/4000.0)));
+    LCD_Cmd(0x01);
+    LCD_Goto(1, 1);
 }
