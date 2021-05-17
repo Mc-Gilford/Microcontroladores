@@ -1,0 +1,141 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F873 ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"40 C:\Users\chuch\MPLABXProjects\P2B_Micro.X\main.c
+[v _Canal0 Canal0 `(v  1 e 1 0 ]
+"89
+[v _main main `(i  1 e 2 0 ]
+"149
+[v _iniciar_puertos iniciar_puertos `(v  1 e 1 0 ]
+"59 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"166
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S37 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"454
+[u S45 . 1 `S37 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES45  1 e 1 @12 ]
+"859
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+[s S104 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"889
+[s S113 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S117 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S120 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S123 . 1 `S104 1 . 1 0 `S113 1 . 1 0 `S117 1 . 1 0 `S120 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES123  1 e 1 @24 ]
+"954
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"961
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1047
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1054
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+"1150
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1270
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1762
+[v _TXSTA TXSTA `VEuc  1 e 1 @152 ]
+[s S57 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"1788
+[s S66 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S70 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S73 . 1 `S57 1 . 1 0 `S66 1 . 1 0 `S70 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES73  1 e 1 @152 ]
+"1843
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"1850
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"1857
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2020
+[v _ADIF ADIF `VEb  1 e 0 @102 ]
+"2023
+[v _ADON ADON `VEb  1 e 0 @248 ]
+"2089
+[v _CHS0 CHS0 `VEb  1 e 0 @251 ]
+"2092
+[v _CHS1 CHS1 `VEb  1 e 0 @252 ]
+"2095
+[v _CHS2 CHS2 `VEb  1 e 0 @253 ]
+"2140
+[v _GO GO `VEb  1 e 0 @250 ]
+"2434
+[v _TRISA0 TRISA0 `VEb  1 e 0 @1064 ]
+"2437
+[v _TRISA1 TRISA1 `VEb  1 e 0 @1065 ]
+"2440
+[v _TRISA2 TRISA2 `VEb  1 e 0 @1066 ]
+"2494
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"2497
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"19 C:\Users\chuch\MPLABXProjects\P2B_Micro.X\main.c
+[v _ADRES ADRES `i  1 e 2 0 ]
+"89
+[v _main main `(i  1 e 2 0 ]
+{
+"147
+} 0
+"149
+[v _iniciar_puertos iniciar_puertos `(v  1 e 1 0 ]
+{
+"170
+} 0
+"40
+[v _Canal0 Canal0 `(v  1 e 1 0 ]
+{
+[v Canal0@z z `i  1 p 2 0 ]
+"63
+} 0
