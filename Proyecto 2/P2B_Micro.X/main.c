@@ -140,25 +140,25 @@ int main()
     bucle:                 
             Canal0(2);            // realiza la conversion y tiempo de espera 2ms
             enviar_datos();
-            //imprimir_valor_lcd();
+            imprimir_valor_lcd();
             
-            if(ADRES < 0.625)     // 0V
+            if(ADRES < 127)     // 0V
                 PORTB = 0x00;
-            if(ADRES >= 0.625)     // 625 mv 
+            if(ADRES > 127)     // 625 mv 
                 PORTB = 0x01;
-            if(ADRES >= 1.25)     // 1.25 V
+            if(ADRES > 255)     // 1.25 V
                 PORTB = 0x03;
-            if(ADRES >= 1.87)     // 1.87 V
+            if(ADRES > 382)     // 1.87 V
                 PORTB = 0x07;
-            if(ADRES >= 2.5)     // 2.5 V
+            if(ADRES > 511)     // 2.5 V
                 PORTB = 0x0F;
-            if(ADRES >= 3.12)     // 3.12 V
+            if(ADRES > 639)     // 3.12 V
                 PORTB = 0x1F;
-            if(ADRES >= 3.75)     // 3.75 V
+            if(ADRES > 767)     // 3.75 V
                 PORTB = 0x3F;
-            if(ADRES >= 4.37)     // 4.37 V
+            if(ADRES > 894)     // 4.37 V
                 PORTB = 0x7F;
-            if(ADRES >= 5)   // 5 V
+            if(ADRES > 1022)   // 5 V
                 PORTB = 0xFF;
             
             goto bucle;                  // Bucle infinito

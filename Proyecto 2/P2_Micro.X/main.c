@@ -142,6 +142,15 @@ void Canal0(int z)
                                                               
 }
 
+void enviar_datos()
+{
+         Canal0(2);            // realiza la conversion y tiempo de espera 2ms
+         Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
+         ECO = Rx_Dato();      // Recepcion del eco del dato
+         Tx_Dato(ADRESH);      // Transmite el dato de ADRESH
+         ECO = Rx_Dato();      // Recepcion del eco del dato    
+}
+
 int main()
 {
     int i=0; //Para concatenar dentro del array 
@@ -185,12 +194,8 @@ int main()
          i=0;
          LCD_PutC(' ');
          LCD_Print("Env");
-         /*
-         Canal0(2);            // realiza la conversion y tiempo de espera 2ms
-         Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
-         ECO = Rx_Dato();      // Recepcion del eco del dato
-         Tx_Dato(ADRESH);      // Transmite el dato de ADRESH
-         ECO = Rx_Dato();      // Recepcion del eco del dato    */
+         imprimir_valor_leds();
+         enviar_datos();
     }
     __delay_ms(500);
     }
