@@ -2180,7 +2180,7 @@ int main()
     _delay((unsigned long)((500)*(32000000/4000.0)));
     LCD_Goto(1, 1);
     _delay((unsigned long)((500)*(32000000/4000.0)));
-    imprimir_valor_leds();
+
     while(1){
 
 

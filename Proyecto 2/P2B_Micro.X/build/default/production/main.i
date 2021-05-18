@@ -1828,23 +1828,23 @@ int main()
             enviar_datos();
 
 
-            if(ADRES < 127)
+            if(ADRES < 0.625)
                 PORTB = 0x00;
-            if(ADRES > 127)
+            if(ADRES >= 0.625)
                 PORTB = 0x01;
-            if(ADRES > 255)
+            if(ADRES >= 1.25)
                 PORTB = 0x03;
-            if(ADRES > 382)
+            if(ADRES >= 1.87)
                 PORTB = 0x07;
-            if(ADRES > 511)
+            if(ADRES >= 2.5)
                 PORTB = 0x0F;
-            if(ADRES > 639)
+            if(ADRES >= 3.12)
                 PORTB = 0x1F;
-            if(ADRES > 767)
+            if(ADRES >= 3.75)
                 PORTB = 0x3F;
-            if(ADRES > 894)
+            if(ADRES >= 4.37)
                 PORTB = 0x7F;
-            if(ADRES > 1022)
+            if(ADRES >= 5)
                 PORTB = 0xFF;
 
             goto bucle;

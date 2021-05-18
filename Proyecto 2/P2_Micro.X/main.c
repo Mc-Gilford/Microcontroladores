@@ -155,7 +155,7 @@ int main()
     __delay_ms(500);
     LCD_Goto(1, 1);    
     __delay_ms(500);
-    imprimir_valor_leds();
+    //imprimir_valor_leds();
     while(1){
 
     //imprimir_valor_leds();

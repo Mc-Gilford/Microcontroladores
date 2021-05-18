@@ -1435,9 +1435,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "157
 [; ;main.c: 157:     _delay((unsigned long)((500)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"158
-[; ;main.c: 158:     imprimir_valor_leds();
-[e ( _imprimir_valor_leds ..  ]
 "159
 [; ;main.c: 159:     while(1){
 [e :U 167 ]
