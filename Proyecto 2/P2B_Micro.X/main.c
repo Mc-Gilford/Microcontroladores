@@ -18,35 +18,6 @@ void iniciar_puertos();
 int ECO;
 int ADRES;
 
-void set_configuraciones()
-{
-    // Configuracion del convertidor Analogico-Digital       
-    ADCON0 = 0x80;        // 32 x Tosc, 
-    ADCON1 = 0x8E;        // Los 6 bits mas significativos (ADRESH)son 0
-    // Puertos RA0 es configurada como analogica
-    
-    // Configuracion de las interrupciones        
-    ADIF = 0;             // Borra se£alizador del de interrupcion del ADC                   
-    
-    /*Configuracion del temporizador*/
-    OPTION_REG = 0x51;    // configura el prescaler a 4
-    TMR0 = 0;             // Limpia el TMR0
-    
-    /*Configuracion del Puerto Serie*/
-    TXSTA = 0x00;         // Limpia el registro TXSTA
-    RCSTA = 0x00;         // Limpia el registro RCSTA
-    RCSTAbits.SPEN = 1;   // Activa el modulo USART
-    TXSTAbits.SYNC = 0;   // Activa el modo UART
-    TXSTAbits.BRGH = 1;   // Alta velocidad
-    TXSTAbits.TXEN = 1;   // Activa la transmision
-    RCSTAbits.CREN = 1;   // Habilita la recepcion continua
-                       
-    SPBRG = 25;           // Carga 25 a SPBRG
-                       
-    /* Velocidad a 9600 baudios con 0.16% de error*/
-                       
-    PORTB = 0x00;         // Limpia el puerto B
-}
 
 void Delay_ms(int time)
 {
@@ -132,10 +103,40 @@ void enviar_datos()
             ECO = Rx_Dato();      // Recepcion del eco del dato                               
 }
 
+void set_configuraciones()
+{
+    // Configuracion del convertidor Analogico-Digital       
+    ADCON0 = 0x80;        // 32 x Tosc, 
+    ADCON1 = 0x8E;        // Los 6 bits mas significativos (ADRESH)son 0
+    // Puertos RA0 es configurada como analogica
+    
+    // Configuracion de las interrupciones        
+    ADIF = 0;             // Borra se£alizador del de interrupcion del ADC                   
+    
+    /*Configuracion del temporizador*/
+    OPTION_REG = 0x51;    // configura el prescaler a 4
+    TMR0 = 0;             // Limpia el TMR0
+    
+    /*Configuracion del Puerto Serie*/
+    TXSTA = 0x00;         // Limpia el registro TXSTA
+    RCSTA = 0x00;         // Limpia el registro RCSTA
+    RCSTAbits.SPEN = 1;   // Activa el modulo USART
+    TXSTAbits.SYNC = 0;   // Activa el modo UART
+    TXSTAbits.BRGH = 1;   // Alta velocidad
+    TXSTAbits.TXEN = 1;   // Activa la transmision
+    RCSTAbits.CREN = 1;   // Habilita la recepcion continua
+                       
+    SPBRG = 25;           // Carga 25 a SPBRG
+                       
+    /* Velocidad a 9600 baudios con 0.16% de error*/
+                       
+    PORTB = 0x00;         // Limpia el puerto B
+}
+
 int main()
 {
-    iniciar_puertos();
     set_configuraciones();
+    iniciar_puertos();
     bucle:                 
             Canal0(2);            // realiza la conversion y tiempo de espera 2ms
             enviar_datos();
@@ -147,7 +148,7 @@ int main()
                 PORTB = 0x01;
             if(ADRES > 255)     // 1.25 V
                 PORTB = 0x03;
-            if(ADRES > 352)     // 1.87 V
+            if(ADRES > 382)     // 1.87 V
                 PORTB = 0x07;
             if(ADRES > 511)     // 2.5 V
                 PORTB = 0x0F;
@@ -184,5 +185,5 @@ void iniciar_puertos()
     TRISC6 = 0;
     TRISC7 = 1;
     TRISB = 0x00; //Puertos B como salida
-    
+    //TRISC = 0x80;
 }

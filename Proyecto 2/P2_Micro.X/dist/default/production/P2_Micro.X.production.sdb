@@ -33,11 +33,15 @@
 [v _Tx_Dato Tx_Dato `(v  1 e 1 0 ]
 "75
 [v _Rx_Dato Rx_Dato `(uc  1 e 1 0 ]
-"123
+"84
+[v _evaluar_dato evaluar_dato `(v  1 e 1 0 ]
+"107
+[v _imprimir_valor_leds imprimir_valor_leds `(v  1 e 1 0 ]
+"145
 [v _main main `(i  1 e 2 0 ]
-"176
+"199
 [v _iniciar_puertos iniciar_puertos `(v  1 e 1 0 ]
-"203
+"226
 [v _inicio_presentacion inicio_presentacion `(v  1 e 1 0 ]
 "52 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
 [v _RS RS `b  1 e 0 0 ]
@@ -211,14 +215,14 @@
 [v _M M `[41]uc  1 e 41 0 ]
 "29
 [v _ADRES ADRES `i  1 e 2 0 ]
-"123
+"145
 [v _main main `(i  1 e 2 0 ]
 {
-"142
+"165
 [v main@c c `uc  1 a 1 20 ]
-"125
+"147
 [v main@i i `i  1 a 2 18 ]
-"174
+"197
 } 0
 "31
 [v _set_configuraciones set_configuraciones `(v  1 e 1 0 ]
@@ -237,23 +241,14 @@
 {
 "88
 } 0
-"203 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
+"226 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
 [v _inicio_presentacion inicio_presentacion `(v  1 e 1 0 ]
 {
-"208
+"231
 [v inicio_presentacion@i i `i  1 a 2 13 ]
-"215
+"238
 } 0
-"113 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
-[v _LCD_Print LCD_Print `(v  1 e 1 0 ]
-{
-"115
-[v LCD_Print@i i `uc  1 a 1 8 ]
-"113
-[v LCD_Print@LCD_Str LCD_Str `*.26uc  1 p 2 3 ]
-"122
-} 0
-"87
+"87 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
 [v _LCD_Goto LCD_Goto `(v  1 e 1 0 ]
 {
 [v LCD_Goto@col col `uc  1 a 1 wreg ]
@@ -262,10 +257,43 @@
 [v LCD_Goto@col col `uc  1 a 1 9 ]
 "104
 } 0
-"176 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
+"199 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
 [v _iniciar_puertos iniciar_puertos `(v  1 e 1 0 ]
 {
-"201
+"224
+} 0
+"107
+[v _imprimir_valor_leds imprimir_valor_leds `(v  1 e 1 0 ]
+{
+"118
+} 0
+"84
+[v _evaluar_dato evaluar_dato `(v  1 e 1 0 ]
+{
+"104
+} 0
+"113 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
+[v _LCD_Print LCD_Print `(v  1 e 1 0 ]
+{
+"115
+[v LCD_Print@i i `uc  1 a 1 6 ]
+"113
+[v LCD_Print@LCD_Str LCD_Str `*.26uc  1 p 2 3 ]
+"122
+} 0
+"62 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
+[v _Tx_Dato Tx_Dato `(v  1 e 1 0 ]
+{
+[v Tx_Dato@X X `uc  1 a 1 wreg ]
+[v Tx_Dato@X X `uc  1 a 1 wreg ]
+"64
+[v Tx_Dato@X X `uc  1 a 1 0 ]
+"71
+} 0
+"75
+[v _Rx_Dato Rx_Dato `(uc  1 e 1 0 ]
+{
+"82
 } 0
 "106 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
 [v _LCD_PutC LCD_PutC `(v  1 e 1 0 ]

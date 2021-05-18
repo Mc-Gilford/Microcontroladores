@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\P2B_Micro.X.production.sym \
   --cmf=dist/default/production\P2B_Micro.X.production.cmf -z -Q16F873 \
-  -oC:\Users\chuch\AppData\Local\Temp\xcAs8e4.4 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\chuch\AppData\Local\Temp\xcAs73s.4 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/P2B_Micro.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0A0h-0FDh -pstack=STACK \
   -ACODE=00h-07FFhx2 -ASTRCODE=00h-0FFFh -ASTRING=00h-0FFhx16 \
@@ -17,7 +17,7 @@ Linker command line:
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\chuch\AppData\Local\Temp\xcAs8e4.o \
+  C:\Users\chuch\AppData\Local\Temp\xcAs73s.o \
   dist/default/production\P2B_Micro.X.production.o 
 
 Object code version is 3.11
@@ -27,7 +27,7 @@ Machine type is 16F873
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\chuch\AppData\Local\Temp\xcAs8e4.o
+C:\Users\chuch\AppData\Local\Temp\xcAs73s.o
                 end_init                              0        0        2        0       0
                 config                             2007     2007        1        0       4
 dist/default/production\P2B_Micro.X.production.o

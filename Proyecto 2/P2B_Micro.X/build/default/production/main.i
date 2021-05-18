@@ -1704,35 +1704,6 @@ void iniciar_puertos();
 int ECO;
 int ADRES;
 
-void set_configuraciones()
-{
-
-    ADCON0 = 0x80;
-    ADCON1 = 0x8E;
-
-
-
-    ADIF = 0;
-
-
-    OPTION_REG = 0x51;
-    TMR0 = 0;
-
-
-    TXSTA = 0x00;
-    RCSTA = 0x00;
-    RCSTAbits.SPEN = 1;
-    TXSTAbits.SYNC = 0;
-    TXSTAbits.BRGH = 1;
-    TXSTAbits.TXEN = 1;
-    RCSTAbits.CREN = 1;
-
-    SPBRG = 25;
-
-
-
-    PORTB = 0x00;
-}
 
 void Delay_ms(int time)
 {
@@ -1818,10 +1789,40 @@ void enviar_datos()
             ECO = Rx_Dato();
 }
 
+void set_configuraciones()
+{
+
+    ADCON0 = 0x80;
+    ADCON1 = 0x8E;
+
+
+
+    ADIF = 0;
+
+
+    OPTION_REG = 0x51;
+    TMR0 = 0;
+
+
+    TXSTA = 0x00;
+    RCSTA = 0x00;
+    RCSTAbits.SPEN = 1;
+    TXSTAbits.SYNC = 0;
+    TXSTAbits.BRGH = 1;
+    TXSTAbits.TXEN = 1;
+    RCSTAbits.CREN = 1;
+
+    SPBRG = 25;
+
+
+
+    PORTB = 0x00;
+}
+
 int main()
 {
-    iniciar_puertos();
     set_configuraciones();
+    iniciar_puertos();
     bucle:
             Canal0(2);
             enviar_datos();
@@ -1833,7 +1834,7 @@ int main()
                 PORTB = 0x01;
             if(ADRES > 255)
                 PORTB = 0x03;
-            if(ADRES > 352)
+            if(ADRES > 382)
                 PORTB = 0x07;
             if(ADRES > 511)
                 PORTB = 0x0F;
@@ -1852,7 +1853,7 @@ int main()
 
 void iniciar_puertos()
 {
-# 177 "main.c"
+# 178 "main.c"
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;

@@ -2106,6 +2106,29 @@ unsigned char Rx_Dato(void)
     return RCREG;
 }
 
+void evaluar_dato()
+{
+            if(ADRES < 127)
+                LCD_Print("0V");
+            if(ADRES > 127)
+                LCD_Print("625mv");
+            if(ADRES > 255)
+                LCD_Print("1.25V");
+            if(ADRES > 352)
+                LCD_Print("1.97V");
+            if(ADRES > 511)
+                LCD_Print("2.5V");
+            if(ADRES > 639)
+                LCD_Print("3.12V");
+            if(ADRES > 767)
+                LCD_Print("3.75V");
+            if(ADRES > 894)
+                LCD_Print("4.37V");
+            if(ADRES > 1022)
+                LCD_Print("5V");
+}
+
+
 void imprimir_valor_leds()
 {
 
@@ -2116,8 +2139,7 @@ void imprimir_valor_leds()
 
     ADRES = (ADRESH << 8) | ADRESL;
     LCD_Print("Rec ");
-    LCD_Print(ADRES);
-    LCD_Print(" |");
+    evaluar_dato();
 }
 
 void Canal0(int z)
@@ -2158,6 +2180,7 @@ int main()
     _delay((unsigned long)((500)*(32000000/4000.0)));
     LCD_Goto(1, 1);
     _delay((unsigned long)((500)*(32000000/4000.0)));
+    imprimir_valor_leds();
     while(1){
 
 
