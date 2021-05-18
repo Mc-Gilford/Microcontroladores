@@ -3,9 +3,9 @@
 [d edition pro ]
 [d chip 16F873 ]
 [d frameptr 0 ]
-"59 C:\Users\chuch\MPLABXProjects\P2_Micro.X/kbd.h
+"35 C:\Users\chuch\MPLABXProjects\P2_Micro.X/kbd.h
 [v _keypad_readkey keypad_readkey `(uc  1 e 1 0 ]
-"114
+"90
 [v _keypad_getkey keypad_getkey `(uc  1 e 1 0 ]
 "61 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
 [v _LCD_Write_Nibble LCD_Write_Nibble `(v  1 e 1 0 ]
@@ -27,15 +27,23 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"45 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
+"31 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
+[v _set_configuraciones set_configuraciones `(v  1 e 1 0 ]
+"62
+[v _Tx_Dato Tx_Dato `(v  1 e 1 0 ]
+"75
+[v _Rx_Dato Rx_Dato `(uc  1 e 1 0 ]
+"123
 [v _main main `(i  1 e 2 0 ]
-"93
+"176
 [v _iniciar_puertos iniciar_puertos `(v  1 e 1 0 ]
-"109
+"203
 [v _inicio_presentacion inicio_presentacion `(v  1 e 1 0 ]
 "52 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
 [v _RS RS `b  1 e 0 0 ]
-"166 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873.h
+"59 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"166
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 [s S22 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
@@ -63,7 +71,7 @@
 [v _PORTBbits PORTBbits `VES48  1 e 1 @6 ]
 "278
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S112 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S201 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -72,12 +80,42 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "454
-[u S120 . 1 `S112 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES120  1 e 1 @12 ]
+[u S209 . 1 `S201 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES209  1 e 1 @12 ]
+"859
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+[s S119 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"889
+[s S128 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S132 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S135 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[u S138 . 1 `S119 1 . 1 0 `S128 1 . 1 0 `S132 1 . 1 0 `S135 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES138  1 e 1 @24 ]
 "954
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "961
 [v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1047
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1054
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+"1150
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
 [s S66 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
@@ -100,9 +138,21 @@
 "1287
 [u S92 . 1 `S83 1 . 1 0 ]
 [v _TRISBbits TRISBbits `VES92  1 e 1 @134 ]
-"1332
-[v _TRISC TRISC `VEuc  1 e 1 @135 ]
-[s S132 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S240 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1349
+[u S249 . 1 `S240 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES249  1 e 1 @135 ]
+"1762
+[v _TXSTA TXSTA `VEuc  1 e 1 @152 ]
+[s S163 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -112,17 +162,33 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "1788
-[s S141 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S172 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S145 . 1 `uc 1 . 1 0 :6:0 
+[s S176 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S148 . 1 `S132 1 . 1 0 `S141 1 . 1 0 `S145 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES148  1 e 1 @152 ]
+[u S179 . 1 `S163 1 . 1 0 `S172 1 . 1 0 `S176 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES179  1 e 1 @152 ]
+"1843
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"1850
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "1857
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2020
+[v _ADIF ADIF `VEb  1 e 0 @102 ]
+"2023
+[v _ADON ADON `VEb  1 e 0 @248 ]
+"2089
+[v _CHS0 CHS0 `VEb  1 e 0 @251 ]
+"2092
+[v _CHS1 CHS1 `VEb  1 e 0 @252 ]
+"2095
+[v _CHS2 CHS2 `VEb  1 e 0 @253 ]
+"2140
+[v _GO GO `VEb  1 e 0 @250 ]
 "2215
 [v _RA3 RA3 `VEb  1 e 0 @43 ]
 "2218
@@ -139,43 +205,50 @@
 [v _RC3 RC3 `VEb  1 e 0 @59 ]
 "2266
 [v _RC4 RC4 `VEb  1 e 0 @60 ]
-"15 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
+"24 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
 [v _number number `[4]uc  1 e 4 0 ]
-"18
+"27
 [v _M M `[41]uc  1 e 41 0 ]
-"45
+"29
+[v _ADRES ADRES `i  1 e 2 0 ]
+"123
 [v _main main `(i  1 e 2 0 ]
 {
-"65
+"142
 [v main@c c `uc  1 a 1 20 ]
-"47
+"125
 [v main@i i `i  1 a 2 18 ]
-"91
+"174
 } 0
-"114 C:\Users\chuch\MPLABXProjects\P2_Micro.X/kbd.h
+"31
+[v _set_configuraciones set_configuraciones `(v  1 e 1 0 ]
+{
+"61
+} 0
+"90 C:\Users\chuch\MPLABXProjects\P2_Micro.X/kbd.h
 [v _keypad_getkey keypad_getkey `(uc  1 e 1 0 ]
 {
-"116
+"92
 [v keypad_getkey@key key `uc  1 a 1 2 ]
-"126
+"102
 } 0
-"59
+"35
 [v _keypad_readkey keypad_readkey `(uc  1 e 1 0 ]
 {
-"112
+"88
 } 0
-"109 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
+"203 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
 [v _inicio_presentacion inicio_presentacion `(v  1 e 1 0 ]
 {
-"114
+"208
 [v inicio_presentacion@i i `i  1 a 2 13 ]
-"121
+"215
 } 0
 "113 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
 [v _LCD_Print LCD_Print `(v  1 e 1 0 ]
 {
 "115
-[v LCD_Print@i i `uc  1 a 1 6 ]
+[v LCD_Print@i i `uc  1 a 1 8 ]
 "113
 [v LCD_Print@LCD_Str LCD_Str `*.26uc  1 p 2 3 ]
 "122
@@ -189,10 +262,10 @@
 [v LCD_Goto@col col `uc  1 a 1 9 ]
 "104
 } 0
-"93 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
+"176 C:\Users\chuch\MPLABXProjects\P2_Micro.X\main.c
 [v _iniciar_puertos iniciar_puertos `(v  1 e 1 0 ]
 {
-"107
+"201
 } 0
 "106 C:\Users\chuch\MPLABXProjects\P2_Micro.X/lcd.h
 [v _LCD_PutC LCD_PutC `(v  1 e 1 0 ]

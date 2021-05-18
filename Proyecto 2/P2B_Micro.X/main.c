@@ -18,15 +18,34 @@ void iniciar_puertos();
 int ECO;
 int ADRES;
 
-void imprimir_valor_lcd() //Imprime el resulatado en los leds
+void set_configuraciones()
 {
-    /*En caso de mal funcionamiento eliminar este codigo hasta el comentario de fin*/
-    ADRESL = Rx_Dato();      // Recepcion del eco del dato
-    Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
-    ADRESH = Rx_Dato();      // Recepcion del eco del dato 
-    Tx_Dato(ADRESH);      // Transmite el dato de ADRESH                             
-    /*Fin de codigo*/
-    ADRES = (ADRESH << 8) | ADRESL;    // Almcena la conversion en la variable Peso1
+    // Configuracion del convertidor Analogico-Digital       
+    ADCON0 = 0x80;        // 32 x Tosc, 
+    ADCON1 = 0x8E;        // Los 6 bits mas significativos (ADRESH)son 0
+    // Puertos RA0 es configurada como analogica
+    
+    // Configuracion de las interrupciones        
+    ADIF = 0;             // Borra se£alizador del de interrupcion del ADC                   
+    
+    /*Configuracion del temporizador*/
+    OPTION_REG = 0x51;    // configura el prescaler a 4
+    TMR0 = 0;             // Limpia el TMR0
+    
+    /*Configuracion del Puerto Serie*/
+    TXSTA = 0x00;         // Limpia el registro TXSTA
+    RCSTA = 0x00;         // Limpia el registro RCSTA
+    RCSTAbits.SPEN = 1;   // Activa el modulo USART
+    TXSTAbits.SYNC = 0;   // Activa el modo UART
+    TXSTAbits.BRGH = 1;   // Alta velocidad
+    TXSTAbits.TXEN = 1;   // Activa la transmision
+    RCSTAbits.CREN = 1;   // Habilita la recepcion continua
+                       
+    SPBRG = 25;           // Carga 25 a SPBRG
+                       
+    /* Velocidad a 9600 baudios con 0.16% de error*/
+                       
+    PORTB = 0x00;         // Limpia el puerto B
 }
 
 void Delay_ms(int time)
@@ -66,7 +85,7 @@ void Canal0(int z)
     
     ADON = 0;                          // Desactiva el convertidor
     
-    ADRES = (ADRESH << 8) | ADRESL;    // Almcena la conversion en la variable Peso1 
+    //ADRES = (ADRESH << 8) | ADRESL;    // Almcena la conversion en la variable Peso1 
     
     ADIF = 0;                          // Borrado de bandera de conversion finalizada     
                                                               
@@ -94,46 +113,33 @@ unsigned char Rx_Dato(void)
     return RCREG;
 } 
 
+void imprimir_valor_lcd() //Imprime el resulatado en los leds
+{
+    /*En caso de mal funcionamiento eliminar este codigo hasta el comentario de fin*/
+    ADRESL = Rx_Dato();      // Recepcion del eco del dato
+    Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
+    ADRESH = Rx_Dato();      // Recepcion del eco del dato 
+    Tx_Dato(ADRESH);      // Transmite el dato de ADRESH                             
+    /*Fin de codigo*/
+    ADRES = (ADRESH << 8) | ADRESL;    // Almcena la conversion en la variable Peso1
+}
 
+void enviar_datos()
+{
+            Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
+            ECO = Rx_Dato();      // Recepcion del eco del dato
+            Tx_Dato(ADRESH);      // Transmite el dato de ADRESH
+            ECO = Rx_Dato();      // Recepcion del eco del dato                               
+}
 
 int main()
 {
     iniciar_puertos();
-    // Configuracion del convertidor Analogico-Digital       
-    ADCON0 = 0x80;        // 32 x Tosc, 
-    ADCON1 = 0x8E;        // Los 6 bits mas significativos (ADRESH)son 0
-    // Puertos RA0 es configurada como analogica
-    
-    // Configuracion de las interrupciones        
-    ADIF = 0;             // Borra se£alizador del de interrupcion del ADC                   
-    
-    /*Configuracion del temporizador*/
-    OPTION_REG = 0x51;    // configura el prescaler a 4
-    TMR0 = 0;             // Limpia el TMR0
-    
-    /*Configuracion del Puerto Serie*/
-    TXSTA = 0x00;         // Limpia el registro TXSTA
-    RCSTA = 0x00;         // Limpia el registro RCSTA
-    RCSTAbits.SPEN = 1;   // Activa el modulo USART
-    TXSTAbits.SYNC = 0;   // Activa el modo UART
-    TXSTAbits.BRGH = 1;   // Alta velocidad
-    TXSTAbits.TXEN = 1;   // Activa la transmision
-    RCSTAbits.CREN = 1;   // Habilita la recepcion continua
-                       
-    SPBRG = 25;           // Carga 25 a SPBRG
-                       
-    /* Velocidad a 9600 baudios con 0.16% de error*/
-                       
-    PORTB = 0x00;         // Limpia el puerto B
+    set_configuraciones();
     bucle:                 
             Canal0(2);            // realiza la conversion y tiempo de espera 2ms
-            
-            Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
-            ECO = Rx_Dato();      // Recepcion del eco del dato
-            Tx_Dato(ADRESH);      // Transmite el dato de ADRESH
-            ECO = Rx_Dato();      // Recepcion del eco del dato                              
-            
-            imprimir_valor_lcd();
+            enviar_datos();
+            //imprimir_valor_lcd();
             
             if(ADRES < 127)     // 0V
                 PORTB = 0x00;

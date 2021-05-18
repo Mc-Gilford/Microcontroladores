@@ -1,7 +1,7 @@
 /*En dado caso de que el codigo no funcione comentar este codigo hasta el siguiente comentario de fin*/
 #pragma config FOSC = XT // OSCILADOR
-#pragma config WDTE = ON // Perro Guardian
-#pragma config PWRTE = ON // Power Up Tiempo habilitado
+#pragma config WDTE = OFF // Perro Guardian
+#pragma config PWRTE = OFF // Power Up Tiempo habilitado
 #pragma config BOREN = OFF // Brown out reset
 #pragma config LVP = OFF // Low volatge 
 #pragma config CPD = OFF // Dta EEPROM Memory
@@ -28,80 +28,8 @@ char M[] = {"El ADC y el UART Jose Rdgz y Karla Reyes"};
 int ECO;
 int ADRES;
 
-void imprimir_valor_leds()
+void set_configuraciones()
 {
-     /*En caso de mal funcionamiento eliminar este codigo hasta el comentario de fin*/
-    ADRESL = Rx_Dato();      // Recepcion del eco del dato
-    Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
-    ADRESH = Rx_Dato();      // Recepcion del eco del dato 
-    Tx_Dato(ADRESH);      // Transmite el dato de ADRESH                             
-    /*Fin de codigo*/
-    ADRES = (ADRESH << 8) | ADRESL;    // Almcena la conversion en la variable Peso1
-    LCD_Print("Rec ");
-    LCD_Print(ADRES);
-    LCD_Print(" |");
-}
-
-void Tx_Dato(unsigned char X)
-{
-    PIR1bits.TXIF = 0;      //  Restaura la bandera del transmisor
-    TXREG = X;          //  Pasa el dato de la conversion 
-    
-    /* Inicia la transmision*/                    
-Transmitiendo:     
-                if(TXSTAbits.TRMT == 0)  //  Byte a sido transmitido?  
-                goto Transmitiendo;   //  No, Esperar a que termine la transmision
-}
-            
-                
-/* Funcion de recepcion*/            
-unsigned char Rx_Dato(void)
-{
-    wait:   
-        if(PIR1bits.RCIF == 0)      // Se recibio un dato?
-        goto wait;                 // No, Esperar a recibir                                               
-    PIR1bits.RCIF = 0;          // Se repone la bandera RCIF a 0
-    return RCREG;
-} 
-
-void Canal0(int z)    
-{
-                
-    CHS2 = 0;                          // Seleccion del canal analogo 0
-    CHS1 = 0;
-    CHS0 = 0;
-    
-    ADON = 1;                          // Activa el modulo del covertidor analogico digital
-     
-    __delay_ms(1);//Delay_ms(z);                       // Tiempo de espera para adquisicion 5ms
-                     
-     GO = 1;                            // Inicia la conversion 
-     
-    
-    ADCA:  if (ADIF == 0)              // Espera hasta que termine la conversion
-    goto ADCA;                
-    
-    ADON = 0;                          // Desactiva el convertidor
-    
-    ADRES = (ADRESH << 8) | ADRESL;    // Almcena la conversion en la variable Peso1 
-    
-    ADIF = 0;                          // Borrado de bandera de conversion finalizada     
-                                                              
-}
-
-int main()
-{
-    int i=0; //Para concatenar dentro del array 
-    iniciar_puertos();
-    
-    /*Iniciar LCD*/
-    LCD_Begin();
-    inicio_presentacion();
-    __delay_ms(500);
-    LCD_Goto(1, 1);    
-    __delay_ms(500);
-    
-    
     /*En dado caso de que el programa no ejecute bien comentar el siguiente codigo hasta el comentario de fin*/
         // Configuracion del convertidor Analogico-Digital       
     ADCON0 = 0x80;        // 32 x Tosc, 
@@ -130,9 +58,84 @@ int main()
     
     /*Hasta aqui termina el codigo, que podria causar ruido*/
     
+}
+void Tx_Dato(unsigned char X)
+{
+    PIR1bits.TXIF = 0;      //  Restaura la bandera del transmisor
+    TXREG = X;          //  Pasa el dato de la conversion 
+    
+    /* Inicia la transmision*/                    
+Transmitiendo:     
+                if(TXSTAbits.TRMT == 0)  //  Byte a sido transmitido?  
+                goto Transmitiendo;   //  No, Esperar a que termine la transmision
+}
+            
+                
+/* Funcion de recepcion*/            
+unsigned char Rx_Dato(void)
+{
+    wait:   
+        if(PIR1bits.RCIF == 0)      // Se recibio un dato?
+        goto wait;                 // No, Esperar a recibir                                               
+    PIR1bits.RCIF = 0;          // Se repone la bandera RCIF a 0
+    return RCREG;
+} 
+
+void imprimir_valor_leds()
+{
+     /*En caso de mal funcionamiento eliminar este codigo hasta el comentario de fin*/
+    ADRESL = Rx_Dato();      // Recepcion del eco del dato
+    Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
+    ADRESH = Rx_Dato();      // Recepcion del eco del dato 
+    Tx_Dato(ADRESH);      // Transmite el dato de ADRESH                             
+    /*Fin de codigo*/
+    ADRES = (ADRESH << 8) | ADRESL;    // Almcena la conversion en la variable Peso1
+    LCD_Print("Rec ");
+    LCD_Print(ADRES);
+    LCD_Print(" |");
+}
+
+void Canal0(int z)    
+{
+                
+    CHS2 = 0;                          // Seleccion del canal analogo 0
+    CHS1 = 0;
+    CHS0 = 0;
+    
+    ADON = 1;                          // Activa el modulo del covertidor analogico digital
+     
+    __delay_ms(1);//Delay_ms(z);                       // Tiempo de espera para adquisicion 5ms
+                     
+     GO = 1;                            // Inicia la conversion 
+     
+    
+    ADCA:  if (ADIF == 0)              // Espera hasta que termine la conversion
+    goto ADCA;                
+    
+    ADON = 0;                          // Desactiva el convertidor
+    
+    //ADRES = (ADRESH << 8) | ADRESL;    // Almcena la conversion en la variable Peso1 
+    
+    ADIF = 0;                          // Borrado de bandera de conversion finalizada     
+                                                              
+}
+
+int main()
+{
+    int i=0; //Para concatenar dentro del array 
+    set_configuraciones();
+    
+    iniciar_puertos();
+    
+    /*Iniciar LCD*/
+    LCD_Begin();
+    inicio_presentacion();
+    __delay_ms(500);
+    LCD_Goto(1, 1);    
+    __delay_ms(500);
     while(1){
 
-    imprimir_valor_leds();
+    //imprimir_valor_leds();
     
     if(i<4)
     {       
@@ -159,11 +162,12 @@ int main()
          i=0;
          LCD_PutC(' ');
          LCD_Print("Env");
+         /*
          Canal0(2);            // realiza la conversion y tiempo de espera 2ms
          Tx_Dato(ADRESL);      // Transmite el dato de ADRESL
          ECO = Rx_Dato();      // Recepcion del eco del dato
          Tx_Dato(ADRESH);      // Transmite el dato de ADRESH
-         ECO = Rx_Dato();      // Recepcion del eco del dato    
+         ECO = Rx_Dato();      // Recepcion del eco del dato    */
     }
     __delay_ms(500);
     }
@@ -174,10 +178,21 @@ void iniciar_puertos()
     
     /*Seteo de entradas PUERTO C*/
     PORTC=0X00;
-    TRISC=0XF0;
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;
+    
+    TRISCbits.TRISC0 = 0; //puerto A como Output
+    TRISCbits.TRISC1 = 0;
+    TRISCbits.TRISC2 = 0;
+    TRISCbits.TRISC3 = 0;
+    TRISCbits.TRISC4 = 1;
+    TRISCbits.TRISC6 = 0;
+    TRISCbits.TRISC7 = 1;
+    
+    TRISAbits.TRISA0 = 0; //puerto A como Output
+    TRISAbits.TRISA1 = 0;
+    TRISAbits.TRISA2 = 0;
     /*Activamos el PULL UP para leer cada entrada del teclado*/
    // OPTION_REG &= 0x7F;
     

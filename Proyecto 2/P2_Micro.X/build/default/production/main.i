@@ -8,6 +8,16 @@
 # 2 "<built-in>" 2
 # 1 "main.c" 2
 
+#pragma config FOSC = XT
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config BOREN = OFF
+#pragma config LVP = OFF
+#pragma config CPD = OFF
+#pragma config WRT = OFF
+#pragma config CP = OFF
+
+
 
 
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
@@ -1461,7 +1471,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 4 "main.c" 2
+# 13 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -1560,7 +1570,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 5 "main.c" 2
+# 14 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -1645,7 +1655,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 6 "main.c" 2
+# 15 "main.c" 2
 
 
 # 1 "./lcd.h" 1
@@ -1904,38 +1914,13 @@ void LCD_Begin()
   LCD_Cmd(0x0F);
   _delay((unsigned long)((50)*(32000000/4000.0)));
 }
-# 8 "main.c" 2
+# 17 "main.c" 2
 
 # 1 "./kbd.h" 1
 void disp_num(float num);
 int get_num (char ch);
 char scan_key(void);
-# 16 "./kbd.h"
-char scan_key()
-{
-RC3=0;RC2=1;RC1=1;RC0=1;
-if(RA3==0 && RC3==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA3==0);return '7';}
-if(RA4==0 && RC3==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA4==0);return '8';}
-if(RA5==0 && RC3==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA5==0);return '9';}
-if(RC4==0 && RC3==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '/';}
-RC3=1;RC2=0;RC1=1;RC0=1;
-if(RA3==0 && RC2==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA3==0);return '4';}
-if(RA4==0 && RC2==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA4==0);return '5';}
-if(RA5==0 && RC2==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA5==0);return '6';}
-if(RC4==0 && RC2==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '*';}
-RC3=1;RC2=1;RC1=0;RC0=1;
-if(RA3==0 && RC1==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA3==0);return '1';}
-if(RA4==0 && RC1==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA4==0);return '2';}
-if(RA5==0 && RC1==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA5==0);return '3';}
-if(RC4==0 && RC1==0){ LCD_Cmd(0x10);_delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '!';}
-RC3=1;RC2=1;RC1=1;RC0=0;
-if(RA3==0 && RC0==0){ LCD_Cmd(0x01);_delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '!';}
-if(RA4==0 && RC0==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RA4==0);return '0';}
-if(RA5==0 && RC0==0){ _delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '\0';}
-if(RC4==0 && RC0==0){ LCD_Cmd(0x14);_delay((unsigned long)((100)*(32000000/4000.0)));while(RC4==0);return '!';}
-return 'n';
-}
-
+# 17 "./kbd.h"
 int get_num(char ch)
 {
 switch(ch)
@@ -2022,7 +2007,7 @@ unsigned char keypad_getkey(void)
 
  return key;
 }
-# 9 "main.c" 2
+# 18 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
 # 14 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
@@ -2055,7 +2040,7 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 10 "main.c" 2
+# 19 "main.c" 2
 
 void iniciar_puertos();
 void inicio_presentacion();
@@ -2068,7 +2053,37 @@ char M[] = {"El ADC y el UART Jose Rdgz y Karla Reyes"};
 int ECO;
 int ADRES;
 
+void set_configuraciones()
+{
 
+
+    ADCON0 = 0x80;
+    ADCON1 = 0x8E;
+
+
+
+    ADIF = 0;
+
+
+    OPTION_REG = 0x51;
+    TMR0 = 0;
+
+
+    TXSTA = 0x00;
+    RCSTA = 0x00;
+    RCSTAbits.SPEN = 1;
+    TXSTAbits.SYNC = 0;
+    TXSTAbits.BRGH = 1;
+    TXSTAbits.TXEN = 1;
+    RCSTAbits.CREN = 1;
+
+    SPBRG = 25;
+
+
+
+
+
+}
 void Tx_Dato(unsigned char X)
 {
     PIR1bits.TXIF = 0;
@@ -2091,9 +2106,50 @@ unsigned char Rx_Dato(void)
     return RCREG;
 }
 
+void imprimir_valor_leds()
+{
+
+    ADRESL = Rx_Dato();
+    Tx_Dato(ADRESL);
+    ADRESH = Rx_Dato();
+    Tx_Dato(ADRESH);
+
+    ADRES = (ADRESH << 8) | ADRESL;
+    LCD_Print("Rec ");
+    LCD_Print(ADRES);
+    LCD_Print(" |");
+}
+
+void Canal0(int z)
+{
+
+    CHS2 = 0;
+    CHS1 = 0;
+    CHS0 = 0;
+
+    ADON = 1;
+
+    _delay((unsigned long)((1)*(32000000/4000.0)));
+
+     GO = 1;
+
+
+    ADCA: if (ADIF == 0)
+    goto ADCA;
+
+    ADON = 0;
+
+
+
+    ADIF = 0;
+
+}
+
 int main()
 {
     int i=0;
+    set_configuraciones();
+
     iniciar_puertos();
 
 
@@ -2102,10 +2158,7 @@ int main()
     _delay((unsigned long)((500)*(32000000/4000.0)));
     LCD_Goto(1, 1);
     _delay((unsigned long)((500)*(32000000/4000.0)));
-
-
     while(1){
-
 
 
 
@@ -2133,7 +2186,13 @@ int main()
     {
          i=0;
          LCD_PutC(' ');
-         LCD_Print("Enviado");
+         LCD_Print("Env");
+
+
+
+
+
+
     }
     _delay((unsigned long)((500)*(32000000/4000.0)));
     }
@@ -2144,10 +2203,21 @@ void iniciar_puertos()
 
 
     PORTC=0X00;
-    TRISC=0XF0;
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;
+
+    TRISCbits.TRISC0 = 0;
+    TRISCbits.TRISC1 = 0;
+    TRISCbits.TRISC2 = 0;
+    TRISCbits.TRISC3 = 0;
+    TRISCbits.TRISC4 = 1;
+    TRISCbits.TRISC6 = 0;
+    TRISCbits.TRISC7 = 1;
+
+    TRISAbits.TRISA0 = 0;
+    TRISAbits.TRISA1 = 0;
+    TRISAbits.TRISA2 = 0;
 
 
 

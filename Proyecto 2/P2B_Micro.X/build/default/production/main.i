@@ -1704,6 +1704,35 @@ void iniciar_puertos();
 int ECO;
 int ADRES;
 
+void set_configuraciones()
+{
+
+    ADCON0 = 0x80;
+    ADCON1 = 0x8E;
+
+
+
+    ADIF = 0;
+
+
+    OPTION_REG = 0x51;
+    TMR0 = 0;
+
+
+    TXSTA = 0x00;
+    RCSTA = 0x00;
+    RCSTAbits.SPEN = 1;
+    TXSTAbits.SYNC = 0;
+    TXSTAbits.BRGH = 1;
+    TXSTAbits.TXEN = 1;
+    RCSTAbits.CREN = 1;
+
+    SPBRG = 25;
+
+
+
+    PORTB = 0x00;
+}
 
 void Delay_ms(int time)
 {
@@ -1742,7 +1771,7 @@ void Canal0(int z)
 
     ADON = 0;
 
-    ADRES = (ADRESH << 8) | ADRESL;
+
 
     ADIF = 0;
 
@@ -1770,39 +1799,33 @@ unsigned char Rx_Dato(void)
     return RCREG;
 }
 
+void imprimir_valor_lcd()
+{
 
+    ADRESL = Rx_Dato();
+    Tx_Dato(ADRESL);
+    ADRESH = Rx_Dato();
+    Tx_Dato(ADRESH);
+
+    ADRES = (ADRESH << 8) | ADRESL;
+}
+
+void enviar_datos()
+{
+            Tx_Dato(ADRESL);
+            ECO = Rx_Dato();
+            Tx_Dato(ADRESH);
+            ECO = Rx_Dato();
+}
 
 int main()
 {
     iniciar_puertos();
-
-    ADCON0 = 0x80;
-    ADCON1 = 0x8E;
-
-
-
-    ADIF = 0;
-
-
-    OPTION_REG = 0x51;
-    TMR0 = 0;
-
-
-    TXSTA = 0x00;
-    RCSTA = 0x00;
-    RCSTAbits.SPEN = 1;
-    TXSTAbits.SYNC = 0;
-    TXSTAbits.BRGH = 1;
-    TXSTAbits.TXEN = 1;
-    RCSTAbits.CREN = 1;
-
-    SPBRG = 25;
-
-
-
-    PORTB = 0x00;
+    set_configuraciones();
     bucle:
             Canal0(2);
+            enviar_datos();
+
 
             if(ADRES < 127)
                 PORTB = 0x00;
@@ -1823,18 +1846,13 @@ int main()
             if(ADRES > 1022)
                 PORTB = 0xFF;
 
-
-
-
-
-
             goto bucle;
 
 }
 
 void iniciar_puertos()
 {
-# 159 "main.c"
+# 177 "main.c"
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;
