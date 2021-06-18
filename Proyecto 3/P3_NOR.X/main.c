@@ -45,6 +45,7 @@ void set_configuraciones()
     TMR0 = 0;             // Limpia el TMR0
     
     /*Configuracion del Puerto Serie*/
+    /*
     TXSTA = 0x00;         // Limpia el registro TXSTA
     RCSTA = 0x00;         // Limpia el registro RCSTA
     RCSTAbits.SPEN = 1;   // Activa el modulo USART
@@ -52,7 +53,7 @@ void set_configuraciones()
     TXSTAbits.BRGH = 1;   // Alta velocidad
     TXSTAbits.TXEN = 1;   // Activa la transmision
     RCSTAbits.CREN = 1;   // Habilita la recepcion continua
-                       
+    */
     SPBRG = 25;           // Carga 25 a SPBRG
                        
     /* Velocidad a 9600 baudios con 0.16% de error*/

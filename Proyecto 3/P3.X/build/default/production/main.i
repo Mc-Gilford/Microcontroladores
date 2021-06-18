@@ -2169,16 +2169,7 @@ void set_configuraciones()
 
     OPTION_REG = 0x51;
     TMR0 = 0;
-
-
-    TXSTA = 0x00;
-    RCSTA = 0x00;
-    RCSTAbits.SPEN = 1;
-    TXSTAbits.SYNC = 0;
-    TXSTAbits.BRGH = 1;
-    TXSTAbits.TXEN = 1;
-    RCSTAbits.CREN = 1;
-
+# 57 "main.c"
     SPBRG = 25;
 
 

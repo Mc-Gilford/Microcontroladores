@@ -32,6 +32,8 @@ resultado que estos le envien.
 Error en el puerto C, se piensa en un posible problema conforme alguna configuracion con estos, dado que no envia bien
 los datos atraves de los puertos.
 
+Nota: Estaba activado el UART
+
 ## Carpetas por PIC
 1. P3 es -> PIC16F873A
 2. P3_NOR -> PIC16F873

@@ -11,13 +11,13 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
+$C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
 end_init CODE 0 0 0 2 2
 config CONFIG 4 2007 2007 1 2
 $dist/default/production\P3_NOR.X.production.o
 cinit CODE 0 7E8 7E8 18 2
-text1 CODE 0 2B6 2B6 26 2
-text2 CODE 0 295 295 21 2
+text1 CODE 0 289 289 17 2
+text2 CODE 0 2BB 2BB 21 2
 text3 CODE 0 637 637 D8 2
 text4 CODE 0 480 480 67 2
 text5 CODE 0 3B0 3B0 30 2
@@ -26,16 +26,16 @@ text7 CODE 0 304 304 29 2
 text8 CODE 0 70F 70F D9 2
 text9 CODE 0 3E0 3E0 3F 2
 text10 CODE 0 32D 32D 2A 2
-text11 CODE 0 244 244 E 2
-text12 CODE 0 23A 23A A 2
-text13 CODE 0 27A 27A 1B 2
-text14 CODE 0 263 263 17 2
+text11 CODE 0 253 253 E 2
+text12 CODE 0 249 249 A 2
+text13 CODE 0 2A0 2A0 1B 2
+text14 CODE 0 272 272 17 2
 text15 CODE 0 57A 57A BD 2
 text16 CODE 0 382 382 2E 2
 text17 CODE 0 41F 41F 61 2
 maintext CODE 0 4E7 4E7 93 2
 cstackBANK0 BANK0 1 4B 4B 15 1
-inittext CODE 0 252 252 11 2
+inittext CODE 0 261 261 11 2
 bitbssBANK0 BANK0 1 340 68 1 1
 bssBANK0 BANK0 1 60 60 8 1
 idataBANK0 CODE 0 357 357 2B 2
@@ -52,22 +52,22 @@ RAM 69-7D 1
 RAM A0-FD 1
 BANK0 69-7D 1
 BANK1 A0-FD 1
-CONST 47-239 2
+CONST 47-248 2
 CONST 800-FFF 2
-ENTRY 47-239 2
+ENTRY 47-248 2
 ENTRY 800-FFF 2
 IDLOC 2000-2003 2
 STACK A0-FD 1
-CODE 47-239 2
+CODE 47-248 2
 CODE 800-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-17D 1
 SFR3 180-1FD 1
 EEDATA 2100-217F 2
-STRCODE 47-239 2
+STRCODE 47-248 2
 STRCODE 800-FFF 2
-STRING 47-239 2
+STRING 47-248 2
 STRING 800-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -83,30 +83,30 @@ STRING 800-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\P3_NOR.X.production.o
-7E8 cinit CODE >608:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7E8 cinit CODE >611:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7E8 cinit CODE >676:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7E9 cinit CODE >677:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7EA cinit CODE >678:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7EB cinit CODE >679:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7EC cinit CODE >680:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7ED cinit CODE >681:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7EE cinit CODE >682:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7EF cinit CODE >683:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7F0 cinit CODE >684:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7F1 cinit CODE >685:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7F4 cinit CODE >689:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7F5 cinit CODE >690:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7F6 cinit CODE >691:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7F7 cinit CODE >692:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7F8 cinit CODE >693:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7F9 cinit CODE >694:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7FA cinit CODE >695:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7FB cinit CODE >696:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7FC cinit CODE >699:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7FD cinit CODE >705:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7FD cinit CODE >707:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-7FE cinit CODE >708:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
+7E8 cinit CODE >602:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7E8 cinit CODE >605:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7E8 cinit CODE >670:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7E9 cinit CODE >671:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7EA cinit CODE >672:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7EB cinit CODE >673:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7EC cinit CODE >674:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7ED cinit CODE >675:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7EE cinit CODE >676:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7EF cinit CODE >677:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7F0 cinit CODE >678:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7F1 cinit CODE >679:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7F4 cinit CODE >683:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7F5 cinit CODE >684:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7F6 cinit CODE >685:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7F7 cinit CODE >686:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7F8 cinit CODE >687:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7F9 cinit CODE >688:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7FA cinit CODE >689:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7FB cinit CODE >690:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7FC cinit CODE >693:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7FD cinit CODE >699:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7FD cinit CODE >701:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+7FE cinit CODE >702:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
 41F text17 CODE >61:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 422 text17 CODE >63:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 42C text17 CODE >64:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
@@ -170,44 +170,44 @@ $dist/default/production\P3_NOR.X.production.o
 623 text15 CODE >166:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 627 text15 CODE >167:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 636 text15 CODE >168:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
-263 text14 CODE >106:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
-266 text14 CODE >108:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
-267 text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
-26A text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
-26D text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
-273 text14 CODE >110:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
-279 text14 CODE >111:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
-27A text13 CODE >121:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-27A text13 CODE >124:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-27D text13 CODE >125:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-27E text13 CODE >126:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-27F text13 CODE >128:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-280 text13 CODE >130:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-28A text13 CODE >132:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-28D text13 CODE >135:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-292 text13 CODE >136:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-292 text13 CODE >138:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-293 text13 CODE >142:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-294 text13 CODE >144:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-23A text12 CODE >76:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-23A text12 CODE >78:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-23A text12 CODE >79:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-241 text12 CODE >80:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-241 text12 CODE >81:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-242 text12 CODE >82:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-243 text12 CODE >83:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-244 text11 CODE >63:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-247 text11 CODE >65:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-248 text11 CODE >66:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-24A text11 CODE >70:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-251 text11 CODE >72:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-32D text10 CODE >146:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-32D text10 CODE >148:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-336 text10 CODE >149:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-33C text10 CODE >150:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-347 text10 CODE >151:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-34B text10 CODE >152:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-356 text10 CODE >153:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+272 text14 CODE >106:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
+275 text14 CODE >108:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
+276 text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
+279 text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
+27C text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
+282 text14 CODE >110:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
+288 text14 CODE >111:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
+2A0 text13 CODE >122:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2A0 text13 CODE >125:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2A3 text13 CODE >126:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2A4 text13 CODE >127:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2A5 text13 CODE >129:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2A6 text13 CODE >131:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2B0 text13 CODE >133:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2B3 text13 CODE >136:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2B8 text13 CODE >137:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2B8 text13 CODE >139:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2B9 text13 CODE >143:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2BA text13 CODE >145:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+249 text12 CODE >77:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+249 text12 CODE >79:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+249 text12 CODE >80:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+250 text12 CODE >81:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+250 text12 CODE >82:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+251 text12 CODE >83:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+252 text12 CODE >84:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+253 text11 CODE >64:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+256 text11 CODE >66:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+257 text11 CODE >67:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+259 text11 CODE >71:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+260 text11 CODE >73:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+32D text10 CODE >147:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+32D text10 CODE >149:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+336 text10 CODE >150:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+33C text10 CODE >151:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+347 text10 CODE >152:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+34B text10 CODE >153:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+356 text10 CODE >154:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
 3E0 text9 CODE >113:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 3E0 text9 CODE >115:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 3E3 text9 CODE >116:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
@@ -222,78 +222,78 @@ $dist/default/production\P3_NOR.X.production.o
 413 text9 CODE >117:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 41A text9 CODE >117:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 41E text9 CODE >122:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
-70F text8 CODE >85:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-70F text8 CODE >87:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-716 text8 CODE >87:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-71A text8 CODE >87:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-71E text8 CODE >88:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-727 text8 CODE >89:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-72E text8 CODE >89:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-732 text8 CODE >89:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-736 text8 CODE >90:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-73F text8 CODE >91:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-746 text8 CODE >91:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-74A text8 CODE >91:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-74E text8 CODE >92:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-757 text8 CODE >93:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-75E text8 CODE >93:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-762 text8 CODE >93:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-766 text8 CODE >94:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-76F text8 CODE >95:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-776 text8 CODE >95:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-77A text8 CODE >95:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-77E text8 CODE >96:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-787 text8 CODE >97:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-78E text8 CODE >97:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-792 text8 CODE >97:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-796 text8 CODE >98:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-79F text8 CODE >99:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7A6 text8 CODE >99:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7AA text8 CODE >99:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7AE text8 CODE >100:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7B7 text8 CODE >101:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7BE text8 CODE >101:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7C2 text8 CODE >101:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7C6 text8 CODE >102:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7CF text8 CODE >103:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7D6 text8 CODE >103:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7DA text8 CODE >103:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7DE text8 CODE >104:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-7E7 text8 CODE >105:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-304 text7 CODE >108:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-304 text7 CODE >111:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-30A text7 CODE >112:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-30E text7 CODE >113:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-314 text7 CODE >114:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-318 text7 CODE >116:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-322 text7 CODE >117:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-329 text7 CODE >118:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-32C text7 CODE >119:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2DC text6 CODE >203:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2DC text6 CODE >207:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2DF text6 CODE >208:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2E0 text6 CODE >209:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2E1 text6 CODE >214:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2E4 text6 CODE >215:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2E5 text6 CODE >217:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2E6 text6 CODE >218:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2E7 text6 CODE >220:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2E8 text6 CODE >221:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2E9 text6 CODE >224:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2EA text6 CODE >225:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2EB text6 CODE >227:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2EC text6 CODE >228:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2ED text6 CODE >229:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2EE text6 CODE >230:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2EF text6 CODE >232:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2F0 text6 CODE >233:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2F1 text6 CODE >237:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2F5 text6 CODE >238:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2F9 text6 CODE >243:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2FD text6 CODE >244:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-300 text6 CODE >246:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-302 text6 CODE >247:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-303 text6 CODE >248:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+70F text8 CODE >86:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+70F text8 CODE >88:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+716 text8 CODE >88:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+71A text8 CODE >88:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+71E text8 CODE >89:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+727 text8 CODE >90:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+72E text8 CODE >90:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+732 text8 CODE >90:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+736 text8 CODE >91:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+73F text8 CODE >92:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+746 text8 CODE >92:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+74A text8 CODE >92:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+74E text8 CODE >93:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+757 text8 CODE >94:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+75E text8 CODE >94:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+762 text8 CODE >94:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+766 text8 CODE >95:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+76F text8 CODE >96:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+776 text8 CODE >96:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+77A text8 CODE >96:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+77E text8 CODE >97:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+787 text8 CODE >98:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+78E text8 CODE >98:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+792 text8 CODE >98:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+796 text8 CODE >99:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+79F text8 CODE >100:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7A6 text8 CODE >100:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7AA text8 CODE >100:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7AE text8 CODE >101:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7B7 text8 CODE >102:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7BE text8 CODE >102:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7C2 text8 CODE >102:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7C6 text8 CODE >103:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7CF text8 CODE >104:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7D6 text8 CODE >104:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7DA text8 CODE >104:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7DE text8 CODE >105:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+7E7 text8 CODE >106:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+304 text7 CODE >109:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+304 text7 CODE >112:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+30A text7 CODE >113:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+30E text7 CODE >114:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+314 text7 CODE >115:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+318 text7 CODE >117:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+322 text7 CODE >118:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+329 text7 CODE >119:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+32C text7 CODE >120:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2DC text6 CODE >204:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2DC text6 CODE >208:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2DF text6 CODE >209:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2E0 text6 CODE >210:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2E1 text6 CODE >215:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2E4 text6 CODE >216:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2E5 text6 CODE >218:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2E6 text6 CODE >219:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2E7 text6 CODE >221:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2E8 text6 CODE >222:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2E9 text6 CODE >225:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2EA text6 CODE >226:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2EB text6 CODE >228:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2EC text6 CODE >229:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2ED text6 CODE >230:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2EE text6 CODE >231:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2EF text6 CODE >233:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2F0 text6 CODE >234:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2F1 text6 CODE >238:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2F5 text6 CODE >239:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2F9 text6 CODE >244:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+2FD text6 CODE >245:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+300 text6 CODE >247:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+302 text6 CODE >248:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+303 text6 CODE >249:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
 3B0 text5 CODE >87:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 3B3 text5 CODE >89:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 3B4 text5 CODE >92:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
@@ -309,21 +309,21 @@ $dist/default/production\P3_NOR.X.production.o
 3D9 text5 CODE >102:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 3DC text5 CODE >102:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
 3DF text5 CODE >104:C:\Users\chuch\MPLABXProjects\P3_NOR.X/lcd.h
-480 text4 CODE >250:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-480 text4 CODE >252:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-488 text4 CODE >253:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-491 text4 CODE >254:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4A0 text4 CODE >255:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4A4 text4 CODE >256:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4A8 text4 CODE >257:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4B6 text4 CODE >258:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4BA text4 CODE >258:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4C3 text4 CODE >258:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4C7 text4 CODE >258:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4CB text4 CODE >259:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4DA text4 CODE >260:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4DE text4 CODE >261:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4E6 text4 CODE >262:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+480 text4 CODE >251:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+480 text4 CODE >253:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+488 text4 CODE >254:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+491 text4 CODE >255:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4A0 text4 CODE >256:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4A4 text4 CODE >257:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4A8 text4 CODE >258:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4B6 text4 CODE >259:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4BA text4 CODE >259:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4C3 text4 CODE >259:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4C7 text4 CODE >259:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4CB text4 CODE >260:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4DA text4 CODE >261:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4DE text4 CODE >262:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4E6 text4 CODE >263:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
 637 text3 CODE >35:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
 637 text3 CODE >37:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
 63A text3 CODE >38:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
@@ -370,74 +370,67 @@ $dist/default/production\P3_NOR.X.production.o
 707 text3 CODE >85:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
 70D text3 CODE >87:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
 70E text3 CODE >88:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
-295 text2 CODE >90:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
-295 text2 CODE >92:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
-29B text2 CODE >95:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
-29C text2 CODE >96:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
-2A4 text2 CODE >95:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
-2AA text2 CODE >99:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
-2AE text2 CODE >99:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
-2B2 text2 CODE >101:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
-2B5 text2 CODE >102:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
-2B6 text1 CODE >32:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2B6 text1 CODE >36:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2BA text1 CODE >37:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2BE text1 CODE >41:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2C1 text1 CODE >44:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2C5 text1 CODE >45:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2C8 text1 CODE >48:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2CB text1 CODE >49:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2CE text1 CODE >50:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2CF text1 CODE >51:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2D2 text1 CODE >52:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2D3 text1 CODE >53:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2D4 text1 CODE >54:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2D7 text1 CODE >56:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-2DB text1 CODE >62:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4E7 maintext CODE >155:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4E7 maintext CODE >157:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4EB maintext CODE >158:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4EE maintext CODE >160:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4F1 maintext CODE >163:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4F4 maintext CODE >164:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-4F7 maintext CODE >165:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-505 maintext CODE >166:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-50D maintext CODE >167:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-51B maintext CODE >171:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-522 maintext CODE >171:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-526 maintext CODE >171:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-52A maintext CODE >173:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-532 maintext CODE >174:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-53E maintext CODE >176:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-542 maintext CODE >177:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-54C maintext CODE >178:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-54E maintext CODE >178:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-552 maintext CODE >179:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-553 maintext CODE >180:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-559 maintext CODE >182:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-55B maintext CODE >183:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-560 maintext CODE >193:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-564 maintext CODE >194:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-568 maintext CODE >195:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-571 maintext CODE >196:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-574 maintext CODE >197:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
-252 inittext CODE >650:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-252 inittext CODE >651:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-253 inittext CODE >652:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-254 inittext CODE >653:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-255 inittext CODE >654:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-256 inittext CODE >661:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-256 inittext CODE >662:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-259 inittext CODE >663:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-25A inittext CODE >664:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-25B inittext CODE >665:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-25C inittext CODE >666:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-25D inittext CODE >667:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-25E inittext CODE >668:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-25F inittext CODE >669:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-260 inittext CODE >670:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-261 inittext CODE >671:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
-262 inittext CODE >672:C:\Users\chuch\AppData\Local\Temp\xcAsn1c.s
+2BB text2 CODE >90:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
+2BB text2 CODE >92:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
+2C1 text2 CODE >95:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
+2C2 text2 CODE >96:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
+2CA text2 CODE >95:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
+2D0 text2 CODE >99:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
+2D4 text2 CODE >99:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
+2D8 text2 CODE >101:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
+2DB text2 CODE >102:C:\Users\chuch\MPLABXProjects\P3_NOR.X/kbd.h
+289 text1 CODE >32:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+289 text1 CODE >36:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+28D text1 CODE >37:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+291 text1 CODE >41:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+294 text1 CODE >44:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+298 text1 CODE >45:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+29B text1 CODE >57:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+29F text1 CODE >63:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4E7 maintext CODE >156:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4E7 maintext CODE >158:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4EB maintext CODE >159:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4EE maintext CODE >161:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4F1 maintext CODE >164:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4F4 maintext CODE >165:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+4F7 maintext CODE >166:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+505 maintext CODE >167:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+50D maintext CODE >168:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+51B maintext CODE >172:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+522 maintext CODE >172:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+526 maintext CODE >172:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+52A maintext CODE >174:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+532 maintext CODE >175:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+53E maintext CODE >177:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+542 maintext CODE >178:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+54C maintext CODE >179:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+54E maintext CODE >179:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+552 maintext CODE >180:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+553 maintext CODE >181:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+559 maintext CODE >183:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+55B maintext CODE >184:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+560 maintext CODE >194:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+564 maintext CODE >195:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+568 maintext CODE >196:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+571 maintext CODE >197:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+574 maintext CODE >198:C:\Users\chuch\MPLABXProjects\P3_NOR.X\main.c
+261 inittext CODE >644:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+261 inittext CODE >645:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+262 inittext CODE >646:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+263 inittext CODE >647:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+264 inittext CODE >648:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+265 inittext CODE >655:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+265 inittext CODE >656:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+268 inittext CODE >657:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+269 inittext CODE >658:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+26A inittext CODE >659:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+26B inittext CODE >660:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+26C inittext CODE >661:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+26D inittext CODE >662:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+26E inittext CODE >663:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+26F inittext CODE >664:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+270 inittext CODE >665:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
+271 inittext CODE >666:C:\Users\chuch\AppData\Local\Temp\xcAsodg.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -474,10 +467,10 @@ _CHS2 FD 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _RCIE 465 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _TXIE 464 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
+___sp 0 0 STACK 2 stack C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
 _main 9CE 0 CODE 0 maintext dist/default/production\P3_NOR.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
-start 0 0 CODE 0 init C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
+start 0 0 CODE 0 init C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
 __size_of_set_configuraciones 0 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 LCD_Goto@col 54 0 BANK0 1 cstackBANK0 dist/default/production\P3_NOR.X.production.o
@@ -485,37 +478,37 @@ LCD_Goto@row 51 0 BANK0 1 cstackBANK0 dist/default/production\P3_NOR.X.productio
 __size_of_LCD_Cmd 0 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 _LCD_Goto 760 0 CODE 0 text5 dist/default/production\P3_NOR.X.production.o
-_LCD_PutC 4C6 0 CODE 0 text14 dist/default/production\P3_NOR.X.production.o
+_LCD_PutC 4E4 0 CODE 0 text14 dist/default/production\P3_NOR.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 Tx_Dato@X 4B 0 BANK0 1 cstackBANK0 dist/default/production\P3_NOR.X.production.o
 __end_of_LCD_Goto 7C0 0 CODE 0 text5 dist/default/production\P3_NOR.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
-__end_of_LCD_PutC 4F4 0 CODE 0 text14 dist/default/production\P3_NOR.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
+__end_of_LCD_PutC 512 0 CODE 0 text14 dist/default/production\P3_NOR.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _imprimir_valor_leds 608 0 CODE 0 text7 dist/default/production\P3_NOR.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-_set_configuraciones 56C 0 CODE 0 text1 dist/default/production\P3_NOR.X.production.o
-__end_of_Tx_Dato 4A4 0 CODE 0 text11 dist/default/production\P3_NOR.X.production.o
+_set_configuraciones 512 0 CODE 0 text1 dist/default/production\P3_NOR.X.production.o
+__end_of_Tx_Dato 4C2 0 CODE 0 text11 dist/default/production\P3_NOR.X.production.o
 _ADCON0 1F 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _ADCON1 9F 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _ADRESH 1E 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _ADRESL 9E 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 LCD_Cmd@Command 50 0 BANK0 1 cstackBANK0 dist/default/production\P3_NOR.X.production.o
 keypad_getkey@key 4D 0 BANK0 1 cstackBANK0 dist/default/production\P3_NOR.X.production.o
-_Canal0 4F4 0 CODE 0 text13 dist/default/production\P3_NOR.X.production.o
+_Canal0 540 0 CODE 0 text13 dist/default/production\P3_NOR.X.production.o
 __size_of_keypad_readkey 0 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _OPTION_REG 81 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
-___stacklo 0 0 ABS 0 - C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
+___stackhi 0 0 ABS 0 - C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
+___stacklo 0 0 ABS 0 - C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
 __end_of_LCD_Cmd 760 0 CODE 0 text16 dist/default/production\P3_NOR.X.production.o
-_keypad_getkey 52A 0 CODE 0 text2 dist/default/production\P3_NOR.X.production.o
+_keypad_getkey 576 0 CODE 0 text2 dist/default/production\P3_NOR.X.production.o
 __size_of_inicio_presentacion 0 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 LCD_Print@i 51 0 BANK0 1 cstackBANK0 dist/default/production\P3_NOR.X.production.o
 start_initialization FD0 0 CODE 0 cinit dist/default/production\P3_NOR.X.production.o
@@ -529,10 +522,10 @@ __end_of_imprimir_valor_leds 65A 0 CODE 0 text7 dist/default/production\P3_NOR.X
 __pcstackBANK0 4B 0 BANK0 1 cstackBANK0 dist/default/production\P3_NOR.X.production.o
 _SSPADD 93 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
-__end_of_set_configuraciones 5B8 0 CODE 0 text1 dist/default/production\P3_NOR.X.production.o
+__end_of_set_configuraciones 540 0 CODE 0 text1 dist/default/production\P3_NOR.X.production.o
 __size_of_Rx_Dato 0 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 __end_of_LCD_Begin C6E 0 CODE 0 text15 dist/default/production\P3_NOR.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
+___int_sp 0 0 STACK 2 stack C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
 __end_of_LCD_Print 83E 0 CODE 0 text9 dist/default/production\P3_NOR.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -593,23 +586,22 @@ __S3 0 0 ABS 0 - -
 __pbitbssBANK0 340 -2D8 BANK0 1 bitbssBANK0 dist/default/production\P3_NOR.X.production.o
 _LCD_Write_Nibble 83E 0 CODE 0 text17 dist/default/production\P3_NOR.X.production.o
 Canal0@z 4B 0 BANK0 1 cstackBANK0 dist/default/production\P3_NOR.X.production.o
-_Tx_Dato 488 0 CODE 0 text11 dist/default/production\P3_NOR.X.production.o
+_Tx_Dato 4A6 0 CODE 0 text11 dist/default/production\P3_NOR.X.production.o
 _evaluar_dato E1E 0 CODE 0 text8 dist/default/production\P3_NOR.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 4 0 STRING 0 strings dist/default/production\P3_NOR.X.production.o
-__end_of_keypad_getkey 56C 0 CODE 0 text2 dist/default/production\P3_NOR.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\chuch\AppData\Local\Temp\xcAsn1c.o
-__end_of_Rx_Dato 488 0 CODE 0 text12 dist/default/production\P3_NOR.X.production.o
+__end_of_keypad_getkey 5B8 0 CODE 0 text2 dist/default/production\P3_NOR.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\chuch\AppData\Local\Temp\xcAsodg.o
+__end_of_Rx_Dato 4A6 0 CODE 0 text12 dist/default/production\P3_NOR.X.production.o
 __pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production\P3_NOR.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-_RCSTAbits 18 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 __LbitbssBANK0 0 0 ABS 0 bitbssBANK0 -
 LCD_Write_Nibble@n 4D 0 BANK0 1 cstackBANK0 dist/default/production\P3_NOR.X.production.o
 __ptext10 65A 0 CODE 0 text10 dist/default/production\P3_NOR.X.production.o
-__ptext11 488 0 CODE 0 text11 dist/default/production\P3_NOR.X.production.o
-__ptext12 474 0 CODE 0 text12 dist/default/production\P3_NOR.X.production.o
-__ptext13 4F4 0 CODE 0 text13 dist/default/production\P3_NOR.X.production.o
-__ptext14 4C6 0 CODE 0 text14 dist/default/production\P3_NOR.X.production.o
+__ptext11 4A6 0 CODE 0 text11 dist/default/production\P3_NOR.X.production.o
+__ptext12 492 0 CODE 0 text12 dist/default/production\P3_NOR.X.production.o
+__ptext13 540 0 CODE 0 text13 dist/default/production\P3_NOR.X.production.o
+__ptext14 4E4 0 CODE 0 text14 dist/default/production\P3_NOR.X.production.o
 __ptext15 AF4 0 CODE 0 text15 dist/default/production\P3_NOR.X.production.o
 __ptext16 704 0 CODE 0 text16 dist/default/production\P3_NOR.X.production.o
 __ptext17 83E 0 CODE 0 text17 dist/default/production\P3_NOR.X.production.o
@@ -632,7 +624,7 @@ __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
 __end_of_evaluar_dato FD0 0 CODE 0 text8 dist/default/production\P3_NOR.X.production.o
-init_fetch0 4A4 0 CODE 0 inittext dist/default/production\P3_NOR.X.production.o
+init_fetch0 4C2 0 CODE 0 inittext dist/default/production\P3_NOR.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 __Lend_init 0 0 CODE 0 end_init -
@@ -643,8 +635,8 @@ __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 0 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 56C 0 CODE 0 text1 dist/default/production\P3_NOR.X.production.o
-__ptext2 52A 0 CODE 0 text2 dist/default/production\P3_NOR.X.production.o
+__ptext1 512 0 CODE 0 text1 dist/default/production\P3_NOR.X.production.o
+__ptext2 576 0 CODE 0 text2 dist/default/production\P3_NOR.X.production.o
 __ptext3 C6E 0 CODE 0 text3 dist/default/production\P3_NOR.X.production.o
 __ptext4 900 0 CODE 0 text4 dist/default/production\P3_NOR.X.production.o
 __ptext5 760 0 CODE 0 text5 dist/default/production\P3_NOR.X.production.o
@@ -667,26 +659,24 @@ _TXSTAbits 98 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _SSPCON2 91 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 __Hend_init 4 0 CODE 0 end_init -
-init_ram0 4AC 0 CODE 0 inittext dist/default/production\P3_NOR.X.production.o
+init_ram0 4CA 0 CODE 0 inittext dist/default/production\P3_NOR.X.production.o
 __end_of_main AF4 0 CODE 0 maintext dist/default/production\P3_NOR.X.production.o
 _ADRES 64 0 BANK0 1 bssBANK0 dist/default/production\P3_NOR.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _RCREG 1A 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
-_RCSTA 18 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _SPBRG 99 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 _TXREG 19 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
-_TXSTA 98 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 __size_of_iniciar_puertos 0 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __size_of_enviar_datos 0 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
-_Rx_Dato 474 0 CODE 0 text12 dist/default/production\P3_NOR.X.production.o
+_Rx_Dato 492 0 CODE 0 text12 dist/default/production\P3_NOR.X.production.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 -
 __initialization FD0 0 CODE 0 cinit dist/default/production\P3_NOR.X.production.o
 __pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production\P3_NOR.X.production.o
-__end_of_Canal0 52A 0 CODE 0 text13 dist/default/production\P3_NOR.X.production.o
+__end_of_Canal0 576 0 CODE 0 text13 dist/default/production\P3_NOR.X.production.o
 __pstrings 4 0 STRING 0 strings dist/default/production\P3_NOR.X.production.o
 __size_of_LCD_Goto 0 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
 __size_of_LCD_PutC 0 0 ABS 0 - dist/default/production\P3_NOR.X.production.o
@@ -719,8 +709,8 @@ __end_of_enviar_datos 6AE 0 CODE 0 text10 dist/default/production\P3_NOR.X.produ
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7E8 FD0 18 2
-text1 0 2B6 56C 26 2
-text2 0 295 52A 21 2
+text1 0 289 512 17 2
+text2 0 2BB 576 21 2
 text3 0 637 C6E D8 2
 text4 0 480 900 67 2
 text5 0 3B0 760 30 2
@@ -729,15 +719,15 @@ text7 0 304 608 29 2
 text8 0 70F E1E D9 2
 text9 0 3E0 7C0 3F 2
 text10 0 32D 65A 2A 2
-text11 0 244 488 E 2
-text12 0 23A 474 A 2
-text13 0 27A 4F4 1B 2
-text14 0 263 4C6 17 2
+text11 0 253 4A6 E 2
+text12 0 249 492 A 2
+text13 0 2A0 540 1B 2
+text14 0 272 4E4 17 2
 text15 0 57A AF4 BD 2
 text16 0 382 704 2E 2
 text17 0 41F 83E 61 2
 maintext 0 4E7 9CE 93 2
-inittext 0 252 4A4 11 2
+inittext 0 261 4C2 11 2
 reset_vec 0 0 0 2 2
 idataBANK0 0 357 6AE 2B 2
 strings 0 2 4 45 2
