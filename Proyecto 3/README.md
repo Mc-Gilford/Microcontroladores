@@ -17,7 +17,6 @@ para mostrar el voltaje con el cual el led prende.
 EL PIC16F819 manejara 2 ventiladores, segun los valores enviados mediante los puertos SCL y SDA este
 enviara los valores de cada ventilador en proceso.
 
-![Imagen de Error](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/CaptureError.PNG "Error Puertos C")
 ![Error](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/CaptureError.PNG)
 
 Error en el puerto C, se piensa en un posible problema conforme alguna configuracion con estos, dado que no envia bien
