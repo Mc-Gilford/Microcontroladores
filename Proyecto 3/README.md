@@ -45,13 +45,13 @@ ADCON1 = 0x07;
 Uno de los otros errores fue dentro del PORT RA4 dado que este es un puerto es pull up para salidas, para la solucion de este se hizo la siguiente configuracion, para poder usarlo como salida.
 
 #### Configuracion nueva
-![Error](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/CaptureError.PNG)
+![Funcionando](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/Circuito%20RA4%20Funcionando.PNG)
 
 #### Configuracion pasada
-![Error](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/CaptureError.PNG)
+![Error](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/Circuito%20No%20Funcionando.PNG)
 
 #### Anexo de configuracion
-![Error](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/CaptureError.PNG)
+![Anexo](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/Added_Part.PNG)
 
 ## Carpetas por PIC
 1. P3 es -> PIC16F873A
