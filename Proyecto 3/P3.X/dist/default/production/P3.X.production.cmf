@@ -11,36 +11,39 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
+$C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
 end_init CODE 0 0 0 2 2
 config CONFIG 4 2007 2007 1 2
 $dist/default/production\P3.X.production.o
-cinit CODE 0 7E8 7E8 18 2
-text1 CODE 0 294 294 17 2
-text2 CODE 0 2E3 2E3 21 2
-text3 CODE 0 637 637 D8 2
-text4 CODE 0 480 480 67 2
-text5 CODE 0 3B0 3B0 30 2
-text6 CODE 0 2C6 2C6 1D 2
-text7 CODE 0 304 304 29 2
-text8 CODE 0 70F 70F D9 2
-text9 CODE 0 3E0 3E0 3F 2
-text10 CODE 0 32D 32D 2A 2
-text11 CODE 0 25E 25E E 2
-text12 CODE 0 254 254 A 2
-text13 CODE 0 2AB 2AB 1B 2
-text14 CODE 0 27D 27D 17 2
-text15 CODE 0 57A 57A BD 2
-text16 CODE 0 382 382 2E 2
-text17 CODE 0 41F 41F 61 2
-maintext CODE 0 4E7 4E7 93 2
-cstackBANK0 BANK0 1 4B 4B 15 1
-inittext CODE 0 26C 26C 11 2
-bitbssBANK0 BANK0 1 340 68 1 1
-bssBANK0 BANK0 1 60 60 8 1
-idataBANK0 CODE 0 357 357 2B 2
-strings STRING 0 2 2 45 2
-dataBANK0 BANK0 1 20 20 2B 1
+cinit CODE 0 7D9 7D9 27 2
+text1 CODE 0 4C2 4C2 AE 2
+text2 CODE 0 1D9 1D9 32 2
+text3 CODE 0 157 157 24 2
+text4 CODE 0 3DA 3DA 6C 2
+text5 CODE 0 240 240 3C 2
+text6 CODE 0 27C 27C 46 2
+text7 CODE 0 446 446 7C 2
+text8 CODE 0 136 136 21 2
+text9 CODE 0 701 701 D8 2
+text10 CODE 0 31C 31C 5D 2
+text11 CODE 0 20B 20B 35 2
+text12 CODE 0 1A9 1A9 30 2
+text13 CODE 0 10A 10A 15 2
+text14 CODE 0 11F 11F 17 2
+text15 CODE 0 570 570 BD 2
+text16 CODE 0 17B 17B 2E 2
+text17 CODE 0 379 379 61 2
+maintext CODE 0 62D 62D D4 2
+cstackBANK0 BANK0 1 20 20 51 1
+inittext CODE 0 F9 F9 11 2
+bitbssBANK0 BANK0 1 3D8 7B 1 1
+bssBANK0 BANK0 1 77 77 4 1
+bssBANK1 BANK1 1 FA FA 4 1
+idataBANK0 CODE 0 F3 F3 6 2
+idataBANK1 CODE 0 2C2 2C2 5A 2
+strings STRING 0 2 2 18 2
+dataBANK0 BANK0 1 71 71 6 1
+dataBANK1 BANK1 1 A0 A0 5A 1
 config CONFIG 4 2007 2007 1 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -48,26 +51,24 @@ config CONFIG 4 2007 2007 1 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 69-7D 1
-RAM A0-FD 1
-BANK0 69-7D 1
-BANK1 A0-FD 1
-CONST 47-253 2
+RAM 7C-7D 1
+BANK0 7C-7D 1
+CONST 1A-F2 2
 CONST 800-FFF 2
-ENTRY 47-253 2
+ENTRY 1A-F2 2
 ENTRY 800-FFF 2
 IDLOC 2000-2003 2
-STACK A0-FD 1
-CODE 47-253 2
+STACK 7C-7D 1
+CODE 1A-F2 2
 CODE 800-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-17D 1
 SFR3 180-1FD 1
 EEDATA 2100-217F 2
-STRCODE 47-253 2
+STRCODE 1A-F2 2
 STRCODE 800-FFF 2
-STRING 47-253 2
+STRING 1A-F2 2
 STRING 800-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -83,349 +84,391 @@ STRING 800-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\P3.X.production.o
-7E8 cinit CODE >602:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7E8 cinit CODE >605:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7E8 cinit CODE >670:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7E9 cinit CODE >671:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7EA cinit CODE >672:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7EB cinit CODE >673:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7EC cinit CODE >674:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7ED cinit CODE >675:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7EE cinit CODE >676:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7EF cinit CODE >677:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7F0 cinit CODE >678:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7F1 cinit CODE >679:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7F4 cinit CODE >683:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7F5 cinit CODE >684:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7F6 cinit CODE >685:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7F7 cinit CODE >686:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7F8 cinit CODE >687:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7F9 cinit CODE >688:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7FA cinit CODE >689:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7FB cinit CODE >690:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7FC cinit CODE >693:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7FD cinit CODE >699:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7FD cinit CODE >701:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-7FE cinit CODE >702:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-41F text17 CODE >61:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-422 text17 CODE >63:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-42C text17 CODE >64:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-435 text17 CODE >65:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-437 text17 CODE >65:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-442 text17 CODE >66:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-445 text17 CODE >66:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-448 text17 CODE >66:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-455 text17 CODE >67:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-458 text17 CODE >67:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-45B text17 CODE >67:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-467 text17 CODE >70:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-468 text17 CODE >71:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-46C text17 CODE >72:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-46F text17 CODE >73:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-473 text17 CODE >74:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-476 text17 CODE >75:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-47F text17 CODE >76:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-382 text16 CODE >78:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-385 text16 CODE >80:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-386 text16 CODE >81:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-389 text16 CODE >81:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-38C text16 CODE >81:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-392 text16 CODE >82:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-398 text16 CODE >83:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3A5 text16 CODE >84:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3AF text16 CODE >85:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-57A text15 CODE >124:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-57A text15 CODE >126:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-57D text15 CODE >127:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-57E text15 CODE >128:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-57F text15 CODE >129:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-580 text15 CODE >134:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-581 text15 CODE >135:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-582 text15 CODE >136:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-583 text15 CODE >137:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-584 text15 CODE >138:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-587 text15 CODE >139:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-588 text15 CODE >140:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-589 text15 CODE >145:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-58A text15 CODE >146:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-58B text15 CODE >147:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-58C text15 CODE >148:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-58D text15 CODE >149:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-59B text15 CODE >150:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-59F text15 CODE >151:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-5AA text15 CODE >152:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-5AE text15 CODE >153:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-5B9 text15 CODE >154:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-5BD text15 CODE >155:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-5C8 text15 CODE >156:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-5CC text15 CODE >157:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-5D7 text15 CODE >158:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-5DB text15 CODE >159:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-5EA text15 CODE >160:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-5EE text15 CODE >161:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-5FD text15 CODE >162:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-601 text15 CODE >163:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-610 text15 CODE >164:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-614 text15 CODE >165:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-623 text15 CODE >166:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-627 text15 CODE >167:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-636 text15 CODE >168:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-27D text14 CODE >106:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-280 text14 CODE >108:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-281 text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-284 text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-287 text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-28D text14 CODE >110:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-293 text14 CODE >111:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-2AB text13 CODE >122:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2AB text13 CODE >125:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2AE text13 CODE >126:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2AF text13 CODE >127:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2B0 text13 CODE >129:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2B1 text13 CODE >131:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2BB text13 CODE >133:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2BE text13 CODE >136:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2C3 text13 CODE >137:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2C3 text13 CODE >139:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2C4 text13 CODE >143:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2C5 text13 CODE >145:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-254 text12 CODE >77:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-254 text12 CODE >79:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-254 text12 CODE >80:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-25B text12 CODE >81:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-25B text12 CODE >82:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-25C text12 CODE >83:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-25D text12 CODE >84:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-25E text11 CODE >64:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-261 text11 CODE >66:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-262 text11 CODE >67:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-264 text11 CODE >71:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-26B text11 CODE >73:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-32D text10 CODE >147:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-32D text10 CODE >149:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-336 text10 CODE >150:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-33C text10 CODE >151:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-347 text10 CODE >152:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-34B text10 CODE >153:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-356 text10 CODE >154:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-3E0 text9 CODE >113:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3E0 text9 CODE >115:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3E3 text9 CODE >116:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3E4 text9 CODE >117:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3E5 text9 CODE >119:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3E9 text9 CODE >119:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3F1 text9 CODE >119:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3F4 text9 CODE >119:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3FA text9 CODE >120:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-400 text9 CODE >120:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-40F text9 CODE >117:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-413 text9 CODE >117:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-41A text9 CODE >117:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-41E text9 CODE >122:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-70F text8 CODE >86:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-70F text8 CODE >88:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-716 text8 CODE >88:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-71A text8 CODE >88:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-71E text8 CODE >89:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-727 text8 CODE >90:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-72E text8 CODE >90:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-732 text8 CODE >90:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-736 text8 CODE >91:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-73F text8 CODE >92:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-746 text8 CODE >92:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-74A text8 CODE >92:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-74E text8 CODE >93:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-757 text8 CODE >94:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-75E text8 CODE >94:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-762 text8 CODE >94:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-766 text8 CODE >95:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-76F text8 CODE >96:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-776 text8 CODE >96:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-77A text8 CODE >96:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-77E text8 CODE >97:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-787 text8 CODE >98:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-78E text8 CODE >98:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-792 text8 CODE >98:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-796 text8 CODE >99:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-79F text8 CODE >100:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7A6 text8 CODE >100:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7AA text8 CODE >100:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7AE text8 CODE >101:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7B7 text8 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7BE text8 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7C2 text8 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7C6 text8 CODE >103:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7CF text8 CODE >104:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7D6 text8 CODE >104:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7DA text8 CODE >104:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7DE text8 CODE >105:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-7E7 text8 CODE >106:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-304 text7 CODE >109:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-304 text7 CODE >112:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-30A text7 CODE >113:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-30E text7 CODE >114:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-314 text7 CODE >115:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-318 text7 CODE >117:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-322 text7 CODE >118:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-329 text7 CODE >119:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-32C text7 CODE >120:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2C6 text6 CODE >204:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2C6 text6 CODE >208:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2C9 text6 CODE >209:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2CA text6 CODE >210:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2CB text6 CODE >215:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2CE text6 CODE >216:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2CF text6 CODE >218:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2D0 text6 CODE >219:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2D1 text6 CODE >221:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2D2 text6 CODE >224:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2D3 text6 CODE >225:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2D4 text6 CODE >227:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2D5 text6 CODE >228:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2D6 text6 CODE >229:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2D7 text6 CODE >230:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2D8 text6 CODE >232:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2D9 text6 CODE >233:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2DA text6 CODE >237:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2DE text6 CODE >238:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2E2 text6 CODE >242:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-3B0 text5 CODE >87:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3B3 text5 CODE >89:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3B4 text5 CODE >92:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3B9 text5 CODE >93:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3BA text5 CODE >95:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3BF text5 CODE >96:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3C0 text5 CODE >98:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3C5 text5 CODE >99:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3C6 text5 CODE >101:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3CB text5 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3D1 text5 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3D6 text5 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3D9 text5 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3DC text5 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-3DF text5 CODE >104:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
-480 text4 CODE >244:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-480 text4 CODE >246:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-488 text4 CODE >247:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-491 text4 CODE >248:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4A0 text4 CODE >249:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4A4 text4 CODE >250:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4A8 text4 CODE >251:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4B6 text4 CODE >252:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4BA text4 CODE >252:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4C3 text4 CODE >252:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4C7 text4 CODE >252:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4CB text4 CODE >253:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4DA text4 CODE >254:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4DE text4 CODE >255:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4E6 text4 CODE >256:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-637 text3 CODE >35:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-637 text3 CODE >37:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-63A text3 CODE >38:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-63B text3 CODE >39:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-63C text3 CODE >40:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-63D text3 CODE >41:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-644 text3 CODE >43:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-656 text3 CODE >44:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-65C text3 CODE >45:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-662 text3 CODE >46:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-668 text3 CODE >47:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-66E text3 CODE >48:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-66E text3 CODE >49:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-66F text3 CODE >50:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-670 text3 CODE >51:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-671 text3 CODE >52:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-672 text3 CODE >53:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-679 text3 CODE >55:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-68B text3 CODE >56:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-691 text3 CODE >57:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-697 text3 CODE >58:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-69D text3 CODE >59:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6A3 text3 CODE >60:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6A3 text3 CODE >62:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6A4 text3 CODE >63:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6A5 text3 CODE >64:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6A6 text3 CODE >65:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6A7 text3 CODE >66:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6AE text3 CODE >68:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6C0 text3 CODE >69:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6C6 text3 CODE >70:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6CC text3 CODE >71:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6D2 text3 CODE >72:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6D8 text3 CODE >73:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6D8 text3 CODE >75:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6D9 text3 CODE >76:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6DA text3 CODE >77:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6DB text3 CODE >78:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6DC text3 CODE >79:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6E3 text3 CODE >81:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6F5 text3 CODE >82:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-6FB text3 CODE >83:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-701 text3 CODE >84:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-707 text3 CODE >85:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-70D text3 CODE >87:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-70E text3 CODE >88:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-2E3 text2 CODE >90:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-2E3 text2 CODE >92:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-2E9 text2 CODE >95:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-2EA text2 CODE >96:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-2F2 text2 CODE >95:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-2F8 text2 CODE >99:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-2FC text2 CODE >99:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-300 text2 CODE >101:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-303 text2 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
-294 text1 CODE >32:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-294 text1 CODE >36:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-298 text1 CODE >37:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-29C text1 CODE >41:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-29F text1 CODE >44:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2A3 text1 CODE >45:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2A6 text1 CODE >57:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-2AA text1 CODE >63:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4E7 maintext CODE >156:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4E7 maintext CODE >158:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4EB maintext CODE >159:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4EE maintext CODE >161:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4F1 maintext CODE >164:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4F4 maintext CODE >165:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-4F7 maintext CODE >166:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-505 maintext CODE >167:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-50D maintext CODE >168:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-51B maintext CODE >172:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-522 maintext CODE >172:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-526 maintext CODE >172:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-52A maintext CODE >174:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-532 maintext CODE >175:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-53E maintext CODE >177:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-542 maintext CODE >178:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-54C maintext CODE >179:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-54E maintext CODE >179:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-552 maintext CODE >180:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-553 maintext CODE >181:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-559 maintext CODE >183:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-55B maintext CODE >184:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-560 maintext CODE >194:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-564 maintext CODE >195:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-568 maintext CODE >196:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-571 maintext CODE >197:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-574 maintext CODE >198:C:\Users\chuch\MPLABXProjects\P3.X\main.c
-26C inittext CODE >644:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-26C inittext CODE >645:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-26D inittext CODE >646:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-26E inittext CODE >647:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-26F inittext CODE >648:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-270 inittext CODE >655:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-270 inittext CODE >656:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-273 inittext CODE >657:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-274 inittext CODE >658:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-275 inittext CODE >659:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-276 inittext CODE >660:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-277 inittext CODE >661:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-278 inittext CODE >662:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-279 inittext CODE >663:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-27A inittext CODE >664:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-27B inittext CODE >665:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
-27C inittext CODE >666:C:\Users\chuch\AppData\Local\Temp\xcAspc0.s
+7D9 cinit CODE >569:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7D9 cinit CODE >572:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7D9 cinit CODE >678:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7DA cinit CODE >679:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7DB cinit CODE >680:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7DC cinit CODE >681:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7DD cinit CODE >682:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7DE cinit CODE >683:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7DF cinit CODE >684:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7E0 cinit CODE >685:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7E1 cinit CODE >686:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7E2 cinit CODE >687:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7E5 cinit CODE >691:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7E6 cinit CODE >692:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7E7 cinit CODE >693:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7E8 cinit CODE >694:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7E9 cinit CODE >695:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7EA cinit CODE >696:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7EB cinit CODE >697:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7EC cinit CODE >698:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7ED cinit CODE >699:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7F0 cinit CODE >703:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7F1 cinit CODE >704:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7F2 cinit CODE >705:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7F3 cinit CODE >706:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7F4 cinit CODE >707:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7F5 cinit CODE >708:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7F6 cinit CODE >711:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7F7 cinit CODE >712:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7F8 cinit CODE >713:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7F9 cinit CODE >714:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7FA cinit CODE >715:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7FB cinit CODE >716:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7FC cinit CODE >719:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7FD cinit CODE >725:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7FD cinit CODE >727:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+7FE cinit CODE >728:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+379 text17 CODE >61:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+37C text17 CODE >63:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+386 text17 CODE >64:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+38F text17 CODE >65:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+391 text17 CODE >65:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+39C text17 CODE >66:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+39F text17 CODE >66:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+3A2 text17 CODE >66:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+3AF text17 CODE >67:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+3B2 text17 CODE >67:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+3B5 text17 CODE >67:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+3C1 text17 CODE >70:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+3C2 text17 CODE >71:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+3C6 text17 CODE >72:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+3C9 text17 CODE >73:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+3CD text17 CODE >74:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+3D0 text17 CODE >75:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+3D9 text17 CODE >76:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+17B text16 CODE >78:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+17E text16 CODE >80:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+17F text16 CODE >81:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+182 text16 CODE >81:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+185 text16 CODE >81:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+18B text16 CODE >82:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+191 text16 CODE >83:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+19E text16 CODE >84:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1A8 text16 CODE >85:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+570 text15 CODE >124:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+570 text15 CODE >126:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+573 text15 CODE >127:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+574 text15 CODE >128:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+575 text15 CODE >129:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+576 text15 CODE >134:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+577 text15 CODE >135:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+578 text15 CODE >136:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+579 text15 CODE >137:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+57A text15 CODE >138:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+57D text15 CODE >139:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+57E text15 CODE >140:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+57F text15 CODE >145:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+580 text15 CODE >146:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+581 text15 CODE >147:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+582 text15 CODE >148:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+583 text15 CODE >149:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+591 text15 CODE >150:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+595 text15 CODE >151:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5A0 text15 CODE >152:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5A4 text15 CODE >153:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5AF text15 CODE >154:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5B3 text15 CODE >155:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5BE text15 CODE >156:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5C2 text15 CODE >157:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5CD text15 CODE >158:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5D1 text15 CODE >159:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5E0 text15 CODE >160:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5E4 text15 CODE >161:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5F3 text15 CODE >162:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+5F7 text15 CODE >163:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+606 text15 CODE >164:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+60A text15 CODE >165:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+619 text15 CODE >166:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+61D text15 CODE >167:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+62C text15 CODE >168:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+11F text14 CODE >106:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+122 text14 CODE >108:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+123 text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+126 text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+129 text14 CODE >109:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+12F text14 CODE >110:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+135 text14 CODE >111:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+10A text13 CODE >78:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+10A text13 CODE >82:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+10D text13 CODE >83:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+10E text13 CODE >84:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+10F text13 CODE >89:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+112 text13 CODE >90:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+113 text13 CODE >92:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+114 text13 CODE >93:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+115 text13 CODE >95:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+116 text13 CODE >99:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+117 text13 CODE >100:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+118 text13 CODE >101:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+119 text13 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+11A text13 CODE >103:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+11B text13 CODE >104:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+11C text13 CODE >108:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+11E text13 CODE >110:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+1A9 text12 CODE >87:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1AC text12 CODE >89:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1AD text12 CODE >92:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1B2 text12 CODE >93:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1B3 text12 CODE >95:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1B8 text12 CODE >96:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1B9 text12 CODE >98:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1BE text12 CODE >99:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1BF text12 CODE >101:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1C4 text12 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1CA text12 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1CF text12 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1D2 text12 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1D5 text12 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+1D8 text12 CODE >104:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+20B text11 CODE >113:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+20E text11 CODE >115:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+20F text11 CODE >116:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+210 text11 CODE >117:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+211 text11 CODE >119:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+219 text11 CODE >119:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+21C text11 CODE >119:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+222 text11 CODE >120:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+234 text11 CODE >117:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+23F text11 CODE >122:C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
+31C text10 CODE >112:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+31C text10 CODE >114:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+324 text10 CODE >115:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+32A text10 CODE >116:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+338 text10 CODE >117:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+33D text10 CODE >118:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+341 text10 CODE >119:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+34C text10 CODE >120:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+350 text10 CODE >120:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+35A text10 CODE >120:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+35E text10 CODE >120:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+362 text10 CODE >121:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+36C text10 CODE >122:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+370 text10 CODE >123:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+378 text10 CODE >124:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+701 text9 CODE >36:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+701 text9 CODE >38:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+704 text9 CODE >39:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+705 text9 CODE >40:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+706 text9 CODE >41:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+707 text9 CODE >42:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+70E text9 CODE >44:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+720 text9 CODE >45:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+726 text9 CODE >46:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+72C text9 CODE >47:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+732 text9 CODE >48:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+738 text9 CODE >49:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+738 text9 CODE >50:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+739 text9 CODE >51:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+73A text9 CODE >52:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+73B text9 CODE >53:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+73C text9 CODE >54:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+743 text9 CODE >56:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+755 text9 CODE >57:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+75B text9 CODE >58:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+761 text9 CODE >59:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+767 text9 CODE >60:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+76D text9 CODE >61:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+76D text9 CODE >63:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+76E text9 CODE >64:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+76F text9 CODE >65:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+770 text9 CODE >66:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+771 text9 CODE >67:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+778 text9 CODE >69:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+78A text9 CODE >70:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+790 text9 CODE >71:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+796 text9 CODE >72:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+79C text9 CODE >73:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7A2 text9 CODE >74:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7A2 text9 CODE >76:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7A3 text9 CODE >77:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7A4 text9 CODE >78:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7A5 text9 CODE >79:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7A6 text9 CODE >80:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7AD text9 CODE >82:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7BF text9 CODE >83:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7C5 text9 CODE >84:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7CB text9 CODE >85:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7D1 text9 CODE >86:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7D7 text9 CODE >88:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+7D8 text9 CODE >89:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+136 text8 CODE >91:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+136 text8 CODE >93:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+13C text8 CODE >96:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+13D text8 CODE >97:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+145 text8 CODE >96:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+14B text8 CODE >100:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+14F text8 CODE >100:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+153 text8 CODE >102:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+156 text8 CODE >103:C:\Users\chuch\MPLABXProjects\P3.X/kbd.h
+446 text7 CODE >43:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+446 text7 CODE >47:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+453 text7 CODE >48:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+45C text7 CODE >49:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+465 text7 CODE >49:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+46B text7 CODE >49:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+471 text7 CODE >50:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+472 text7 CODE >51:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+47A text7 CODE >52:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+47C text7 CODE >53:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+480 text7 CODE >54:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+483 text7 CODE >54:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+488 text7 CODE >57:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+489 text7 CODE >57:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+48F text7 CODE >57:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+491 text7 CODE >58:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+49A text7 CODE >60:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+49C text7 CODE >60:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+4A1 text7 CODE >63:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+4A3 text7 CODE >63:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+4AA text7 CODE >64:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+4AC text7 CODE >62:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+4AC text7 CODE >65:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+4B1 text7 CODE >67:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+4B6 text7 CODE >68:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+4BB text7 CODE >68:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+4BD text7 CODE >68:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+4BF text7 CODE >68:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+4C1 text7 CODE >70:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+27C text6 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+27C text6 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+280 text6 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+286 text6 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+288 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+289 text6 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+28A text6 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+28E text6 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+290 text6 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+294 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+298 text6 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+299 text6 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+29D text6 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+29F text6 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+2A1 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+2A5 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+2A9 text6 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+2AC text6 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+2AF text6 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+2B0 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+2B1 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+2B5 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+2B7 text6 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+2BD text6 CODE >29:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+2C1 text6 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+240 text5 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+240 text5 CODE >12:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+248 text5 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+24A text5 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+24B text5 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+24C text5 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+250 text5 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+252 text5 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+256 text5 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+25A text5 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+25C text5 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+260 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+264 text5 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+267 text5 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+26A text5 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+26B text5 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+26F text5 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+271 text5 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+277 text5 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+27B text5 CODE >25:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+3DA text4 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+3DD text4 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+3E1 text4 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+3F2 text4 CODE >25:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+3F6 text4 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+3FC text4 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+402 text4 CODE >29:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+413 text4 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+424 text4 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+426 text4 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+42A text4 CODE >32:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+42E text4 CODE >33:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+432 text4 CODE >34:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+43B text4 CODE >35:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+441 text4 CODE >36:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+445 text4 CODE >37:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+157 text3 CODE >4:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+15A text3 CODE >6:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+15A text3 CODE >8:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+15E text3 CODE >9:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+169 text3 CODE >10:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+16C text3 CODE >10:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+16E text3 CODE >12:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+17A text3 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+1D9 text2 CODE >8:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strcat.c
+1DC text2 CODE >18:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strcat.c
+1E0 text2 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strcat.c
+1E1 text2 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strcat.c
+1E5 text2 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strcat.c
+1EE text2 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strcat.c
+1F2 text2 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strcat.c
+1F4 text2 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strcat.c
+1F8 text2 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strcat.c
+20A text2 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strcat.c
+4C2 text1 CODE >127:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+4C2 text1 CODE >129:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+4D9 text1 CODE >130:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+4EE text1 CODE >138:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+4F4 text1 CODE >141:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+50F text1 CODE >142:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+519 text1 CODE >144:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+51D text1 CODE >145:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+527 text1 CODE >146:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+535 text1 CODE >147:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+53F text1 CODE >148:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+549 text1 CODE >149:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+557 text1 CODE >150:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+561 text1 CODE >151:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+56B text1 CODE >153:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+56F text1 CODE >154:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+62D maintext CODE >42:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+62D maintext CODE >44:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+633 maintext CODE >46:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+636 maintext CODE >48:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+639 maintext CODE >49:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+646 maintext CODE >50:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+651 maintext CODE >51:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+65E maintext CODE >52:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+669 maintext CODE >53:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+676 maintext CODE >54:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+681 maintext CODE >55:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+689 maintext CODE >56:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+698 maintext CODE >60:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6A0 maintext CODE >61:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6A4 maintext CODE >62:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6AC maintext CODE >64:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6B2 maintext CODE >65:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6C5 maintext CODE >66:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6C9 maintext CODE >66:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6CD maintext CODE >67:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6CE maintext CODE >68:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6D5 maintext CODE >69:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6E8 maintext CODE >70:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6EC maintext CODE >70:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+6F0 maintext CODE >74:C:\Users\chuch\MPLABXProjects\P3.X\main.c
+F9 inittext CODE >652:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+F9 inittext CODE >653:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+FA inittext CODE >654:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+FB inittext CODE >655:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+FC inittext CODE >656:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+FD inittext CODE >663:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+FD inittext CODE >664:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+100 inittext CODE >665:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+101 inittext CODE >666:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+102 inittext CODE >667:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+103 inittext CODE >668:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+104 inittext CODE >669:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+105 inittext CODE >670:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+106 inittext CODE >671:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+107 inittext CODE >672:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+108 inittext CODE >673:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
+109 inittext CODE >674:C:\Users\chuch\AppData\Local\Temp\xcAsfmk.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -438,98 +481,108 @@ $dist/default/production\P3.X.production.o
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_M 22 0 BANK0 1 dataBANK0 dist/default/production\P3.X.production.o
 ___latbits 1 0 ABS 0 - dist/default/production\P3.X.production.o
+___lwmod@counter 25 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 __LdataBANK0 0 0 ABS 0 dataBANK0 -
+__LdataBANK1 0 0 ABS 0 dataBANK1 -
 __Hspace_0 800 0 ABS 0 - -
-__Hspace_1 341 0 ABS 0 - -
+__Hspace_1 3D9 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 400F 0 ABS 0 - -
 __HidataBANK0 0 0 ABS 0 idataBANK0 -
+__HidataBANK1 0 0 ABS 0 idataBANK1 -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_GO FA 0 ABS 0 - dist/default/production\P3.X.production.o
-_RS 340 -2D8 BANK0 1 bitbssBANK0 dist/default/production\P3.X.production.o
-__size_of_imprimir_valor_leds 0 0 ABS 0 - dist/default/production\P3.X.production.o
-main@c 5F 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
-main@i 5D 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+_RS 3D8 -35D BANK0 1 bitbssBANK0 dist/default/production\P3.X.production.o
+main@c 6E 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+main@i 6F 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+ventilator_screen@F1129 B0 0 BANK1 1 dataBANK1 dist/default/production\P3.X.production.o
+ventilator_screen@F1131 A0 0 BANK1 1 dataBANK1 dist/default/production\P3.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-_ADIF 66 0 ABS 0 - dist/default/production\P3.X.production.o
-_ADON F8 0 ABS 0 - dist/default/production\P3.X.production.o
-_CHS0 FB 0 ABS 0 - dist/default/production\P3.X.production.o
-_CHS1 FC 0 ABS 0 - dist/default/production\P3.X.production.o
-_CHS2 FD 0 ABS 0 - dist/default/production\P3.X.production.o
-_RCIE 465 0 ABS 0 - dist/default/production\P3.X.production.o
-_TMR0 1 0 ABS 0 - dist/default/production\P3.X.production.o
-_TXIE 464 0 ABS 0 - dist/default/production\P3.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-_main 9CE 0 CODE 0 maintext dist/default/production\P3.X.production.o
+itoa@base 33 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+_itoa 2AE 0 CODE 0 text3 dist/default/production\P3.X.production.o
+_main C5A 0 CODE 0 maintext dist/default/production\P3.X.production.o
+_utoa 7B4 0 CODE 0 text4 dist/default/production\P3.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\P3.X.production.o
-start 0 0 CODE 0 init C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-__size_of_set_configuraciones 0 0 ABS 0 - dist/default/production\P3.X.production.o
+start 0 0 CODE 0 init C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+__size_of___fltol 0 0 ABS 0 - dist/default/production\P3.X.production.o
+__size_of_itoa 0 0 ABS 0 - dist/default/production\P3.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\P3.X.production.o
-LCD_Goto@col 54 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
-LCD_Goto@row 51 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+__size_of_utoa 0 0 ABS 0 - dist/default/production\P3.X.production.o
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\P3.X.production.o
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\P3.X.production.o
+LCD_Goto@col 29 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+LCD_Goto@row 26 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 __size_of_LCD_Cmd 0 0 ABS 0 - dist/default/production\P3.X.production.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
-_LCD_Goto 760 0 CODE 0 text5 dist/default/production\P3.X.production.o
-_LCD_PutC 4FA 0 CODE 0 text14 dist/default/production\P3.X.production.o
+__LidataBANK1 0 0 ABS 0 idataBANK1 -
+_LCD_Goto 352 0 CODE 0 text12 dist/default/production\P3.X.production.o
+_LCD_PutC 23E 0 CODE 0 text14 dist/default/production\P3.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-Tx_Dato@X 4B 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
-__end_of_LCD_Goto 7C0 0 CODE 0 text5 dist/default/production\P3.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-__end_of_LCD_PutC 528 0 CODE 0 text14 dist/default/production\P3.X.production.o
+utoa@c 2F 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+utoa@v 2D 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+__end_of_LCD_Goto 3B2 0 CODE 0 text12 dist/default/production\P3.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+__end_of_LCD_PutC 26C 0 CODE 0 text14 dist/default/production\P3.X.production.o
+strcat@from 20 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\P3.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-_imprimir_valor_leds 608 0 CODE 0 text7 dist/default/production\P3.X.production.o
+_ventilator_screen 984 0 CODE 0 text1 dist/default/production\P3.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-_set_configuraciones 528 0 CODE 0 text1 dist/default/production\P3.X.production.o
-__end_of_Tx_Dato 4D8 0 CODE 0 text11 dist/default/production\P3.X.production.o
-_ADCON0 1F 0 ABS 0 - dist/default/production\P3.X.production.o
 _ADCON1 9F 0 ABS 0 - dist/default/production\P3.X.production.o
-_ADRESH 1E 0 ABS 0 - dist/default/production\P3.X.production.o
-_ADRESL 9E 0 ABS 0 - dist/default/production\P3.X.production.o
-LCD_Cmd@Command 50 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
-keypad_getkey@key 4D 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
-_Canal0 556 0 CODE 0 text13 dist/default/production\P3.X.production.o
+LCD_Cmd@Command 25 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+keypad_getkey@key 22 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 __size_of_keypad_readkey 0 0 ABS 0 - dist/default/production\P3.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-_OPTION_REG 81 0 ABS 0 - dist/default/production\P3.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-___stacklo 0 0 ABS 0 - C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-__end_of_LCD_Cmd 760 0 CODE 0 text16 dist/default/production\P3.X.production.o
-_keypad_getkey 5C6 0 CODE 0 text2 dist/default/production\P3.X.production.o
+___lwmod@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+__end_of___fltol 984 0 CODE 0 text7 dist/default/production\P3.X.production.o
+__end_of___lwdiv 584 0 CODE 0 text6 dist/default/production\P3.X.production.o
+__end_of___lwmod 4F8 0 CODE 0 text5 dist/default/production\P3.X.production.o
+ventilator_screen@ventilator_number 3D 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+___stacklo 0 0 ABS 0 - C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+__end_of_LCD_Cmd 352 0 CODE 0 text16 dist/default/production\P3.X.production.o
+ventilator_screen@vel_number 6A 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+_keypad_getkey 26C 0 CODE 0 text8 dist/default/production\P3.X.production.o
+___lwdiv@quotient 25 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+itoa@buf 36 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+itoa@val 31 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 __size_of_inicio_presentacion 0 0 ABS 0 - dist/default/production\P3.X.production.o
-LCD_Print@i 51 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
-start_initialization FD0 0 CODE 0 cinit dist/default/production\P3.X.production.o
-__size_of_Canal0 0 0 ABS 0 - dist/default/production\P3.X.production.o
-LCD_PutC@LCD_Char 4F 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+___lwmod@dividend 22 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+LCD_Print@i 25 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+start_initialization FB2 0 CODE 0 cinit dist/default/production\P3.X.production.o
+LCD_PutC@LCD_Char 24 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 _TRISAbits 85 0 ABS 0 - dist/default/production\P3.X.production.o
 _TRISBbits 86 0 ABS 0 - dist/default/production\P3.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\P3.X.production.o
-inicio_presentacion@i 58 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
-__end_of_imprimir_valor_leds 65A 0 CODE 0 text7 dist/default/production\P3.X.production.o
-__pcstackBANK0 4B 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
-__end_of_set_configuraciones 556 0 CODE 0 text1 dist/default/production\P3.X.production.o
-__size_of_Rx_Dato 0 0 ABS 0 - dist/default/production\P3.X.production.o
-__end_of_LCD_Begin C6E 0 CODE 0 text15 dist/default/production\P3.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-__end_of_LCD_Print 83E 0 CODE 0 text9 dist/default/production\P3.X.production.o
+ventilator_screen@vel 53 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+ventilator_screen@vol 43 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+ventilator_screen@vrm 3B 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+inicio_presentacion@i 30 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+utoa@buf 30 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+utoa@val 28 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+__end_of_LCD_Begin C5A 0 CODE 0 text15 dist/default/production\P3.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+__end_of_LCD_Print 480 0 CODE 0 text11 dist/default/production\P3.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 BANK2 1 bank2 -
 __Hbank3 0 0 BANK3 1 bank3 -
 __Hcinit 1000 0 CODE 0 cinit -
+__end_of_strcat 416 0 CODE 0 text2 dist/default/production\P3.X.production.o
 __size_of_LCD_Begin 0 0 ABS 0 - dist/default/production\P3.X.production.o
 __Hstack 0 0 STACK 2 stack -
 __stringbase 22 0 STRING 0 strings dist/default/production\P3.X.production.o
+___lwdiv@counter 27 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 __size_of_LCD_Print 0 0 ABS 0 - dist/default/production\P3.X.production.o
-_inicio_presentacion 900 0 CODE 0 text4 dist/default/production\P3.X.production.o
+_inicio_presentacion 638 0 CODE 0 text10 dist/default/production\P3.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4010 0 CONFIG 4 config -
@@ -537,11 +590,11 @@ __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 BANK2 1 bank2 -
 __Lbank3 0 0 BANK3 1 bank3 -
-__Lcinit FD0 0 CODE 0 cinit -
+__Lcinit FB2 0 CODE 0 cinit -
 __Lstack 0 0 STACK 2 stack -
-_LCD_Begin AF4 0 CODE 0 text15 dist/default/production\P3.X.production.o
+_LCD_Begin AE0 0 CODE 0 text15 dist/default/production\P3.X.production.o
 __Linittext 0 0 ABS 0 inittext -
-_LCD_Print 7C0 0 CODE 0 text9 dist/default/production\P3.X.production.o
+_LCD_Print 416 0 CODE 0 text11 dist/default/production\P3.X.production.o
 _PORTBbits 6 0 ABS 0 - dist/default/production\P3.X.production.o
 _PORTCbits 7 0 ABS 0 - dist/default/production\P3.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
@@ -563,52 +616,59 @@ __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_keypad_getkey 0 0 ABS 0 - dist/default/production\P3.X.production.o
-_ECO 66 0 BANK0 1 bssBANK0 dist/default/production\P3.X.production.o
 _RA0 28 0 ABS 0 - dist/default/production\P3.X.production.o
 _RA1 29 0 ABS 0 - dist/default/production\P3.X.production.o
 _RA2 2A 0 ABS 0 - dist/default/production\P3.X.production.o
+_RA3 2B 0 ABS 0 - dist/default/production\P3.X.production.o
 _RA4 2C 0 ABS 0 - dist/default/production\P3.X.production.o
 _RA5 2D 0 ABS 0 - dist/default/production\P3.X.production.o
 _RC0 38 0 ABS 0 - dist/default/production\P3.X.production.o
 _RC1 39 0 ABS 0 - dist/default/production\P3.X.production.o
-_RC3 3B 0 ABS 0 - dist/default/production\P3.X.production.o
 __S0 800 0 ABS 0 - -
-__S1 69 0 ABS 0 - -
+__S1 FE 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-__pbitbssBANK0 340 -2D8 BANK0 1 bitbssBANK0 dist/default/production\P3.X.production.o
-_LCD_Write_Nibble 83E 0 CODE 0 text17 dist/default/production\P3.X.production.o
-Canal0@z 4B 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
-_Tx_Dato 4BC 0 CODE 0 text11 dist/default/production\P3.X.production.o
-_evaluar_dato E1E 0 CODE 0 text8 dist/default/production\P3.X.production.o
+__pbitbssBANK0 3D8 -35D BANK0 1 bitbssBANK0 dist/default/production\P3.X.production.o
+_LCD_Write_Nibble 6F2 0 CODE 0 text17 dist/default/production\P3.X.production.o
+utoa@base 2A 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+strcat@cp 23 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+strcat@to 24 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+inicio_presentacion@length 2A 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
 __stringtab 4 0 STRING 0 strings dist/default/production\P3.X.production.o
-__end_of_keypad_getkey 608 0 CODE 0 text2 dist/default/production\P3.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\chuch\AppData\Local\Temp\xcAspc0.o
-__end_of_Rx_Dato 4BC 0 CODE 0 text12 dist/default/production\P3.X.production.o
-__pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production\P3.X.production.o
+__end_of_keypad_getkey 2AE 0 CODE 0 text8 dist/default/production\P3.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\chuch\AppData\Local\Temp\xcAsfmk.o
+__pdataBANK0 71 0 BANK0 1 dataBANK0 dist/default/production\P3.X.production.o
+__pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production\P3.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
 __LbitbssBANK0 0 0 ABS 0 bitbssBANK0 -
-LCD_Write_Nibble@n 4D 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
-__ptext10 65A 0 CODE 0 text10 dist/default/production\P3.X.production.o
-__ptext11 4BC 0 CODE 0 text11 dist/default/production\P3.X.production.o
-__ptext12 4A8 0 CODE 0 text12 dist/default/production\P3.X.production.o
-__ptext13 556 0 CODE 0 text13 dist/default/production\P3.X.production.o
-__ptext14 4FA 0 CODE 0 text14 dist/default/production\P3.X.production.o
-__ptext15 AF4 0 CODE 0 text15 dist/default/production\P3.X.production.o
-__ptext16 704 0 CODE 0 text16 dist/default/production\P3.X.production.o
-__ptext17 83E 0 CODE 0 text17 dist/default/production\P3.X.production.o
-__end_of_inicio_presentacion 9CE 0 CODE 0 text4 dist/default/production\P3.X.production.o
-_number 60 0 BANK0 1 bssBANK0 dist/default/production\P3.X.production.o
-__end_of_iniciar_puertos 5C6 0 CODE 0 text6 dist/default/production\P3.X.production.o
-__pmaintext 9CE 0 CODE 0 maintext dist/default/production\P3.X.production.o
+LCD_Write_Nibble@n 22 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+__ptext10 638 0 CODE 0 text10 dist/default/production\P3.X.production.o
+__ptext11 416 0 CODE 0 text11 dist/default/production\P3.X.production.o
+__ptext12 352 0 CODE 0 text12 dist/default/production\P3.X.production.o
+__ptext13 214 0 CODE 0 text13 dist/default/production\P3.X.production.o
+__ptext14 23E 0 CODE 0 text14 dist/default/production\P3.X.production.o
+__ptext15 AE0 0 CODE 0 text15 dist/default/production\P3.X.production.o
+__ptext16 2F6 0 CODE 0 text16 dist/default/production\P3.X.production.o
+__ptext17 6F2 0 CODE 0 text17 dist/default/production\P3.X.production.o
+__end_of_inicio_presentacion 6F2 0 CODE 0 text10 dist/default/production\P3.X.production.o
+___fltol 88C 0 CODE 0 text7 dist/default/production\P3.X.production.o
+___lwdiv 4F8 0 CODE 0 text6 dist/default/production\P3.X.production.o
+___lwmod 480 0 CODE 0 text5 dist/default/production\P3.X.production.o
+__end_of_iniciar_puertos 23E 0 CODE 0 text13 dist/default/production\P3.X.production.o
+__pmaintext C5A 0 CODE 0 maintext dist/default/production\P3.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 __Hinittext 0 0 ABS 0 inittext -
-_LCD_Cmd 704 0 CODE 0 text16 dist/default/production\P3.X.production.o
-__size_of_evaluar_dato 0 0 ABS 0 - dist/default/production\P3.X.production.o
-__end_of_LCD_Write_Nibble 900 0 CODE 0 text17 dist/default/production\P3.X.production.o
-_keypad_readkey C6E 0 CODE 0 text3 dist/default/production\P3.X.production.o
+_LCD_Cmd 2F6 0 CODE 0 text16 dist/default/production\P3.X.production.o
+ventilator_screen@voltaje 37 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+_saludo DD 0 BANK1 1 dataBANK1 dist/default/production\P3.X.production.o
+___lwdiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+_strcat 3B2 0 CODE 0 text2 dist/default/production\P3.X.production.o
+__end_of_LCD_Write_Nibble 7B4 0 CODE 0 text17 dist/default/production\P3.X.production.o
+_keypad_readkey E02 0 CODE 0 text9 dist/default/production\P3.X.production.o
+inicio_presentacion@str 2C 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 __end_of__stringtab 24 0 STRING 0 strings dist/default/production\P3.X.production.o
 __size_of_LCD_Write_Nibble 0 0 ABS 0 - dist/default/production\P3.X.production.o
 __Lspace_0 0 0 ABS 0 - -
@@ -616,64 +676,71 @@ __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__end_of_evaluar_dato FD0 0 CODE 0 text8 dist/default/production\P3.X.production.o
-init_fetch0 4D8 0 CODE 0 inittext dist/default/production\P3.X.production.o
+init_fetch0 1F2 0 CODE 0 inittext dist/default/production\P3.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
-_PIR1bits C 0 ABS 0 - dist/default/production\P3.X.production.o
 __Lend_init 0 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+___fltol@exp1 2A 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production\P3.X.production.o
-_iniciar_puertos 58C 0 CODE 0 text6 dist/default/production\P3.X.production.o
+_iniciar_puertos 214 0 CODE 0 text13 dist/default/production\P3.X.production.o
 __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
+___lwdiv@dividend 22 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+?___fltol 20 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+__size_of_ventilator_screen 0 0 ABS 0 - dist/default/production\P3.X.production.o
+?___lwdiv 20 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+?___lwmod 20 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 __Hreset_vec 0 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 528 0 CODE 0 text1 dist/default/production\P3.X.production.o
-__ptext2 5C6 0 CODE 0 text2 dist/default/production\P3.X.production.o
-__ptext3 C6E 0 CODE 0 text3 dist/default/production\P3.X.production.o
-__ptext4 900 0 CODE 0 text4 dist/default/production\P3.X.production.o
-__ptext5 760 0 CODE 0 text5 dist/default/production\P3.X.production.o
-__ptext6 58C 0 CODE 0 text6 dist/default/production\P3.X.production.o
-__ptext7 608 0 CODE 0 text7 dist/default/production\P3.X.production.o
-__ptext8 E1E 0 CODE 0 text8 dist/default/production\P3.X.production.o
-__ptext9 7C0 0 CODE 0 text9 dist/default/production\P3.X.production.o
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+__size_of_strcat 0 0 ABS 0 - dist/default/production\P3.X.production.o
+ventilator_screen@vel_value 63 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+__ptext1 984 0 CODE 0 text1 dist/default/production\P3.X.production.o
+__ptext2 3B2 0 CODE 0 text2 dist/default/production\P3.X.production.o
+__ptext3 2AE 0 CODE 0 text3 dist/default/production\P3.X.production.o
+__ptext4 7B4 0 CODE 0 text4 dist/default/production\P3.X.production.o
+__ptext5 480 0 CODE 0 text5 dist/default/production\P3.X.production.o
+__ptext6 4F8 0 CODE 0 text6 dist/default/production\P3.X.production.o
+__ptext7 88C 0 CODE 0 text7 dist/default/production\P3.X.production.o
+__ptext8 26C 0 CODE 0 text8 dist/default/production\P3.X.production.o
+__ptext9 E02 0 CODE 0 text9 dist/default/production\P3.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_keypad_readkey E1E 0 CODE 0 text3 dist/default/production\P3.X.production.o
+__end_of_keypad_readkey FB2 0 CODE 0 text9 dist/default/production\P3.X.production.o
+___fltol@sign1 29 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-_enviar_datos 65A 0 CODE 0 text10 dist/default/production\P3.X.production.o
+___fltol@f1 20 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 __HbitbssBANK0 0 0 ABS 0 bitbssBANK0 -
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/production\P3.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK0 6AE 0 CODE 0 idataBANK0 dist/default/production\P3.X.production.o
+__pidataBANK0 1E6 0 CODE 0 idataBANK0 dist/default/production\P3.X.production.o
+__pidataBANK1 584 0 CODE 0 idataBANK1 dist/default/production\P3.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production\P3.X.production.o
-_TXSTAbits 98 0 ABS 0 - dist/default/production\P3.X.production.o
 __Hend_init 4 0 CODE 0 end_init -
-init_ram0 4E0 0 CODE 0 inittext dist/default/production\P3.X.production.o
-__end_of_main AF4 0 CODE 0 maintext dist/default/production\P3.X.production.o
-_ADRES 64 0 BANK0 1 bssBANK0 dist/default/production\P3.X.production.o
+init_ram0 1FA 0 CODE 0 inittext dist/default/production\P3.X.production.o
+__end_of_itoa 2F6 0 CODE 0 text3 dist/default/production\P3.X.production.o
+__end_of_main E02 0 CODE 0 maintext dist/default/production\P3.X.production.o
+__end_of_utoa 88C 0 CODE 0 text4 dist/default/production\P3.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\P3.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\P3.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\P3.X.production.o
-_RCREG 1A 0 ABS 0 - dist/default/production\P3.X.production.o
-_SPBRG 99 0 ABS 0 - dist/default/production\P3.X.production.o
-_TXREG 19 0 ABS 0 - dist/default/production\P3.X.production.o
 __size_of_iniciar_puertos 0 0 ABS 0 - dist/default/production\P3.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__size_of_enviar_datos 0 0 ABS 0 - dist/default/production\P3.X.production.o
-_Rx_Dato 4A8 0 CODE 0 text12 dist/default/production\P3.X.production.o
+_grupo F4 0 BANK1 1 dataBANK1 dist/default/production\P3.X.production.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 -
-__initialization FD0 0 CODE 0 cinit dist/default/production\P3.X.production.o
-__pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production\P3.X.production.o
-__end_of_Canal0 58C 0 CODE 0 text13 dist/default/production\P3.X.production.o
+__HdataBANK1 0 0 ABS 0 dataBANK1 -
+__initialization FB2 0 CODE 0 cinit dist/default/production\P3.X.production.o
+__pbssBANK0 77 0 BANK0 1 bssBANK0 dist/default/production\P3.X.production.o
+__pbssBANK1 FA 0 BANK1 1 bssBANK1 dist/default/production\P3.X.production.o
 __pstrings 4 0 STRING 0 strings dist/default/production\P3.X.production.o
+__end_of_ventilator_screen AE0 0 CODE 0 text1 dist/default/production\P3.X.production.o
+_presentacion C0 0 BANK1 1 dataBANK1 dist/default/production\P3.X.production.o
 __size_of_LCD_Goto 0 0 ABS 0 - dist/default/production\P3.X.production.o
 __size_of_LCD_PutC 0 0 ABS 0 - dist/default/production\P3.X.production.o
-LCD_Print@LCD_Str 4E 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
-__size_of_Tx_Dato 0 0 ABS 0 - dist/default/production\P3.X.production.o
-__end_of_enviar_datos 6AE 0 CODE 0 text10 dist/default/production\P3.X.production.o
+LCD_Print@LCD_Str 26 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
+ventilator_screen@vol_value 67 0 BANK0 1 cstackBANK0 dist/default/production\P3.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -699,30 +766,32 @@ __end_of_enviar_datos 6AE 0 CODE 0 text10 dist/default/production\P3.X.productio
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7E8 FD0 18 2
-text1 0 294 528 17 2
-text2 0 2E3 5C6 21 2
-text3 0 637 C6E D8 2
-text4 0 480 900 67 2
-text5 0 3B0 760 30 2
-text6 0 2C6 58C 1D 2
-text7 0 304 608 29 2
-text8 0 70F E1E D9 2
-text9 0 3E0 7C0 3F 2
-text10 0 32D 65A 2A 2
-text11 0 25E 4BC E 2
-text12 0 254 4A8 A 2
-text13 0 2AB 556 1B 2
-text14 0 27D 4FA 17 2
-text15 0 57A AF4 BD 2
-text16 0 382 704 2E 2
-text17 0 41F 83E 61 2
-maintext 0 4E7 9CE 93 2
-inittext 0 26C 4D8 11 2
+cinit 0 7D9 FB2 27 2
+text1 0 4C2 984 AE 2
+text2 0 1D9 3B2 32 2
+text3 0 157 2AE 24 2
+text4 0 3DA 7B4 6C 2
+text5 0 240 480 3C 2
+text6 0 27C 4F8 46 2
+text7 0 446 88C 7C 2
+text8 0 136 26C 21 2
+text9 0 701 E02 D8 2
+text10 0 31C 638 5D 2
+text11 0 20B 416 35 2
+text12 0 1A9 352 30 2
+text13 0 10A 214 15 2
+text14 0 11F 23E 17 2
+text15 0 570 AE0 BD 2
+text16 0 17B 2F6 2E 2
+text17 0 379 6F2 61 2
+maintext 0 62D C5A D4 2
+cstackBANK0 1 20 20 5C 1
+inittext 0 F9 1F2 11 2
 reset_vec 0 0 0 2 2
-idataBANK0 0 357 6AE 2B 2
-strings 0 2 4 45 2
-dataBANK0 1 20 20 49 1
+idataBANK0 0 F3 1E6 6 2
+idataBANK1 0 2C2 584 5A 2
+strings 0 2 4 18 2
+dataBANK1 1 A0 A0 5E 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

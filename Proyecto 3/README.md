@@ -32,7 +32,26 @@ resultado que estos le envien.
 Error en el puerto C, se piensa en un posible problema conforme alguna configuracion con estos, dado que no envia bien
 los datos atraves de los puertos.
 
-Nota: Estaba activado el UART
+Nota: Estaba activado el UART, al quitarlo funciona correctamente
+
+
+### Microcontrolador 1 PIC16F873A
+Dentro de este PIC se hayo que en el esquema estaba mal diseñado dado que los valores de las FILAS que van de ENTRADA deben de ir de SALIDA, mientras que en las COLUMNAS en vez de ir de SALIDA deben de ir de ENTRADA. Este error se visualizo dado que el PIC, no obtenia valores del KEYPAD.
+
+Tambien debemos realizar un configuracion de los puertos de A para que sean digitales, en este caso deseamos que todos los puertos de A por lo cual se realizo con la siguiente instruccion:
+```C
+ADCON1 = 0x07;
+```
+Uno de los otros errores fue dentro del PORT RA4 dado que este es un puerto es pull up para salidas, para la solucion de este se hizo la siguiente configuracion, para poder usarlo como salida.
+
+#### Configuracion nueva
+![Error](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/CaptureError.PNG)
+
+#### Configuracion pasada
+![Error](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/CaptureError.PNG)
+
+#### Anexo de configuracion
+![Error](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/CaptureError.PNG)
 
 ## Carpetas por PIC
 1. P3 es -> PIC16F873A

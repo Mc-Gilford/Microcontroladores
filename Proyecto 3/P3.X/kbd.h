@@ -4,14 +4,15 @@ char scan_key(void);
 //Puestos de columas y filas
 #define HIGH 1
 #define LOW 0
-#define r3 RC1 
-#define r2 RC0
-#define r1 RA5
-#define r0 RA4
+#define r3 RA4 
+#define r2 RA5
+#define r1 RC0 //FILA 3
+#define r0 RC1
+
 #define c0 RA0
 #define c1 RA1
 #define c2 RA2
-#define c3 RC3
+#define c3 RA3
 
 
 int get_num(char ch)         //converting character into integer
@@ -41,7 +42,7 @@ unsigned char keypad_readkey(void)
     __delay_us(30);
   
     if(r0==HIGH && r1==LOW && r2==LOW && r3==LOW)  {   
-        if (c0 == HIGH) return 'A';		// Key '1' 
+        if (c0 == HIGH) return 'Z';		// Key '1' 
         if (c1 == HIGH) return '0';		// Key '2' 
         if (c2 == HIGH) return '=';		// Key '3'
         if (c3 == HIGH) return '+';		// Key '3' 
@@ -82,7 +83,7 @@ unsigned char keypad_readkey(void)
         if (c0 == HIGH) return '7';		// Key '7' 
         if (c1 == HIGH) return '8';		// Key '8' 
         if (c2 == HIGH) return '9';		// Key '9'
-        if (c3 == HIGH) return '/';		// Key '/' 
+        if (c3 == HIGH) return 'A';		// Key '/' 
     }
 	return 'x';					// if no key press, the register is 0xFF
 }

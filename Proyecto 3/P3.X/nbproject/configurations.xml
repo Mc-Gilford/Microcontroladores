@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>kbd.h</itemPath>
       <itemPath>lcd.h</itemPath>
+      <itemPath>ftoaa.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
