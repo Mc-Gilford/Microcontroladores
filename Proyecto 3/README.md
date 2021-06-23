@@ -87,7 +87,7 @@ El interpretado es el siguiente:
                |     xx.xx mv     |    Si se presiona una tecla "#" acepta el valor, si se presiona "*" No acepta el valor
                 ------------------     ( lo mismo aplica para velocidad 1 y velocidad 2 )
 
-
+![Menu](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/New%20Interface.PNG)
 ## Carpetas por PIC
 1. P3 es -> PIC16F873A
 2. P3_NOR -> PIC16F873
