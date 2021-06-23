@@ -54,8 +54,10 @@ Uno de los otros errores fue dentro del PORT RA4 dado que este es un puerto es p
 ![Anexo](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/Added_Part.PNG)
 
 ## KEYPAD
+
 Para el KEYPAD se hizo la configuracion respecto al que se puede ver en la imagen:
 ![Keypad](https://circuitdigest.com/sites/default/files/inlineimages/4x4-matrix-keypad.gif)
+
 El interpretado es el siguiente:
                | Voltaje: xx.x mv |
                | Vel_1: xxxx RPM  |    Si se presiona una tecla "A" que despliegue lo siguiente
