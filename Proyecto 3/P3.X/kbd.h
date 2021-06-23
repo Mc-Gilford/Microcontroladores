@@ -45,7 +45,7 @@ unsigned char keypad_readkey(void)
         if (c0 == HIGH) return 'Z';		// Key '1' 
         if (c1 == HIGH) return '0';		// Key '2' 
         if (c2 == HIGH) return '=';		// Key '3'
-        if (c3 == HIGH) return '+';		// Key '3' 
+        if (c3 == HIGH) return 'D';		// Key '3' 
     }
     r0 = LOW;		
     r1 = HIGH;
@@ -57,7 +57,7 @@ unsigned char keypad_readkey(void)
         if (c0 == HIGH) return '1';		// Key '1' 
         if (c1 == HIGH) return '2';		// Key '2' 
         if (c2 == HIGH) return '3';		// Key '3'
-        if (c3 == HIGH) return '.';		// Key '.' 
+        if (c3 == HIGH) return 'C';		// Key '.' 
     }
     
     r0 = LOW;		
@@ -70,7 +70,7 @@ unsigned char keypad_readkey(void)
         if (c0 == HIGH) return '4';		// Key '4' 
         if (c1 == HIGH) return '5';		// Key '5' 
         if (c2 == HIGH) return '6';		// Key '6'
-        if (c3 == HIGH) return '*';		// Key '*' 
+        if (c3 == HIGH) return 'B';		// Key '*' 
     }
     
     r0 = LOW;		

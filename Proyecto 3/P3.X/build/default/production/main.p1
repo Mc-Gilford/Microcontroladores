@@ -71,17 +71,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2422
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873a.h: 2422: extern volatile __bit RA3 __attribute__((address(0x2B)));
 [v _RA3 `Vb ~T0 @X0 0 e@43 ]
-[p mainexit ]
-"23 main.c
-[; ;main.c: 23: void iniciar_puertos();
-[v _iniciar_puertos `(v ~T0 @X0 0 e? ]
-"24
-[; ;main.c: 24: void inicio_presentacion(int, char*);
-[v _inicio_presentacion `(v ~T0 @X0 0 ef2`i`*uc ]
-"25
-[; ;main.c: 25: void ventilator_screen(float , int , int );
-[v _ventilator_screen `(v ~T0 @X0 0 ef3`f`i`i ]
-"166 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873a.h
+"166
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873a.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
 [v _PORTA `Vuc ~T0 @X0 0 e@5 ]
 "216
@@ -104,28 +94,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2004
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873a.h: 2004: extern volatile unsigned char ADCON1 __attribute__((address(0x09F)));
 [v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
-"113 C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdlib.h
-[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdlib.h: 113: extern char * itoa(char * buf, int val, int base);
-[v _itoa `(*uc ~T0 @X0 0 ef3`*uc`i`i ]
 "36 C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\string.h
 [; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\string.h: 36: extern char * strcat(char *, const char *);
 [v _strcat `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
-"2 main.c
-[; ;main.c: 2: 
+"113 C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdlib.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c90\stdlib.h: 113: extern char * itoa(char * buf, int val, int base);
+[v _itoa `(*uc ~T0 @X0 0 ef3`*uc`i`i ]
+[p mainexit ]
+"10 main.c
 [p x FOSC  =  XT  ]
-"3
+"11
 [p x WDTE  =  OFF  ]
-"4
+"12
 [p x PWRTE  =  OFF  ]
-"5
+"13
 [p x BOREN  =  OFF  ]
-"6
+"14
 [p x LVP  =  OFF  ]
-"7
+"15
 [p x CPD  =  OFF  ]
-"8
+"16
 [p x WRT  =  OFF  ]
-"9
+"17
 [p x CP  =  OFF  ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873a.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873a.h: 54: __asm("INDF equ 00h");
@@ -785,9 +775,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $UE 121  ]
 [e :U 125 ]
 "48
-[; ;./kbd.h: 48:         if (RA3 == 1) return '+';
+[; ;./kbd.h: 48:         if (RA3 == 1) return 'D';
 [e $ ! == -> _RA3 `i -> 1 `i 126  ]
-[e ) -> -> 43 `ui `uc ]
+[e ) -> -> 68 `ui `uc ]
 [e $UE 121  ]
 [e :U 126 ]
 "49
@@ -832,9 +822,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $UE 121  ]
 [e :U 130 ]
 "60
-[; ;./kbd.h: 60:         if (RA3 == 1) return '.';
+[; ;./kbd.h: 60:         if (RA3 == 1) return 'C';
 [e $ ! == -> _RA3 `i -> 1 `i 131  ]
-[e ) -> -> 46 `ui `uc ]
+[e ) -> -> 67 `ui `uc ]
 [e $UE 121  ]
 [e :U 131 ]
 "61
@@ -879,9 +869,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $UE 121  ]
 [e :U 135 ]
 "73
-[; ;./kbd.h: 73:         if (RA3 == 1) return '*';
+[; ;./kbd.h: 73:         if (RA3 == 1) return 'B';
 [e $ ! == -> _RA3 `i -> 1 `i 136  ]
-[e ) -> -> 42 `ui `uc ]
+[e ) -> -> 66 `ui `uc ]
 [e $UE 121  ]
 [e :U 136 ]
 "74
@@ -982,17 +972,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./kbd.h: 103: }
 [e :UE 142 ]
 }
-"28 main.c
-[; ;main.c: 28: char number[4];
+"32 main.c
+[; ;main.c: 32: char number[4];
 [v _number `uc ~T0 @X0 -> 4 `i e ]
-"30
-[; ;main.c: 30: int length_grupo = 5;
+"33
+[; ;main.c: 33: int i =0;
+[v _i `i ~T0 @X0 1 e ]
+[i _i
+-> 0 `i
+]
+"34
+[; ;main.c: 34: int length_grupo = 5;
 [v _length_grupo `i ~T0 @X0 1 e ]
 [i _length_grupo
 -> 5 `i
 ]
-"31
-[; ;main.c: 31: char grupo[] = {"3CV16"};
+"35
+[; ;main.c: 35: char grupo[] = {"3CV16"};
 [v _grupo `uc ~T0 @X0 -> 6 `i e ]
 [i _grupo
 :U ..
@@ -1004,14 +1000,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"32
-[; ;main.c: 32: int length_presentacion = 38;
+"36
+[; ;main.c: 36: int length_presentacion = 38;
 [v _length_presentacion `i ~T0 @X0 1 e ]
 [i _length_presentacion
 -> 38 `i
 ]
-"33
-[; ;main.c: 33: char presentacion[] = {"Jose Rodriguez y Karla Reyes"};
+"37
+[; ;main.c: 37: char presentacion[] = {"Jose Rodriguez y Karla Reyes"};
 [v _presentacion `uc ~T0 @X0 -> 29 `i e ]
 [i _presentacion
 :U ..
@@ -1046,14 +1042,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"34
-[; ;main.c: 34: int length_saludo = 22;
+"38
+[; ;main.c: 38: int length_saludo = 22;
 [v _length_saludo `i ~T0 @X0 1 e ]
 [i _length_saludo
 -> 22 `i
 ]
-"35
-[; ;main.c: 35: char saludo[] = "Hola Mundo bienvenido!";
+"39
+[; ;main.c: 39: char saludo[] = "Hola Mundo bienvenido!";
 [v _saludo `uc ~T0 @X0 -> 23 `i e ]
 [i _saludo
 :U ..
@@ -1082,254 +1078,267 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"36
-[; ;main.c: 36: int ECO;
+"40
+[; ;main.c: 40: int ECO;
 [v _ECO `i ~T0 @X0 1 e ]
-"37
-[; ;main.c: 37: int ADRES;
+"41
+[; ;main.c: 41: int ADRES;
 [v _ADRES `i ~T0 @X0 1 e ]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"42
-[; ;main.c: 42: int main()
-[v _main `(i ~T0 @X0 1 ef ]
 "43
-[; ;main.c: 43: {
-{
-[e :U _main ]
-[f ]
-"44
-[; ;main.c: 44:     int i=1;
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 1 `i ]
-"46
-[; ;main.c: 46:     iniciar_puertos();
-[e ( _iniciar_puertos ..  ]
-"48
-[; ;main.c: 48:     LCD_Begin();
-[e ( _LCD_Begin ..  ]
-"49
-[; ;main.c: 49:     inicio_presentacion(length_saludo, saludo);
-[e ( _inicio_presentacion (2 , _length_saludo &U _saludo ]
-"50
-[; ;main.c: 50:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"51
-[; ;main.c: 51:     inicio_presentacion(length_presentacion,presentacion);
-[e ( _inicio_presentacion (2 , _length_presentacion &U _presentacion ]
-"52
-[; ;main.c: 52:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"53
-[; ;main.c: 53:     inicio_presentacion(length_grupo,grupo);
-[e ( _inicio_presentacion (2 , _length_grupo &U _grupo ]
-"54
-[; ;main.c: 54:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"55
-[; ;main.c: 55:     LCD_Goto(1, 1);
-[e ( _LCD_Goto (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"56
-[; ;main.c: 56:     _delay((unsigned long)((50)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"58
-[; ;main.c: 58:     while(1){
-[e :U 151 ]
-{
-"60
-[; ;main.c: 60:     char c = keypad_getkey();
-[v _c `uc ~T0 @X0 1 a ]
-[e = _c -> ( _keypad_getkey ..  `uc ]
-"61
-[; ;main.c: 61:         LCD_PutC(c);
-[e ( _LCD_PutC (1 _c ]
-"62
-[; ;main.c: 62:         if(c=='A')
-[e $ ! == -> _c `ui -> 65 `ui 153  ]
-"63
-[; ;main.c: 63:         {
-{
-"64
-[; ;main.c: 64:             if(i==1){
-[e $ ! == _i -> 1 `i 154  ]
-{
-"65
-[; ;main.c: 65:                 ventilator_screen(1.2,1000,1);
-[e ( _ventilator_screen (3 , , -> .1.2 `f -> 1000 `i -> 1 `i ]
-"66
-[; ;main.c: 66:             ++i;
-[e =+ _i -> 1 `i ]
-"67
-[; ;main.c: 67:             }
-}
-[e $U 155  ]
-"68
-[; ;main.c: 68:             else if(i==2){
-[e :U 154 ]
-[e $ ! == _i -> 2 `i 156  ]
-{
-"69
-[; ;main.c: 69:                 ventilator_screen(2.1,1000,2);
-[e ( _ventilator_screen (3 , , -> .2.1 `f -> 1000 `i -> 2 `i ]
-"70
-[; ;main.c: 70:                 --i;
-[e =- _i -> 1 `i ]
-"71
-[; ;main.c: 71:             }
-}
-[e :U 156 ]
-[e :U 155 ]
-"73
-[; ;main.c: 73:         }
-}
-[e :U 153 ]
-"74
-[; ;main.c: 74:     _delay((unsigned long)((500)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"75
-[; ;main.c: 75:     }
-}
-[e :U 150 ]
-[e $U 151  ]
-[e :U 152 ]
-"76
-[; ;main.c: 76: }
-[e :UE 149 ]
-}
-"78
-[; ;main.c: 78: void iniciar_puertos()
+[; ;main.c: 43: void iniciar_puertos()
 [v _iniciar_puertos `(v ~T0 @X0 1 ef ]
-"79
-[; ;main.c: 79: {
+"44
+[; ;main.c: 44: {
 {
 [e :U _iniciar_puertos ]
 [f ]
-"82
-[; ;main.c: 82:     PORTA = 0;
+"47
+[; ;main.c: 47:     PORTA = 0x00;
 [e = _PORTA -> -> 0 `i `uc ]
-"83
-[; ;main.c: 83:     PORTB = 0;
+"48
+[; ;main.c: 48:     PORTB = 0x00;
 [e = _PORTB -> -> 0 `i `uc ]
-"84
-[; ;main.c: 84:     PORTC = 0;
+"49
+[; ;main.c: 49:     PORTC = 0x00;
 [e = _PORTC -> -> 0 `i `uc ]
-"89
-[; ;main.c: 89:     TRISCbits.TRISC0 = 0;
+"54
+[; ;main.c: 54:     TRISCbits.TRISC0 = 0;
 [e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
-"90
-[; ;main.c: 90:     TRISCbits.TRISC1 = 0;
+"55
+[; ;main.c: 55:     TRISCbits.TRISC1 = 0;
 [e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
-"92
-[; ;main.c: 92:     TRISCbits.TRISC3 = 0;
+"57
+[; ;main.c: 57:     TRISCbits.TRISC3 = 0;
 [e = . . _TRISCbits 0 3 -> -> 0 `i `uc ]
-"93
-[; ;main.c: 93:     TRISCbits.TRISC4 = 0;
+"58
+[; ;main.c: 58:     TRISCbits.TRISC4 = 0;
 [e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
-"95
-[; ;main.c: 95:     TRISCbits.TRISC6 = 0;
+"60
+[; ;main.c: 60:     TRISCbits.TRISC6 = 0;
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-"99
-[; ;main.c: 99:     TRISAbits.TRISA0 = 1;
+"64
+[; ;main.c: 64:     TRISAbits.TRISA0 = 1;
 [e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
-"100
-[; ;main.c: 100:     TRISAbits.TRISA1 = 1;
+"65
+[; ;main.c: 65:     TRISAbits.TRISA1 = 1;
 [e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
-"101
-[; ;main.c: 101:     TRISAbits.TRISA2 = 1;
+"66
+[; ;main.c: 66:     TRISAbits.TRISA2 = 1;
 [e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
-"102
-[; ;main.c: 102:     TRISAbits.TRISA3 = 1;
+"67
+[; ;main.c: 67:     TRISAbits.TRISA3 = 1;
 [e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
-"103
-[; ;main.c: 103:     TRISAbits.TRISA4 = 0;
+"68
+[; ;main.c: 68:     TRISAbits.TRISA4 = 0;
 [e = . . _TRISAbits 0 4 -> -> 0 `i `uc ]
-"104
-[; ;main.c: 104:     TRISAbits.TRISA5 = 0;
+"69
+[; ;main.c: 69:     TRISAbits.TRISA5 = 0;
 [e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
-"108
-[; ;main.c: 108:     ADCON1 = 0x07;
+"71
+[; ;main.c: 71:     ADCON1 = 0x07;
 [e = _ADCON1 -> -> 7 `i `uc ]
-"110
-[; ;main.c: 110: }
-[e :UE 157 ]
+"73
+[; ;main.c: 73: }
+[e :UE 149 ]
 }
-"112
-[; ;main.c: 112: void inicio_presentacion (int length, char *str)
+"75
+[; ;main.c: 75: void inicio_presentacion (int length, char *str)
 [v _inicio_presentacion `(v ~T0 @X0 1 ef2`i`*uc ]
-"113
-[; ;main.c: 113: {
+"76
+[; ;main.c: 76: {
 {
 [e :U _inicio_presentacion ]
-"112
-[; ;main.c: 112: void inicio_presentacion (int length, char *str)
+"75
+[; ;main.c: 75: void inicio_presentacion (int length, char *str)
 [v _length `i ~T0 @X0 1 r1 ]
 [v _str `*uc ~T0 @X0 1 r2 ]
-"113
-[; ;main.c: 113: {
+"76
+[; ;main.c: 76: {
 [f ]
-"114
-[; ;main.c: 114:     LCD_Goto(1,1);
+"77
+[; ;main.c: 77:     LCD_Goto(1,1);
 [e ( _LCD_Goto (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"115
-[; ;main.c: 115:     LCD_Print(str);
+"78
+[; ;main.c: 78:     LCD_Print(str);
 [e ( _LCD_Print (1 _str ]
-"116
-[; ;main.c: 116:     _delay((unsigned long)((25)*(32000000/4000.0)));
+"79
+[; ;main.c: 79:     _delay((unsigned long)((25)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 25 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"117
-[; ;main.c: 117:     for(int i=0;i<length;i++){
+"80
+[; ;main.c: 80:     for(int i=0;i<length;i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 162  ]
-[e :U 159 ]
+[e $U 154  ]
+[e :U 151 ]
 {
-"118
-[; ;main.c: 118:         LCD_Cmd(0x18);
+"81
+[; ;main.c: 81:         LCD_Cmd(0x18);
 [e ( _LCD_Cmd (1 -> -> 24 `i `uc ]
-"119
-[; ;main.c: 119:         _delay((unsigned long)((20)*(32000000/4000.0)));
+"82
+[; ;main.c: 82:         _delay((unsigned long)((20)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"120
-[; ;main.c: 120:     }
+"83
+[; ;main.c: 83:     }
 }
 [e ++ _i -> 1 `i ]
-[e :U 162 ]
-[e $ < _i _length 159  ]
-[e :U 160 ]
+[e :U 154 ]
+[e $ < _i _length 151  ]
+[e :U 152 ]
 }
-"121
-[; ;main.c: 121:     _delay((unsigned long)((10)*(32000000/4000.0)));
+"84
+[; ;main.c: 84:     _delay((unsigned long)((10)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"122
-[; ;main.c: 122:     LCD_Cmd(0x01);
+"85
+[; ;main.c: 85:     LCD_Cmd(0x01);
 [e ( _LCD_Cmd (1 -> -> 1 `i `uc ]
-"123
-[; ;main.c: 123:     LCD_Goto(1, 1);
+"86
+[; ;main.c: 86:     LCD_Goto(1, 1);
 [e ( _LCD_Goto (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"124
-[; ;main.c: 124: }
-[e :UE 158 ]
+"87
+[; ;main.c: 87: }
+[e :UE 150 ]
 }
-"127
-[; ;main.c: 127: void ventilator_screen(float voltaje, int vrm, int ventilator_number)
+"89
+[; ;main.c: 89: void conditional_screen(int x)
+[v _conditional_screen `(v ~T0 @X0 1 ef1`i ]
+"90
+[; ;main.c: 90: {
+{
+[e :U _conditional_screen ]
+"89
+[; ;main.c: 89: void conditional_screen(int x)
+[v _x `i ~T0 @X0 1 r1 ]
+"90
+[; ;main.c: 90: {
+[f ]
+[v F1115 `uc ~T0 @X0 -> 14 `i s ]
+[i F1115
+:U ..
+"91
+[; ;main.c: 91:     char msj[]="Cambiar cond.";
+-> 67 `c
+-> 97 `c
+-> 109 `c
+-> 98 `c
+-> 105 `c
+-> 97 `c
+-> 114 `c
+-> 32 `c
+-> 99 `c
+-> 111 `c
+-> 110 `c
+-> 100 `c
+-> 46 `c
+-> 0 `c
+..
+]
+[v _msj `uc ~T0 @X0 -> 14 `i a ]
+[e = _msj F1115 ]
+[v F1117 `uc ~T0 @X0 -> 10 `i s ]
+[i F1117
+:U ..
+"92
+[; ;main.c: 92:     char con[]="1.Si 2.No";
+-> 49 `c
+-> 46 `c
+-> 83 `c
+-> 105 `c
+-> 32 `c
+-> 50 `c
+-> 46 `c
+-> 78 `c
+-> 111 `c
+-> 0 `c
+..
+]
+[v _con `uc ~T0 @X0 -> 10 `i a ]
+[e = _con F1117 ]
+"93
+[; ;main.c: 93:     LCD_Cmd(0x01);
+[e ( _LCD_Cmd (1 -> -> 1 `i `uc ]
+"94
+[; ;main.c: 94:     if(x==1)
+[e $ ! == _x -> 1 `i 156  ]
+"95
+[; ;main.c: 95:     {
+{
+"96
+[; ;main.c: 96:         strcat(msj," V");
+[e ( _strcat (2 , &U _msj :s 1C ]
+"97
+[; ;main.c: 97:     }
+}
+[e $U 157  ]
+"98
+[; ;main.c: 98:     else if(x==2)
+[e :U 156 ]
+[e $ ! == _x -> 2 `i 158  ]
+"99
+[; ;main.c: 99:     {
+{
+"100
+[; ;main.c: 100:         strcat(msj," F1");
+[e ( _strcat (2 , &U _msj :s 2C ]
+"101
+[; ;main.c: 101:     }
+}
+[e $U 159  ]
+"102
+[; ;main.c: 102:     else if(x==3)
+[e :U 158 ]
+[e $ ! == _x -> 3 `i 160  ]
+"103
+[; ;main.c: 103:     {
+{
+"104
+[; ;main.c: 104:         strcat(msj," F2");
+[e ( _strcat (2 , &U _msj :s 3C ]
+"105
+[; ;main.c: 105:     }
+}
+[e :U 160 ]
+[e :U 159 ]
+[e :U 157 ]
+"106
+[; ;main.c: 106:     LCD_Goto(1,1);
+[e ( _LCD_Goto (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"107
+[; ;main.c: 107:     LCD_Print(msj);
+[e ( _LCD_Print (1 &U _msj ]
+"108
+[; ;main.c: 108:     LCD_Goto(1,2);
+[e ( _LCD_Goto (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
+"109
+[; ;main.c: 109:     LCD_Print(con);
+[e ( _LCD_Print (1 &U _con ]
+"110
+[; ;main.c: 110: }
+[e :UE 155 ]
+}
+"113
+[; ;main.c: 113: void ventilator_screen(float voltaje, int vrm, int ventilator_number)
 [v _ventilator_screen `(v ~T0 @X0 1 ef3`f`i`i ]
-"128
-[; ;main.c: 128: {
+"114
+[; ;main.c: 114: {
 {
 [e :U _ventilator_screen ]
-"127
-[; ;main.c: 127: void ventilator_screen(float voltaje, int vrm, int ventilator_number)
+"113
+[; ;main.c: 113: void ventilator_screen(float voltaje, int vrm, int ventilator_number)
 [v _voltaje `f ~T0 @X0 1 r1 ]
 [v _vrm `i ~T0 @X0 1 r2 ]
 [v _ventilator_number `i ~T0 @X0 1 r3 ]
-"128
-[; ;main.c: 128: {
+"114
+[; ;main.c: 114: {
 [f ]
-[v F1129 `uc ~T0 @X0 -> 16 `i s ]
-[i F1129
+"115
+[; ;main.c: 115:     LCD_Cmd(0x01);
+[e ( _LCD_Cmd (1 -> -> 1 `i `uc ]
+[v F1123 `uc ~T0 @X0 -> 10 `i s ]
+[i F1123
 :U ..
-"129
-[; ;main.c: 129:     unsigned char vol[16]="Voltaje: ";
+"116
+[; ;main.c: 116:     unsigned char vol[]="Voltaje: ";
 -> 86 `c
 -> 111 `c
 -> 108 `c
@@ -1342,13 +1351,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[v _vol `uc ~T0 @X0 -> 16 `i a ]
-[e = _vol F1129 ]
-[v F1131 `uc ~T0 @X0 -> 16 `i s ]
-[i F1131
+[v _vol `uc ~T0 @X0 -> 10 `i a ]
+[e = _vol F1123 ]
+[v F1125 `uc ~T0 @X0 -> 5 `i s ]
+[i F1125
 :U ..
-"130
-[; ;main.c: 130:     unsigned char vel[16]="Vel ";
+"117
+[; ;main.c: 117:     unsigned char vel[]="Vel ";
 -> 86 `c
 -> 101 `c
 -> 108 `c
@@ -1356,56 +1365,251 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[v _vel `uc ~T0 @X0 -> 16 `i a ]
-[e = _vel F1131 ]
-"131
-[; ;main.c: 131:     char vol_value[3];
-[v _vol_value `uc ~T0 @X0 -> 3 `i a ]
-"132
-[; ;main.c: 132:     char vel_number[1];
+[v _vel `uc ~T0 @X0 -> 5 `i a ]
+[e = _vel F1125 ]
+[v F1127 `uc ~T0 @X0 -> -> 1 `i `ux s ]
+[i F1127
+:U ..
+"118
+[; ;main.c: 118:     char vol_value[]="";
+-> 0 `c
+..
+]
+[v _vol_value `uc ~T0 @X0 -> -> 1 `i `ux a ]
+[e = _vol_value F1127 ]
+[v F1129 `uc ~T0 @X0 -> -> 1 `i `ux s ]
+[i F1129
+:U ..
+"119
+[; ;main.c: 119:     char vel_number[]="";
+-> 0 `c
+..
+]
 [v _vel_number `uc ~T0 @X0 -> -> 1 `i `ux a ]
-"133
-[; ;main.c: 133:     char vel_value[4];
-[v _vel_value `uc ~T0 @X0 -> 4 `i a ]
-"138
-[; ;main.c: 138:     LCD_Goto(1,1);
+[e = _vel_number F1129 ]
+[v F1131 `uc ~T0 @X0 -> -> 1 `i `ux s ]
+[i F1131
+:U ..
+"120
+[; ;main.c: 120:     char vel_value[]="";
+-> 0 `c
+..
+]
+[v _vel_value `uc ~T0 @X0 -> -> 1 `i `ux a ]
+[e = _vel_value F1131 ]
+"125
+[; ;main.c: 125:     LCD_Goto(1,1);
 [e ( _LCD_Goto (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"141
-[; ;main.c: 141:     itoa(vol_value,voltaje,10);
+"128
+[; ;main.c: 128:     itoa(vol_value,voltaje,10);
 [e ( _itoa (3 , , &U _vol_value -> _voltaje `i -> 10 `i ]
-"142
-[; ;main.c: 142:     strcat(vol,vol_value);
+"129
+[; ;main.c: 129:     strcat(vol,vol_value);
 [e ( _strcat (2 , -> &U _vol `*uc -> &U _vol_value `*Cuc ]
-"144
-[; ;main.c: 144:     LCD_Print(vol);
+"131
+[; ;main.c: 131:     LCD_Print(vol);
 [e ( _LCD_Print (1 -> &U _vol `*uc ]
-"145
-[; ;main.c: 145:     LCD_Goto(1,2);
+"132
+[; ;main.c: 132:     LCD_Goto(1,2);
 [e ( _LCD_Goto (2 , -> -> 1 `i `uc -> -> 2 `i `uc ]
-"146
-[; ;main.c: 146:     itoa(vel_number,ventilator_number,10);
+"133
+[; ;main.c: 133:     itoa(vel_number,ventilator_number,10);
 [e ( _itoa (3 , , &U _vel_number _ventilator_number -> 10 `i ]
-"147
-[; ;main.c: 147:     strcat(vel,vel_number);
+"134
+[; ;main.c: 134:     strcat(vel,vel_number);
 [e ( _strcat (2 , -> &U _vel `*uc -> &U _vel_number `*Cuc ]
-"148
-[; ;main.c: 148:     strcat(vel,": ");
-[e ( _strcat (2 , -> &U _vel `*uc :s 1C ]
-"149
-[; ;main.c: 149:     itoa(vel_value,vrm,10);
+"135
+[; ;main.c: 135:     strcat(vel,": ");
+[e ( _strcat (2 , -> &U _vel `*uc :s 4C ]
+"136
+[; ;main.c: 136:     itoa(vel_value,vrm,10);
 [e ( _itoa (3 , , &U _vel_value _vrm -> 10 `i ]
-"150
-[; ;main.c: 150:     strcat(vel,vel_value);
+"137
+[; ;main.c: 137:     strcat(vel,vel_value);
 [e ( _strcat (2 , -> &U _vel `*uc -> &U _vel_value `*Cuc ]
-"151
-[; ;main.c: 151:     strcat(vel," RPM");
-[e ( _strcat (2 , -> &U _vel `*uc :s 2C ]
-"153
-[; ;main.c: 153:     LCD_Print(vel);
+"138
+[; ;main.c: 138:     strcat(vel," RPM");
+[e ( _strcat (2 , -> &U _vel `*uc :s 5C ]
+"140
+[; ;main.c: 140:     LCD_Print(vel);
 [e ( _LCD_Print (1 -> &U _vel `*uc ]
-"154
-[; ;main.c: 154: }
-[e :UE 163 ]
+"141
+[; ;main.c: 141: }
+[e :UE 161 ]
 }
-[a 2C 32 82 80 77 0 ]
-[a 1C 58 32 0 ]
+"143
+[; ;main.c: 143: void selector_type(char c)
+[v _selector_type `(v ~T0 @X0 1 ef1`uc ]
+"144
+[; ;main.c: 144: {
+{
+[e :U _selector_type ]
+"143
+[; ;main.c: 143: void selector_type(char c)
+[v _c `uc ~T0 @X0 1 r1 ]
+"144
+[; ;main.c: 144: {
+[f ]
+"145
+[; ;main.c: 145:     if(c=='A')
+[e $ ! == -> _c `ui -> 65 `ui 163  ]
+"146
+[; ;main.c: 146:         {
+{
+"147
+[; ;main.c: 147:             if(i==1){
+[e $ ! == _i -> 1 `i 164  ]
+{
+"148
+[; ;main.c: 148:                 ventilator_screen(1.1,1000,1);
+[e ( _ventilator_screen (3 , , -> .1.1 `f -> 1000 `i -> 1 `i ]
+"149
+[; ;main.c: 149:             ++i;
+[e =+ _i -> 1 `i ]
+"150
+[; ;main.c: 150:             }
+}
+[e $U 165  ]
+"151
+[; ;main.c: 151:             else if(i==2){
+[e :U 164 ]
+[e $ ! == _i -> 2 `i 166  ]
+{
+"152
+[; ;main.c: 152:                 ventilator_screen(2.2,1000,2);
+[e ( _ventilator_screen (3 , , -> .2.2 `f -> 1000 `i -> 2 `i ]
+"153
+[; ;main.c: 153:                 --i;
+[e =- _i -> 1 `i ]
+"154
+[; ;main.c: 154:             }
+}
+[e :U 166 ]
+[e :U 165 ]
+"156
+[; ;main.c: 156:         }
+}
+[e $U 167  ]
+"157
+[; ;main.c: 157:     else if(c=='B')
+[e :U 163 ]
+[e $ ! == -> _c `ui -> 66 `ui 168  ]
+"158
+[; ;main.c: 158:     {
+{
+"159
+[; ;main.c: 159:         conditional_screen(1);
+[e ( _conditional_screen (1 -> 1 `i ]
+"160
+[; ;main.c: 160:     }
+}
+[e $U 169  ]
+"161
+[; ;main.c: 161:     else if(c=='C')
+[e :U 168 ]
+[e $ ! == -> _c `ui -> 67 `ui 170  ]
+"162
+[; ;main.c: 162:     {
+{
+"163
+[; ;main.c: 163:         conditional_screen(2);
+[e ( _conditional_screen (1 -> 2 `i ]
+"164
+[; ;main.c: 164:     }
+}
+[e $U 171  ]
+"165
+[; ;main.c: 165:     else if(c=='D')
+[e :U 170 ]
+[e $ ! == -> _c `ui -> 68 `ui 172  ]
+"166
+[; ;main.c: 166:     {
+{
+"167
+[; ;main.c: 167:         conditional_screen(3);
+[e ( _conditional_screen (1 -> 3 `i ]
+"168
+[; ;main.c: 168:     }
+}
+[e :U 172 ]
+[e :U 171 ]
+[e :U 169 ]
+[e :U 167 ]
+"169
+[; ;main.c: 169: }
+[e :UE 162 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"171
+[; ;main.c: 171: void main()
+[v _main `(v ~T0 @X0 1 ef ]
+"172
+[; ;main.c: 172: {
+{
+[e :U _main ]
+[f ]
+"173
+[; ;main.c: 173:     i=1;
+[e = _i -> 1 `i ]
+"175
+[; ;main.c: 175:     iniciar_puertos();
+[e ( _iniciar_puertos ..  ]
+"177
+[; ;main.c: 177:     LCD_Begin();
+[e ( _LCD_Begin ..  ]
+"178
+[; ;main.c: 178:     inicio_presentacion(length_saludo, saludo);
+[e ( _inicio_presentacion (2 , _length_saludo &U _saludo ]
+"179
+[; ;main.c: 179:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"180
+[; ;main.c: 180:     inicio_presentacion(length_presentacion,presentacion);
+[e ( _inicio_presentacion (2 , _length_presentacion &U _presentacion ]
+"181
+[; ;main.c: 181:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"182
+[; ;main.c: 182:     inicio_presentacion(length_grupo,grupo);
+[e ( _inicio_presentacion (2 , _length_grupo &U _grupo ]
+"183
+[; ;main.c: 183:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"184
+[; ;main.c: 184:     LCD_Goto(1, 1);
+[e ( _LCD_Goto (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
+"185
+[; ;main.c: 185:     _delay((unsigned long)((50)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"187
+[; ;main.c: 187:     while(1){
+[e :U 175 ]
+{
+"189
+[; ;main.c: 189:     char c = keypad_getkey();
+[v _c `uc ~T0 @X0 1 a ]
+[e = _c -> ( _keypad_getkey ..  `uc ]
+"190
+[; ;main.c: 190:         LCD_PutC(c);
+[e ( _LCD_PutC (1 _c ]
+"191
+[; ;main.c: 191:         selector_type(c);
+[e ( _selector_type (1 _c ]
+"192
+[; ;main.c: 192:     _delay((unsigned long)((500)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"193
+[; ;main.c: 193:     }
+}
+[e :U 174 ]
+[e $U 175  ]
+[e :U 176 ]
+"194
+[; ;main.c: 194: }
+[e :UE 173 ]
+}
+[a 1C 32 86 0 ]
+[a 5C 32 82 80 77 0 ]
+[a 3C 32 70 50 0 ]
+[a 2C 32 70 49 0 ]
+[a 4C 58 32 0 ]

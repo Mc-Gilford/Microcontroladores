@@ -7,7 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-
+# 10 "main.c"
 #pragma config FOSC = XT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -1572,7 +1572,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
-# 13 "main.c" 2
+# 21 "main.c" 2
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
@@ -1672,7 +1672,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 15 "main.c" 2
+# 23 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -1757,7 +1757,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 16 "main.c" 2
+# 24 "main.c" 2
 
 
 # 1 "./lcd.h" 1
@@ -2016,7 +2016,7 @@ void LCD_Begin()
   LCD_Cmd(0x0F);
   _delay((unsigned long)((50)*(32000000/4000.0)));
 }
-# 18 "main.c" 2
+# 26 "main.c" 2
 
 # 1 "./kbd.h" 1
 void disp_num(float num);
@@ -2053,7 +2053,7 @@ unsigned char keypad_readkey(void)
         if (RA0 == 1) return 'Z';
         if (RA1 == 1) return '0';
         if (RA2 == 1) return '=';
-        if (RA3 == 1) return '+';
+        if (RA3 == 1) return 'D';
     }
     RC1 = 0;
     RC0 = 1;
@@ -2065,7 +2065,7 @@ unsigned char keypad_readkey(void)
         if (RA0 == 1) return '1';
         if (RA1 == 1) return '2';
         if (RA2 == 1) return '3';
-        if (RA3 == 1) return '.';
+        if (RA3 == 1) return 'C';
     }
 
     RC1 = 0;
@@ -2078,7 +2078,7 @@ unsigned char keypad_readkey(void)
         if (RA0 == 1) return '4';
         if (RA1 == 1) return '5';
         if (RA2 == 1) return '6';
-        if (RA3 == 1) return '*';
+        if (RA3 == 1) return 'B';
     }
 
     RC1 = 0;
@@ -2109,7 +2109,7 @@ unsigned char keypad_getkey(void)
 
  return key;
 }
-# 19 "main.c" 2
+# 27 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
 # 14 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
@@ -2142,19 +2142,15 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 20 "main.c" 2
+# 28 "main.c" 2
 
 # 1 "./ftoaa.h" 1
-# 21 "main.c" 2
+# 29 "main.c" 2
 
 
-void iniciar_puertos();
-void inicio_presentacion(int, char*);
-void ventilator_screen(float , int , int );
-void selector_type(char );
 
 char number[4];
-
+int i =0;
 int length_grupo = 5;
 char grupo[] = {"3CV16"};
 int length_presentacion = 38;
@@ -2164,52 +2160,13 @@ char saludo[] = "Hola Mundo bienvenido!";
 int ECO;
 int ADRES;
 
-
-
-
-int main()
-{
-    int i=1;
-
-    iniciar_puertos();
-
-    LCD_Begin();
-    inicio_presentacion(length_saludo, saludo);
-    _delay((unsigned long)((20)*(32000000/4000.0)));
-    inicio_presentacion(length_presentacion,presentacion);
-    _delay((unsigned long)((20)*(32000000/4000.0)));
-    inicio_presentacion(length_grupo,grupo);
-    _delay((unsigned long)((20)*(32000000/4000.0)));
-    LCD_Goto(1, 1);
-    _delay((unsigned long)((50)*(32000000/4000.0)));
-
-    while(1){
-
-    char c = keypad_getkey();
-        LCD_PutC(c);
-        if(c=='A')
-        {
-            if(i==1){
-                ventilator_screen(1.2,1000,1);
-            ++i;
-            }
-            else if(i==2){
-                ventilator_screen(2.1,1000,2);
-                --i;
-            }
-
-        }
-    _delay((unsigned long)((500)*(32000000/4000.0)));
-    }
-}
-
 void iniciar_puertos()
 {
 
 
-    PORTA = 0;
-    PORTB = 0;
-    PORTC = 0;
+    PORTA = 0x00;
+    PORTB = 0x00;
+    PORTC = 0x00;
 
 
 
@@ -2231,8 +2188,6 @@ void iniciar_puertos()
     TRISAbits.TRISA4 = 0;
     TRISAbits.TRISA5 = 0;
 
-
-
     ADCON1 = 0x07;
 
 }
@@ -2251,14 +2206,38 @@ void inicio_presentacion (int length, char *str)
     LCD_Goto(1, 1);
 }
 
+void conditional_screen(int x)
+{
+    char msj[]="Cambiar cond.";
+    char con[]="1.Si 2.No";
+    LCD_Cmd(0x01);
+    if(x==1)
+    {
+        strcat(msj," V");
+    }
+    else if(x==2)
+    {
+        strcat(msj," F1");
+    }
+    else if(x==3)
+    {
+        strcat(msj," F2");
+    }
+    LCD_Goto(1,1);
+    LCD_Print(msj);
+    LCD_Goto(1,2);
+    LCD_Print(con);
+}
+
 
 void ventilator_screen(float voltaje, int vrm, int ventilator_number)
 {
-    unsigned char vol[16]="Voltaje: ";
-    unsigned char vel[16]="Vel ";
-    char vol_value[3];
-    char vel_number[1];
-    char vel_value[4];
+    LCD_Cmd(0x01);
+    unsigned char vol[]="Voltaje: ";
+    unsigned char vel[]="Vel ";
+    char vol_value[]="";
+    char vel_number[]="";
+    char vel_value[]="";
 
 
 
@@ -2279,4 +2258,57 @@ void ventilator_screen(float voltaje, int vrm, int ventilator_number)
     strcat(vel," RPM");
 
     LCD_Print(vel);
+}
+
+void selector_type(char c)
+{
+    if(c=='A')
+        {
+            if(i==1){
+                ventilator_screen(1.1,1000,1);
+            ++i;
+            }
+            else if(i==2){
+                ventilator_screen(2.2,1000,2);
+                --i;
+            }
+
+        }
+    else if(c=='B')
+    {
+        conditional_screen(1);
+    }
+    else if(c=='C')
+    {
+        conditional_screen(2);
+    }
+    else if(c=='D')
+    {
+        conditional_screen(3);
+    }
+}
+
+void main()
+{
+    i=1;
+
+    iniciar_puertos();
+
+    LCD_Begin();
+    inicio_presentacion(length_saludo, saludo);
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    inicio_presentacion(length_presentacion,presentacion);
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    inicio_presentacion(length_grupo,grupo);
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    LCD_Goto(1, 1);
+    _delay((unsigned long)((50)*(32000000/4000.0)));
+
+    while(1){
+
+    char c = keypad_getkey();
+        LCD_PutC(c);
+        selector_type(c);
+    _delay((unsigned long)((500)*(32000000/4000.0)));
+    }
 }

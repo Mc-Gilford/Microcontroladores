@@ -44,14 +44,49 @@ ADCON1 = 0x07;
 ```
 Uno de los otros errores fue dentro del PORT RA4 dado que este es un puerto es pull up para salidas, para la solucion de este se hizo la siguiente configuracion, para poder usarlo como salida.
 
-#### Configuracion nueva
+### Configuracion nueva
 ![Funcionando](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/Circuito%20RA4%20Funcionando.PNG)
 
-#### Configuracion pasada
+### Configuracion pasada
 ![Error](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/Circuito%20No%20Funcionando.PNG)
 
-#### Anexo de configuracion
+### Anexo de configuracion
 ![Anexo](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/Added_Part.PNG)
+
+## KEYPAD
+Para el KEYPAD se hizo la configuracion respecto al que se puede ver en la imagen:
+![Keypad](https://www.google.com/url?sa=i&url=https%3A%2F%2Fcircuitdigest.com%2Fmicrocontroller-projects%2Fkeypad-interfacing-with-8051-microcontroller&psig=AOvVaw2zc89Mxz2_YD1_iNZZD-OF&ust=1624514891725000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCPiop9uLrfECFQAAAAAdAAAAABAD)
+El interpretado es el siguiente:
+               | Voltaje: xx.x mv |
+               | Vel_1: xxxx RPM  |    Si se presiona una tecla "A" que despliegue lo siguiente
+                ------------------
+             
+                __________________
+               | Voltaje: xx.x mv |
+               | Vel_2: xxxx RPM  |    Solo cambia esta linea
+                ------------------              
+
+                __________________
+               | Cambiar cond. V  |
+               |  Si: 1    No: 2  |    Si se presiona una tecla "B" que despliegue lo siguiente
+                ------------------
+               
+                __________________
+               | Cambiar cond. F1 |
+               |  Si: 1    No: 2  |    Si se presiona una tecla "C" que despliegue lo siguiente
+                -------------------- 
+
+                __________________
+               | Cambiar cond. F2 |
+               |  Si: 1    No: 2  |    Si se presiona una tecla "D" que despliegue lo siguiente
+                -------------------- 
+
+                Cuando se acepta cambiar el valor (de cualquiera de las condiciones) se debe desplegar este
+                __________________
+               |    Nuevo valor:  |
+               |     xx.xx mv     |    Si se presiona una tecla "#" acepta el valor, si se presiona "*" No acepta el valor
+                ------------------     ( lo mismo aplica para velocidad 1 y velocidad 2 )
+
 
 ## Carpetas por PIC
 1. P3 es -> PIC16F873A

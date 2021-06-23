@@ -1,3 +1,11 @@
+
+/*
+ * Realizado por: Jose de Jesus Rodriguez Apaicio y Karla Reyes
+ * Fecha: 6/23/21
+ * PIC MAESTRO Control de ventiladores y LED, Practica 3
+*/
+
+
 /*En dado caso de que el codigo no funcione comentar este codigo hasta el siguiente comentario de fin*/
 #pragma config FOSC = XT // OSCILADOR
 #pragma config WDTE = OFF // Perro Guardian
@@ -20,13 +28,9 @@
 #include <string.h>
 #include "ftoaa.h"
 
-void iniciar_puertos();
-void inicio_presentacion(int, char*);
-void ventilator_screen(float , int , int );
-void selector_type(char );
 //Agregar variable global
 char number[4];
-
+int i =0;
 int length_grupo = 5;
 char grupo[] = {"3CV16"};
 int length_presentacion = 38;
@@ -36,52 +40,13 @@ char saludo[] = "Hola Mundo bienvenido!";
 int ECO;
 int ADRES;
 
-/*Jose de Jesus Rodriguez Apaicio y Karla Reyes*/
-
-
-int main()
-{
-    int i=1; //Para concatenar dentro del array  
-    //set_configuraciones();
-    iniciar_puertos();
-    /*Iniciar LCD*/
-    LCD_Begin();
-    inicio_presentacion(length_saludo, saludo);
-    __delay_ms(20);
-    inicio_presentacion(length_presentacion,presentacion);
-    __delay_ms(20);
-    inicio_presentacion(length_grupo,grupo);
-    __delay_ms(20);
-    LCD_Goto(1, 1);    
-    __delay_ms(50);
-    
-    while(1){
-    //imprimir_valor_leds(); 
-    char c = keypad_getkey();
-        LCD_PutC(c);
-        if(c=='A')
-        {
-            if(i==1){
-                ventilator_screen(1.2,1000,1);
-            ++i;
-            }
-            else if(i==2){
-                ventilator_screen(2.1,1000,2);
-                --i;
-            }
-            
-        }
-    __delay_ms(500);
-    }
-}
-
 void iniciar_puertos()
 {
    
         /*Seteo de entradas PUERTO C*/
-    PORTA = 0;
-    PORTB = 0;
-    PORTC = 0;
+    PORTA = 0x00;
+    PORTB = 0x00;
+    PORTC = 0x00;
  
     /*Al poner TRIS en 1 significa entrada y 0 salida*/
     
@@ -102,8 +67,6 @@ void iniciar_puertos()
     TRISAbits.TRISA3 = 1;
     TRISAbits.TRISA4 = 0; 
     TRISAbits.TRISA5 = 0;
-    /*Activamos el PULL UP para leer cada entrada del teclado*/
-   // OPTION_REG &= 0x7F;
     //ADCON1 =  0b00000110;
     ADCON1 = 0x07;
     
@@ -123,14 +86,38 @@ void inicio_presentacion (int length, char *str)
     LCD_Goto(1, 1);
 }
 
+void conditional_screen(int x)
+{
+    char msj[]="Cambiar cond.";
+    char con[]="1.Si 2.No";
+    LCD_Cmd(LCD_CLEAR);
+    if(x==1)
+    {
+        strcat(msj," V");
+    }
+    else if(x==2)
+    {
+        strcat(msj," F1");
+    }
+    else if(x==3)
+    {
+        strcat(msj," F2");   
+    }
+    LCD_Goto(1,1);
+    LCD_Print(msj);
+    LCD_Goto(1,2);
+    LCD_Print(con);
+}
+
 
 void ventilator_screen(float voltaje, int vrm, int ventilator_number)
 {
-    unsigned char vol[16]="Voltaje: ";
-    unsigned char vel[16]="Vel ";
-    char vol_value[3];
-    char vel_number[1];
-    char vel_value[4];
+    LCD_Cmd(LCD_CLEAR);
+    unsigned char vol[]="Voltaje: ";
+    unsigned char vel[]="Vel ";
+    char vol_value[]="";
+    char vel_number[]="";
+    char vel_value[]="";
     /*
       Voltaje: xx.x mv   
       Vel_2: xxxx RPM
@@ -151,4 +138,57 @@ void ventilator_screen(float voltaje, int vrm, int ventilator_number)
     strcat(vel," RPM");
     //sprintf(vel, "Vel %d: %d RPM", ventilator_number, vrm);
     LCD_Print(vel);
+}
+
+void selector_type(char c)
+{
+    if(c=='A')
+        {
+            if(i==1){
+                ventilator_screen(1.1,1000,1);
+            ++i;
+            }
+            else if(i==2){
+                ventilator_screen(2.2,1000,2);
+                --i;
+            }
+            
+        }
+    else if(c=='B')
+    {
+        conditional_screen(1);
+    }
+    else if(c=='C')
+    {
+        conditional_screen(2);
+    }
+    else if(c=='D')
+    {
+        conditional_screen(3);
+    }
+}
+
+void main()
+{
+    i=1; //Para concatenar dentro del array  
+    //set_configuraciones();
+    iniciar_puertos();
+    /*Iniciar LCD*/
+    LCD_Begin();
+    inicio_presentacion(length_saludo, saludo);
+    __delay_ms(20);
+    inicio_presentacion(length_presentacion,presentacion);
+    __delay_ms(20);
+    inicio_presentacion(length_grupo,grupo);
+    __delay_ms(20);
+    LCD_Goto(1, 1);    
+    __delay_ms(50);
+    
+    while(1){
+    //imprimir_valor_leds(); 
+    char c = keypad_getkey();
+        LCD_PutC(c);
+        selector_type(c);
+    __delay_ms(500);
+    }
 }
