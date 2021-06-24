@@ -114,6 +114,15 @@ void write_value(int direction, int value){
         eeprom_write(direction,value);
 }
 ```
+### Interfaz I2C
+El PIC16F873A Maestro recibe el voltaje, el cual se comunicaran con los PIC esclavos mediante la comunicacion I2C, el cual tendra una frecuencia de 100kbps. Como tenemos 2 esclavos se usara 2 direcciones.
+Se utilizara un variable definida para la direccion de nuestro PICS esclavos mediante las siguiente instruccion:
+```C
+#define ADDRA 0xA0
+#define ADDRB 0xA1
+```
+
+
 ## NOTAS
 * Dentro del PIC hacer la configuracion como esta en nuestro esquema
 * Se observa que a mayor cantidad de codigo, mayor tiempo de espera en la ejecucion de la simulacion tiempo aproximado (10 min)
