@@ -219,8 +219,18 @@ void Tx_Dato(unsigned char x)
 }
 
 ```
-### Configuracion en main 
+### Configuracion de transmision 
+Dentro de nuestro codigo segun la logica aplicada, dado un valor que nosotros recibimos mediante el keypad lo enviaremos a los PICS esclavos
 
+``` C
+
+        envio=c;
+        C_inicio(); //Envia la condicion de inicio
+        Tx_Dato(0xA0); //Envio de direccion de 7 bits y orden de escritura
+        Tx_Dato(envio); // Envio conversion del ADC parte baja
+        C_parada(); // Condicion de parada
+        __delay_ms(100); //Retraso para evitar errores
+```
 
 ## NOTAS
 * Dentro del PIC hacer la configuracion como esta en nuestro esquema
