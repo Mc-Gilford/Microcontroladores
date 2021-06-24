@@ -179,7 +179,48 @@ void evaluar_dato()
                 envio=0xFF;
 }
 
+
 ```
+1. C_config nos sirve para configurar nuestro modulo MSSP para configurarlo como modulo maerto en el cual vamos ha usar una ecuacion para la velocidad de transmision
+2. C_inicio nos sirve para setear nuestro SEN en 1 para activar la secuencia de inicio y esta debe de ir precedida por el la transmision de progreso. 
+3. C_inicio nos sirve para setear nuestro PEN en 1 para desactivar la secuencia de inicio y esta debe de ir precedida por el la transmision de progreso.
+4. Tx_Dato para la tranmision de nuestro dato hacia el buffer despues la transmision iniciara automaticamente
+
+``` C
+void C_config(const unsigned long c)
+{
+    SSPCON =0b00101000; // Configuracion y activacion del MSSP en modo T2C maestro
+    SSPCON2 = 0;
+    SSPADD = (_XTAL_FREQ/(4*c))-1; // Velocidad de transmision
+    SSPSTAT = 0;
+    /*Dado que la configuracion de nuestros PIN C3 Y C4 ya estan configurados ya no tenemos que proceder a realizar alguna
+     accion */
+}
+
+/*Funcion de condicion de inicio*/
+void C_inicio()
+{
+    while((SSPSTAT & 0x04) || (SSPCON2 & 0x1F)); // Transmision en progreso
+    SSPCON2bits.SEN =1; // Activa secuencia de inicio
+}
+
+/* Condicion de parada*/
+void C_parada()
+{
+    while((SSPSTAT & 0x04) || (SSPCON2 & 0x1F)); // Transmision en progreso
+    SSPCON2bits.PEN =1; // Activa secuencia de parada
+}
+
+//Funcion de transmision 
+void Tx_Dato(unsigned char x)
+{
+    while((SSPSTAT & 0x04) || (SSPCON2 & 0x1F)); // Transmision en progreso
+    SSPBUF = x; // transmicion de dato
+}
+
+```
+### Configuracion en main 
+
 
 ## NOTAS
 * Dentro del PIC hacer la configuracion como esta en nuestro esquema
