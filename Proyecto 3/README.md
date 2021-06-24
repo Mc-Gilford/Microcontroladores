@@ -118,10 +118,68 @@ void write_value(int direction, int value){
 El PIC16F873A Maestro recibe el voltaje, el cual se comunicaran con los PIC esclavos mediante la comunicacion I2C, el cual tendra una frecuencia de 100kbps. Como tenemos 2 esclavos se usara 2 direcciones.
 Se utilizara un variable definida para la direccion de nuestro PICS esclavos mediante las siguiente instruccion:
 ```C
-#define ADDRA 0xA0
-#define ADDRB 0xA1
+#define ADDRA 0xA0 //Direccion de PIC1
+#define ADDRB 0xA1 // Direccion PIC2
 ```
+Crearemos nuestras variables ADRES como int donde vamos hacer la concadenacion de la conversion analogico-digital y un char para que no nos manden warning al realizar el envio de nuestro dato.
+```C
+    int ADRESA;
+    int ADRESB;
+    int ADRES;
+    unsigned char envio;
+``` 
+Despues usaremos una funcion para analogico digital
+```C
+// Funcion de conversion Analogico Digital 
+void Canal0(int z)    
+{
+                
+    CHS2 = 0;                          // Seleccion del canal analogo 0
+    CHS1 = 0;
+    CHS0 = 0;
+    
+    ADON = 1;                          // Activa el modulo del covertidor analogico digital
+     
+    __delay_ms(4);//Delay_ms(z);                       // Tiempo de espera para adquisicion 5ms
+                     
+     GO = 1;                            // Inicia la conversion 
+     
+    
+    ADCA:  if (ADIF == 0)              // Espera hasta que termine la conversion
+    goto ADCA;                
+    
+    ADON = 0;                          // Desactiva el convertidor
+    
+    ADRES = (ADRESH << 8) | ADRESL;    // Almcena la conversion en la variable Peso1 
+    
+    ADIF = 0;                          // Borrado de bandera de conversion finalizada     
 
+    evaluar_dato();                                                             
+}
+
+void evaluar_dato()
+{
+            if(ADRES < 127)     // 0V
+                envio = 0x00;
+            if(ADRES > 127)     // 625 mv 
+                envio = 0x01;
+            if(ADRES > 255)     // 1.25 V
+                envio=0x03;
+            if(ADRES > 352)     // 1.87 V
+                envio=0x07;
+            if(ADRES > 511)     // 2.5 V
+                envio=0x0F;
+            if(ADRES > 639)     // 3.12 V
+                envio=0x1F;
+            if(ADRES > 767)     // 3.75 V
+                envio=0x3F;
+            if(ADRES > 894)     // 4.37 V
+                envio=0x7F;
+            if(ADRES > 1022)   // 5 V
+                envio=0xFF;
+}
+
+```
 
 ## NOTAS
 * Dentro del PIC hacer la configuracion como esta en nuestro esquema
