@@ -118,7 +118,7 @@ void write_value(int direction, int value){
 * Dentro del PIC hacer la configuracion como esta en nuestro esquema
 * Se observa que a mayor cantidad de codigo, mayor tiempo de espera en la ejecucion de la simulacion tiempo aproximado (10 min)
 * Dentro de nuestro PIC tener una frecuencia minima de 4MHz, para que su ejecucion sea mas rapida
-![Menu](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/New%20Interface.PNG)
+![FrecuenciaPIC](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/PICFrec.jpeg)
 * MPLAB deshabilito la forma de conversion para numeros flotante, no se pueden use ftoa(), ni sprintf() dentro del codigo vienen comentado dado que estas son las soluciones mas viables para su operacion
 
 ## Carpetas por PIC
