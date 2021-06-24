@@ -90,6 +90,37 @@ El interpretado es el siguiente:
                 ------------------     ( lo mismo aplica para velocidad 1 y velocidad 2 )
 
 ![Menu](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/New%20Interface.PNG)
+### EEPROM
+Para la parte de EEPROM dentro de nuestro PIC16F873A (Maestro) nosotros tendremos configurados unos valos determinados por el equipo haciendo uso de las siguientes lineas para realizar la asignacion de valores en las direcciones de memoria
+Para hacer uso de nuestro EEPROM debemos tener la siguiente instruccion:
+```C
+#pragma config CPD = OFF // Dta EEPROM Memory
+```
+```C
+void load_values()
+{  
+    //Direcciones, Valores
+        eeprom_write(0x00,4); 
+        eeprom_write(0x01,5);
+        eeprom_write(0x02,3);
+        eeprom_write(0x03,1);
+        eeprom_write(0x04,2);
+        eeprom_write(0x05,0);
+}
+```
+Dentro de este nosotros tenemos una interfaz para la asignacion de valores a nuestras direcciones y poder hacer uso de ellas mediante la siguiente instruccion:
+```C
+void write_value(int direction, int value){
+        eeprom_write(direction,value);
+}
+```
+## NOTAS
+* Dentro del PIC hacer la configuracion como esta en nuestro esquema
+* Se observa que a mayor cantidad de codigo, mayor tiempo de espera en la ejecucion de la simulacion tiempo aproximado (10 min)
+* Dentro de nuestro PIC tener una frecuencia minima de 4MHz, para que su ejecucion sea mas rapida
+![Menu](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/New%20Interface.PNG)
+* MPLAB deshabilito la forma de conversion para numeros flotante, no se pueden use ftoa(), ni sprintf() dentro del codigo vienen comentado dado que estas son las soluciones mas viables para su operacion
+
 ## Carpetas por PIC
 1. P3 es -> PIC16F873A
 2. P3_NOR -> PIC16F873

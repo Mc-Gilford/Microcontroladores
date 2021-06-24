@@ -42,9 +42,9 @@ unsigned char keypad_readkey(void)
     __delay_us(30);
   
     if(r0==HIGH && r1==LOW && r2==LOW && r3==LOW)  {   
-        if (c0 == HIGH) return 'Z';		// Key '1' 
+        if (c0 == HIGH) return '*';		// Key '1' 
         if (c1 == HIGH) return '0';		// Key '2' 
-        if (c2 == HIGH) return '=';		// Key '3'
+        if (c2 == HIGH) return '#';		// Key '3'
         if (c3 == HIGH) return 'D';		// Key '3' 
     }
     r0 = LOW;		

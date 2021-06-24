@@ -1,10 +1,8 @@
-
 /*
  * Realizado por: Jose de Jesus Rodriguez Apaicio y Karla Reyes
  * Fecha: 6/23/21
  * PIC MAESTRO Control de ventiladores y LED, Practica 3
 */
-
 
 /*En dado caso de que el codigo no funcione comentar este codigo hasta el siguiente comentario de fin*/
 #pragma config FOSC = XT // OSCILADOR
@@ -15,6 +13,7 @@
 #pragma config CPD = OFF // Dta EEPROM Memory
 #pragma config WRT = OFF //Flash Program Memory Write
 #pragma config CP = OFF // Flash Program Memory Code
+
 /*Fin de codigo*/
 
 #define _XTAL_FREQ 32000000
@@ -28,7 +27,6 @@
 #include <string.h>
 #include "ftoaa.h"
 
-//Agregar variable global
 char number[4];
 int i =0;
 int length_grupo = 5;
@@ -36,14 +34,23 @@ char grupo[] = {"3CV16"};
 int length_presentacion = 38;
 char presentacion[] = {"Jose Rodriguez y Karla Reyes"};
 int length_saludo = 22;
-char saludo[] = "Hola Mundo bienvenido!";
+char saludo[] = {"Hola Mundo bienvenido!"};
 int ECO;
 int ADRES;
+int va=0,vb=0;
+
+void load_values()
+{  
+        eeprom_write(0x00,4);
+        eeprom_write(0x01,5);
+        eeprom_write(0x02,3);
+        eeprom_write(0x03,1);
+        eeprom_write(0x04,2);
+        eeprom_write(0x05,0);
+}
 
 void iniciar_puertos()
 {
-   
-        /*Seteo de entradas PUERTO C*/
     PORTA = 0x00;
     PORTB = 0x00;
     PORTC = 0x00;
@@ -118,10 +125,6 @@ void ventilator_screen(float voltaje, int vrm, int ventilator_number)
     char vol_value[]="";
     char vel_number[]="";
     char vel_value[]="";
-    /*
-      Voltaje: xx.x mv   
-      Vel_2: xxxx RPM
-    */
     LCD_Goto(1,1);
     //sprintf(vol, "Voltaje: %.1f mv", voltaje); 
     //ftoa_safe(voltaje,vol_value);
@@ -140,8 +143,73 @@ void ventilator_screen(float voltaje, int vrm, int ventilator_number)
     LCD_Print(vel);
 }
 
+void write_value(int direction, int value){
+        eeprom_write(direction,value);
+}
+
+void key_writing_value()
+{
+   char c='5';
+   LCD_Cmd(LCD_CLEAR);
+   LCD_Goto(1,1);
+   LCD_Print("Escribe valor");  
+   //c = keypad_readkey();
+   va = atoi(c);
+   LCD_Goto(1,2);
+   LCD_PutC(c);
+   __delay_ms(50);
+   LCD_Cmd(LCD_CLEAR);
+   LCD_Goto(1,1);
+   LCD_Print("Escribe Direccion");
+   //c = keypad_readkey();
+   vb = atoi(c);
+   LCD_Goto(1,2);
+   LCD_PutC(c);
+   __delay_ms(50);
+   LCD_Cmd(LCD_CLEAR);
+   
+}
+
+void screen_selector(char c, char k)
+{
+    
+    LCD_Cmd(LCD_CLEAR);
+    LCD_Goto(1,1);
+    if(c=='1')
+    {
+        LCD_Print("Nuevo Valor");
+        LCD_Goto(1,2);
+        float v=5.12;
+        char value[]="";
+        int dir=0, val=0;
+        /*EEPROM WRITE
+        Escribe la direccion de alojamiento, y el valor*/
+        key_writing_value();
+        //val=key_writing_value();
+        
+        //write_value(dir,val);
+        itoa(value,v,10);
+        strcat(value," mv");
+        LCD_Print(value);
+    }
+    else if(c=='2')
+    {
+         LCD_Print("Saliendo");
+        __delay_ms(50);
+        LCD_Cmd(LCD_CLEAR);
+    }
+    else{
+        
+        LCD_Print("Opcion Invalida");
+        __delay_ms(50);
+        //screen_selector(c);
+        LCD_Cmd(LCD_CLEAR);
+    }
+}
+
 void selector_type(char c)
 {
+    char k=c;
     if(c=='A')
         {
             if(i==1){
@@ -157,14 +225,20 @@ void selector_type(char c)
     else if(c=='B')
     {
         conditional_screen(1);
+        c = keypad_getkey();
+        screen_selector(c,k);
     }
     else if(c=='C')
     {
         conditional_screen(2);
+        c = keypad_getkey();
+        screen_selector(c,k);
     }
     else if(c=='D')
     {
         conditional_screen(3);
+        c = keypad_getkey();
+        screen_selector(c,k);
     }
 }
 
@@ -172,6 +246,7 @@ void main()
 {
     i=1; //Para concatenar dentro del array  
     //set_configuraciones();
+    load_values();
     iniciar_puertos();
     /*Iniciar LCD*/
     LCD_Begin();
@@ -185,10 +260,9 @@ void main()
     __delay_ms(50);
     
     while(1){
-    //imprimir_valor_leds(); 
     char c = keypad_getkey();
         LCD_PutC(c);
         selector_type(c);
-    __delay_ms(500);
+    __delay_ms(60);
     }
 }
