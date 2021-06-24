@@ -2456,6 +2456,8 @@ void selector_type(char c)
         screen_selector(c,k);
     }
     else {
+        int Sadc = (int)eeprom_read(atoi(c));
+
         envio=c;
         C_inicio();
         Tx_Dato(0xA0);

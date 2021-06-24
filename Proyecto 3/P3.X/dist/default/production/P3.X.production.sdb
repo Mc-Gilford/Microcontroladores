@@ -47,6 +47,8 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
 "6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eewrite.c
 [v _eeprom_write eeprom_write `(v  1 e 1 0 ]
 "48 C:\Users\chuch\MPLABXProjects\P3.X\main.c
@@ -73,11 +75,11 @@
 [v _screen_selector screen_selector `(v  1 e 1 0 ]
 "297
 [v _selector_type selector_type `(v  1 e 1 0 ]
-"340
+"342
 [v _main main `(v  1 e 1 0 ]
 "52 C:\Users\chuch\MPLABXProjects\P3.X/lcd.h
 [v _RS RS `b  1 e 0 0 ]
-[s S385 . 1 `uc 1 C 1 0 :1:0 
+[s S391 . 1 `uc 1 C 1 0 :1:0 
 `uc 1 DC 1 0 :1:1 
 `uc 1 Z 1 0 :1:2 
 `uc 1 nPD 1 0 :1:3 
@@ -86,16 +88,16 @@
 `uc 1 IRP 1 0 :1:7 
 ]
 "99 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f873a.h
-[s S393 . 1 `uc 1 . 1 0 :5:0 
+[s S399 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RP0 1 0 :1:5 
 `uc 1 RP1 1 0 :1:6 
 ]
-[s S397 . 1 `uc 1 CARRY 1 0 :1:0 
+[s S403 . 1 `uc 1 CARRY 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ZERO 1 0 :1:2 
 ]
-[u S401 . 1 `S385 1 . 1 0 `S393 1 . 1 0 `S397 1 . 1 0 ]
-[v _STATUSbits STATUSbits `VES401  1 e 1 @3 ]
+[u S407 . 1 `S391 1 . 1 0 `S399 1 . 1 0 `S403 1 . 1 0 ]
+[v _STATUSbits STATUSbits `VES407  1 e 1 @3 ]
 "166
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "216
@@ -126,7 +128,7 @@
 "295
 [u S31 . 1 `S22 1 . 1 0 ]
 [v _PORTCbits PORTCbits `VES31  1 e 1 @7 ]
-[s S422 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S428 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -136,13 +138,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "383
-[s S431 . 1 `uc 1 . 1 0 :2:0 
+[s S437 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S436 . 1 `S422 1 . 1 0 `S431 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES436  1 e 1 @11 ]
+[u S442 . 1 `S428 1 . 1 0 `S437 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES442  1 e 1 @11 ]
 "708
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "715
@@ -211,7 +213,7 @@
 [v _EEADR EEADR `VEuc  1 e 1 @269 ]
 "2091
 [v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
-[s S365 . 1 `uc 1 RD 1 0 :1:0 
+[s S371 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -219,8 +221,8 @@
 `uc 1 EEPGD 1 0 :1:7 
 ]
 "2106
-[u S372 . 1 `S365 1 . 1 0 ]
-[v _EECON1bits EECON1bits `VES372  1 e 1 @396 ]
+[u S378 . 1 `S371 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES378  1 e 1 @396 ]
 "2136
 [v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
 "2176
@@ -266,12 +268,12 @@
 [v _ADRES ADRES `i  1 e 2 0 ]
 "46
 [v _envio envio `uc  1 e 1 0 ]
-"340
+"342
 [v _main main `(v  1 e 1 0 ]
 {
-"358
+"360
 [v main@c c `uc  1 a 1 61 ]
-"363
+"365
 } 0
 "297
 [v _selector_type selector_type `(v  1 e 1 0 ]
@@ -283,7 +285,7 @@
 [v selector_type@c c `uc  1 a 1 wreg ]
 "299
 [v selector_type@c c `uc  1 a 1 57 ]
-"338
+"340
 } 0
 "126
 [v _ventilator_screen ventilator_screen `(v  1 e 1 0 ]
@@ -440,6 +442,15 @@
 [v _keypad_readkey keypad_readkey `(uc  1 e 1 0 ]
 {
 "89
+} 0
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+{
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+"9
+[v eeprom_read@addr addr `uc  1 a 1 1 ]
+"19
 } 0
 "102 C:\Users\chuch\MPLABXProjects\P3.X\main.c
 [v _conditional_screen conditional_screen `(v  1 e 1 0 ]

@@ -1,5 +1,5 @@
 /*
- * Realizado por: Jose de Jesus Rodriguez Apaicio y Karla Reyes
+ * Realizado por: Jose de Jesus Rodriguez Aparicio y Karla Reyes Reyes
  * Fecha: 6/23/21
  * PIC MAESTRO Control de ventiladores y LED, Practica 3
 */
@@ -328,6 +328,8 @@ void selector_type(char c)
         screen_selector(c,k);
     }
     else {
+        int Sadc = (int)eeprom_read(atoi(c));
+        //envio=itoa(Sadc); Este para leer los valores de nuestra EEPROM
         envio=c;
         C_inicio(); //Envia la condicion de inicio
         Tx_Dato(0xA0); //Envio de direccion de 7 bits y orden de escritura
