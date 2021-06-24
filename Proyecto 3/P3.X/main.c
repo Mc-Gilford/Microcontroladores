@@ -27,6 +27,10 @@
 #include <string.h>
 #include "ftoaa.h"
 
+#define ADDRA 0xA0 //Direccion de PIC1
+#define ADDRB 0xA1 // Direccion PIC2
+
+
 char number[4];
 int i =0;
 int length_grupo = 5;
@@ -36,8 +40,10 @@ char presentacion[] = {"Jose Rodriguez y Karla Reyes"};
 int length_saludo = 22;
 char saludo[] = {"Hola Mundo bienvenido!"};
 int ECO;
-int ADRES;
 int va=0,vb=0;
+/*Para envio de datos*/
+int ADRES;
+unsigned char envio;
 
 void load_values()
 {  
@@ -61,8 +67,8 @@ void iniciar_puertos()
     TRISCbits.TRISC0 = 0; 
     TRISCbits.TRISC1 = 0;
     //TRISCbits.TRISC2 = 0;
-    TRISCbits.TRISC3 = 0;
-    TRISCbits.TRISC4 = 0;
+    TRISCbits.TRISC3 = 1; // SCL como entrada
+    TRISCbits.TRISC4 = 1; // SDA como salida
     //TRISCbits.TRISC5 = 0;
     TRISCbits.TRISC6 = 0;
     //TRISCbits.TRISC7 = 0;
@@ -143,17 +149,98 @@ void ventilator_screen(float voltaje, int vrm, int ventilator_number)
     LCD_Print(vel);
 }
 
+void evaluar_dato()
+{
+            if(ADRES < 127)     // 0V
+                envio = 0x00;
+            if(ADRES > 127)     // 625 mv 
+                envio = 0x01;
+            if(ADRES > 255)     // 1.25 V
+                envio=0x03;
+            if(ADRES > 352)     // 1.87 V
+                envio=0x07;
+            if(ADRES > 511)     // 2.5 V
+                envio=0x0F;
+            if(ADRES > 639)     // 3.12 V
+                envio=0x1F;
+            if(ADRES > 767)     // 3.75 V
+                envio=0x3F;
+            if(ADRES > 894)     // 4.37 V
+                envio=0x7F;
+            if(ADRES > 1022)   // 5 V
+                envio=0xFF;
+}
+
+// Funcion de conversion Analogico Digital 
+void Canal0()    
+{
+                
+    CHS2 = 0;                          // Seleccion del canal analogo 0
+    CHS1 = 0;
+    CHS0 = 0;
+    
+    ADON = 1;                          // Activa el modulo del covertidor analogico digital
+     
+    __delay_ms(4);//Delay_ms(z);                       // Tiempo de espera para adquisicion 5ms
+                     
+     GO = 1;                            // Inicia la conversion 
+     
+    
+    ADCA:  if (ADIF == 0)              // Espera hasta que termine la conversion
+    goto ADCA;                
+    
+    ADON = 0;                          // Desactiva el convertidor
+    
+    ADRES = (ADRESH << 8) | ADRESL;    // Almcena la conversion en la variable Peso1 
+    
+    ADIF = 0;                          // Borrado de bandera de conversion finalizada     
+
+    evaluar_dato();                                                             
+}
+
+/*Configuracion del modulo MSSP configuracion como modulo  maestro*/
+void C_config(const unsigned long c)
+{
+    SSPCON =0b00101000; // Configuracion y activacion del MSSP en modo T2C maestro
+    SSPCON2 = 0;
+    SSPADD = (_XTAL_FREQ/(4*c))-1; // Velocidad de transmision
+    SSPSTAT = 0;
+    /*Dado que la configuracion de nuestros PIN C3 Y C4 ya estan configurados ya no tenemos que proceder a realizar alguna
+     accion */
+}
+
+/*Funcion de condicion de inicio*/
+void C_inicio()
+{
+    while((SSPSTAT & 0x04) || (SSPCON2 & 0x1F)); // Transmision en progreso
+    SSPCON2bits.SEN =1; // Activa secuencia de inicio
+}
+
+/* Condicion de parada*/
+void C_parada()
+{
+    while((SSPSTAT & 0x04) || (SSPCON2 & 0x1F)); // Transmision en progreso
+    SSPCON2bits.PEN =1; // Activa secuencia de parada
+}
+
+//Funcion de transmision 
+void Tx_Dato(unsigned char x)
+{
+    while((SSPSTAT & 0x04) || (SSPCON2 & 0x1F)); // Transmision en progreso
+    SSPBUF = x; // transmicion de dato
+}
+
 void write_value(int direction, int value){
         eeprom_write(direction,value);
 }
 
 void key_writing_value()
 {
-   char c='5';
+   char c;
    LCD_Cmd(LCD_CLEAR);
    LCD_Goto(1,1);
    LCD_Print("Escribe valor");  
-   //c = keypad_readkey();
+   c = keypad_readkey();
    va = atoi(c);
    LCD_Goto(1,2);
    LCD_PutC(c);
@@ -161,7 +248,7 @@ void key_writing_value()
    LCD_Cmd(LCD_CLEAR);
    LCD_Goto(1,1);
    LCD_Print("Escribe Direccion");
-   //c = keypad_readkey();
+   c = keypad_readkey();
    vb = atoi(c);
    LCD_Goto(1,2);
    LCD_PutC(c);
@@ -239,6 +326,14 @@ void selector_type(char c)
         conditional_screen(3);
         c = keypad_getkey();
         screen_selector(c,k);
+    }
+    else {
+        envio=c;
+        C_inicio(); //Envia la condicion de inicio
+        Tx_Dato(0xA0); //Envio de direccion de 7 bits y orden de escritura
+        Tx_Dato(envio); // Envio conversion del ADC parte baja
+        C_parada(); // Condicion de parada
+        __delay_ms(100); //Retraso para evitar errores
     }
 }
 

@@ -2155,6 +2155,10 @@ extern char * strrichr(const char *, int);
 # 28 "main.c" 2
 
 
+
+
+
+
 char number[4];
 int i =0;
 int length_grupo = 5;
@@ -2164,8 +2168,10 @@ char presentacion[] = {"Jose Rodriguez y Karla Reyes"};
 int length_saludo = 22;
 char saludo[] = {"Hola Mundo bienvenido!"};
 int ECO;
-int ADRES;
 int va=0,vb=0;
+
+int ADRES;
+unsigned char envio;
 
 void load_values()
 {
@@ -2189,8 +2195,8 @@ void iniciar_puertos()
     TRISCbits.TRISC0 = 0;
     TRISCbits.TRISC1 = 0;
 
-    TRISCbits.TRISC3 = 0;
-    TRISCbits.TRISC4 = 0;
+    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC4 = 1;
 
     TRISCbits.TRISC6 = 0;
 
@@ -2271,17 +2277,98 @@ void ventilator_screen(float voltaje, int vrm, int ventilator_number)
     LCD_Print(vel);
 }
 
+void evaluar_dato()
+{
+            if(ADRES < 127)
+                envio = 0x00;
+            if(ADRES > 127)
+                envio = 0x01;
+            if(ADRES > 255)
+                envio=0x03;
+            if(ADRES > 352)
+                envio=0x07;
+            if(ADRES > 511)
+                envio=0x0F;
+            if(ADRES > 639)
+                envio=0x1F;
+            if(ADRES > 767)
+                envio=0x3F;
+            if(ADRES > 894)
+                envio=0x7F;
+            if(ADRES > 1022)
+                envio=0xFF;
+}
+
+
+void Canal0()
+{
+
+    CHS2 = 0;
+    CHS1 = 0;
+    CHS0 = 0;
+
+    ADON = 1;
+
+    _delay((unsigned long)((4)*(32000000/4000.0)));
+
+     GO = 1;
+
+
+    ADCA: if (ADIF == 0)
+    goto ADCA;
+
+    ADON = 0;
+
+    ADRES = (ADRESH << 8) | ADRESL;
+
+    ADIF = 0;
+
+    evaluar_dato();
+}
+
+
+void C_config(const unsigned long c)
+{
+    SSPCON =0b00101000;
+    SSPCON2 = 0;
+    SSPADD = (32000000/(4*c))-1;
+    SSPSTAT = 0;
+
+
+}
+
+
+void C_inicio()
+{
+    while((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
+    SSPCON2bits.SEN =1;
+}
+
+
+void C_parada()
+{
+    while((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
+    SSPCON2bits.PEN =1;
+}
+
+
+void Tx_Dato(unsigned char x)
+{
+    while((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
+    SSPBUF = x;
+}
+
 void write_value(int direction, int value){
         eeprom_write(direction,value);
 }
 
 void key_writing_value()
 {
-   char c='5';
+   char c;
    LCD_Cmd(0x01);
    LCD_Goto(1,1);
    LCD_Print("Escribe valor");
-
+   c = keypad_readkey();
    va = atoi(c);
    LCD_Goto(1,2);
    LCD_PutC(c);
@@ -2289,7 +2376,7 @@ void key_writing_value()
    LCD_Cmd(0x01);
    LCD_Goto(1,1);
    LCD_Print("Escribe Direccion");
-
+   c = keypad_readkey();
    vb = atoi(c);
    LCD_Goto(1,2);
    LCD_PutC(c);
@@ -2367,6 +2454,14 @@ void selector_type(char c)
         conditional_screen(3);
         c = keypad_getkey();
         screen_selector(c,k);
+    }
+    else {
+        envio=c;
+        C_inicio();
+        Tx_Dato(0xA0);
+        Tx_Dato(envio);
+        C_parada();
+        _delay((unsigned long)((100)*(32000000/4000.0)));
     }
 }
 
