@@ -228,6 +228,7 @@ void Tx_Dato(unsigned char x)
 * Dentro de nuestro PIC tener una frecuencia minima de 4MHz, para que su ejecucion sea mas rapida
 ![FrecuenciaPIC](https://github.com/McGilfordJose/Microcontroladores/blob/main/Proyecto%203/PICFrec.jpeg)
 * MPLAB deshabilito la forma de conversion para numeros flotante, no se pueden use ftoa(), ni sprintf() dentro del codigo vienen comentado dado que estas son las soluciones mas viables para su operacion
+* Conforme respecto al Puerto RA4 conforme la investigacion realizada se observo que era un problema con el cual tenian los microcontroladores pasados, dado que este puerto esta como tipo pull up, por lo cual se tuvo que realizar una configuracion extra dentro del diseño del circuito para su correcto funcionamiento, lo cual fue agregar una resistencia y mandarla hacia positivo para emendar este error.
 
 ## Carpetas por PIC
 1. P3 es -> PIC16F873A
